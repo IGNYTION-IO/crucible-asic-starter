@@ -1,0 +1,28 @@
+# crucible-asic-starter
+
+A reproducible starter for open-source ASIC design, powered by [Crucible](https://ignytion.io).
+
+Fork it, and go from RTL to GDS without fighting your environment —
+toolchain, PDK, and verification stack resolved and pinned for you.
+
+Built as a community starter for the **Jane Street protocol-emulator ASIC
+competition**. Targets the [Tiny Tapeout](https://www.tinytapeout.com/) IHP
+130nm (CMOS5L) flow.
+
+## Quickstart
+
+```sh
+igny init
+igny build
+```
+
+That's it. No Conda fights, no PDK hunt, no version drift.
+
+## Status
+
+🚧 Work in progress — first public release coming soon.
+
+---
+
+_Not affiliated with or endorsed by Jane Street. "Jane Street" is a trademark
+of Jane Street Group, LLC._
