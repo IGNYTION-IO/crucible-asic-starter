@@ -4,7 +4,8 @@ Tiny Tapeout IHP (SG13G2) submission files: `info.yaml`, pinout, and the files t
 Tiny Tapeout GitHub Actions expect. Copy these from the official
 `ttihp-verilog-template` so the format matches their checks exactly.
 
-The IHP SG13G2 PDK install path inside Crucible is not yet confirmed (see the
-kickoff notes). Until it is, `PDK_ROOT` in each unit's `06_floorplanning` onward
-Makefiles is left blank, and GDS is produced via the Tiny Tapeout GitHub Actions
-flow as a fallback.
+Crucible has produced a GDS on IHP SG13G2 end to end, so the PDK path is confirmed
+working. `PDK_ROOT` in each unit's `06_floorplanning` onward Makefiles is still
+left blank here pending the exact install path to standardize on; until that's
+filled in, fall back to the Tiny Tapeout GitHub Actions flow for GDS if a local
+run is blocked.
