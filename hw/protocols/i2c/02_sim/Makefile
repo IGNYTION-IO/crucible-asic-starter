@@ -1,0 +1,27 @@
+# ===============================================================================
+# Ignytion IO - CRUCIBLE CORE
+# Copyright (c) 2026 Ignytion IO. All rights reserved.
+# File        : hw/protocols/i2c/02_sim/Makefile
+# Created     : 2026-09-21
+# Description : Make entrypoint for I2C Icarus simulation.
+# ===============================================================================
+
+PROJECT_ROOT := $(abspath ..)
+SIM_OUT := 02_sim/i2c_core_sim.out
+WAVE_OUT := 02_sim/i2c_core.vcd
+
+.PHONY: all sim compile run clean
+
+all: sim
+
+sim: compile run
+
+compile:
+	cd "$(PROJECT_ROOT)" && igny run iverilog -o "$(SIM_OUT)" -s test -I 01_rtl 01_rtl/i2c_core.v 02_sim/test.v
+
+run:
+	cd "$(PROJECT_ROOT)" && igny run vvp "$(SIM_OUT)"
+	cd "$(PROJECT_ROOT)" && if [ -f waveform.vcd ]; then mv -f waveform.vcd "$(WAVE_OUT)"; fi
+
+clean:
+	cd "$(PROJECT_ROOT)" && rm -f "$(SIM_OUT)" "$(WAVE_OUT)"

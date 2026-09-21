@@ -1,0 +1,22 @@
+# Simulation
+sim_build/
+results.xml
+__pycache__/
+*.pyc
+*.vcd
+*.fst
+*.vvp
+
+# Flow outputs
+runs/
+*.gds
+*.oas
+*.def
+*.odb
+*.spef
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
