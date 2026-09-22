@@ -30,6 +30,7 @@ see [Status](#status).
 ```
 crucible-asic-starter/
 ├── Specs/                   reference protocol specifications (PDF)
+├── docs/                    prerequisites.md: what a team needs to know before starting
 ├── hw/
 │   ├── protocols/           each protocol built and verified on its own
 │   │   ├── uart/
