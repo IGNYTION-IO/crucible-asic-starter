@@ -1,6 +1,17 @@
-# I2C - 01 RTL
+<!--
+===============================================================================
+Ignytion IO - CRUCIBLE CORE
+Copyright (c) 2026 Ignytion IO. All rights reserved.
+Author      : IGNYTION_TECH
+File        : hw/protocols/i2c/01_rtl/README.md
+Created     : 2026-10-03
+Description : I2C rtl sources reference-stage guide.
+===============================================================================
+-->
+# I2C RTL sources
 
-Synthesizable Verilog source. Top module: `i2c_core` in `i2c_core.v`.
-One module per file, file name matches module name.
+Contains the pinned upstream controller and local integration wrapper. Original notices and licences remain applicable. Lint elaborates the selected top.
 
-**Output artifact:** `i2c_core.v` (and any submodules it instantiates)
+Run from this existing stage directory in an initialized WSL Igny shell:\n\n```bash\nmake\n```\n\nThe Make recipe returns to the protocol root and invokes the actual stage-aware run_flow.sh.
+
+See [the unit README](../README.md) for source provenance, prerequisites, interfaces, tested cases, reproduction and physical-evidence limitations. Keep the upstream licence notices. Tool-generated artifacts use their required formats; provenance is recorded in the source headers, unit README, tool lock and validation receipt rather than corrupting binary/standard-format payloads.

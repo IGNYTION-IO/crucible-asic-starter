@@ -1,5 +1,17 @@
-# I2C - 03 Verification
+<!--
+===============================================================================
+Ignytion IO - CRUCIBLE CORE
+Copyright (c) 2026 Ignytion IO. All rights reserved.
+Author      : IGNYTION_TECH
+File        : hw/protocols/i2c/03_verification/README.md
+Created     : 2026-10-03
+Description : I2C directed verification reference-stage guide.
+===============================================================================
+-->
+# I2C Directed verification
 
-cocotb testbench and self-checking tests in `py_verification_i2c_core/`. Constrained-random and coverage results land in `py_verification_i2c_core/results/`.
+Reuses the actual self-checking regression. Formal verification and full protocol compliance are not implemented. Scope and omitted cases are documented in the unit README.
 
-**Output artifacts:** `py_verification_i2c_core/results/*.xml`, coverage report
+Run from this existing stage directory in an initialized WSL Igny shell:\n\n```bash\nmake\n```\n\nThe Make recipe returns to the protocol root and invokes the actual stage-aware run_flow.sh.
+
+See [the unit README](../README.md) for source provenance, prerequisites, interfaces, tested cases, reproduction and physical-evidence limitations. Keep the upstream licence notices. Tool-generated artifacts use their required formats; provenance is recorded in the source headers, unit README, tool lock and validation receipt rather than corrupting binary/standard-format payloads.

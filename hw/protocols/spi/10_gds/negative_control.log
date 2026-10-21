@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/10_gds/validate_gds.py", line 106, in <module>
+    require(expected == actual, f"DEF/GDS placement mismatch: missing={sum((expected - actual).values())}, extra={sum((actual - expected).values())}")
+  File "/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/10_gds/validate_gds.py", line 25, in require
+    raise ValueError(message)
+ValueError: DEF/GDS placement mismatch: missing=1, extra=0
+Script failed (exit code 1) (log: 
+/home/hasan/.ignytion/.crucible/workspaces/spi-8b930456/runs/20261003-000351-772
+afa/stdout.log)

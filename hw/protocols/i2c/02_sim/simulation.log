@@ -1,0 +1,47 @@
+VCD info: dumpfile 02_sim/i2c_core.vcd opened for output.
+
+status:                    0 Testbench started
+
+
+
+INFO: WISHBONE MASTER MODEL INSTANTIATED (tst_bench_top.u0)
+
+status:                 5000 done reset
+status:               106000 programmed registers
+status:               146000 verified registers
+status:               176000 core enabled
+status:               226000 generate 'start', write cmd 20 (slave address+write)
+status:            108816000 tip==0
+status:            108866000 write slave memory address 01
+status:            205196000 tip==0
+status:            205246000 write data a5
+status:            395936000 tip==0
+status:            395986000 write next data 5a, generate 'stop'
+status:            503056000 tip==0
+status:            503106000 generate 'start', write cmd 20 (slave address+write)
+status:            611676000 tip==0
+status:            611726000 write slave address 01
+status:            708056000 tip==0
+status:            708106000 generate 'repeated start', write cmd 21 (slave address+read)
+status:            817216000 tip==0
+status:            817246000 read + ack
+status:            913606000 tip==0
+status:            913636000 received a5
+status:            913666000 read + ack
+status:           1009996000 tip==0
+status:           1010026000 received 5a
+status:           1010056000 read + ack
+status:           1106386000 tip==0
+status:           1106416000 received xx from 3rd read address
+status:           1106446000 read + nack
+status:           1202776000 tip==0
+status:           1202806000 received xx from 4th read address
+status:           1202856000 generate 'start', write cmd 20 (slave address+write). Check invalid address
+status:           1311906000 tip==0
+status:           1311956000 write slave memory address 10
+status:           1408286000 tip==0
+status:           1408286000 Check for nack
+status:           1408316000 generate 'stop'
+status:           1408346000 tip==0
+PASS I2C regression: asserted register access, write/read A5/5A and NACK; indirect repeated START/stretch coverage
+02_sim/test.v:470: $finish called at 1658346000 (1ps)

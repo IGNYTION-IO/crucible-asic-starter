@@ -1,0 +1,97 @@
+OpenROAD 26Q3-771-g7cfb2105c9 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 4 thread(s).
+Startpoint: prescale[2] (input port clocked by core_clk)
+Endpoint: _0858_ (rising edge-triggered flip-flop clocked by core_clk)
+Path Group: core_clk
+Path Type: min
+
+     Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------
+                     0.000    0.000   clock core_clk (rise edge)
+                     0.000    0.000   clock network delay (propagated)
+                     0.200    0.200 ^ input external delay
+   0.017    0.000    0.000    0.200 ^ prescale[2] (in)
+            0.002    0.001    0.201 ^ _0519_/A (sg13g2_nor3_1)
+   0.009    0.064    0.061    0.262 v _0519_/Y (sg13g2_nor3_1)
+            0.064    0.001    0.262 v _0561_/B (sg13g2_xnor2_1)
+   0.011    0.089    0.181    0.443 ^ _0561_/Y (sg13g2_xnor2_1)
+            0.089    0.000    0.443 ^ _0562_/A (sg13g2_inv_1)
+   0.008    0.058    0.083    0.526 v _0562_/Y (sg13g2_inv_1)
+            0.058    0.000    0.526 v _0563_/B1 (sg13g2_a22oi_1)
+   0.006    0.128    0.139    0.665 ^ _0563_/Y (sg13g2_a22oi_1)
+            0.128    0.000    0.666 ^ _0564_/B1 (sg13g2_a221oi_1)
+   0.002    0.071    0.125    0.790 v _0564_/Y (sg13g2_a221oi_1)
+            0.071    0.000    0.790 v _0858_/D (sg13g2_dfrbpq_1)
+                              0.790   data arrival time
+
+                     0.000    0.000   clock core_clk (rise edge)
+                     0.515    0.515   clock network delay (propagated)
+                     0.100    0.615   clock uncertainty
+                     0.000    0.615   clock reconvergence pessimism
+                              0.615 ^ _0858_/CLK (sg13g2_dfrbpq_1)
+                    -0.065    0.550   library hold time
+                              0.550   data required time
+---------------------------------------------------------------------------
+                              0.550   data required time
+                             -0.790   data arrival time
+---------------------------------------------------------------------------
+                              0.240   slack (MET)
+
+
+Startpoint: prescale[5] (input port clocked by core_clk)
+Endpoint: _0908_ (rising edge-triggered flip-flop clocked by core_clk)
+Path Group: core_clk
+Path Type: max
+
+     Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------
+                     0.000    0.000   clock core_clk (rise edge)
+                     0.000    0.000   clock network delay (propagated)
+                     2.000    2.000 v input external delay
+   0.011    0.000    0.000    2.000 v prescale[5] (in)
+            0.001    0.000    2.000 v hold40/A (sg13g2_dlygate4sd3_1)
+   0.011    0.100    0.618    2.618 v hold40/X (sg13g2_dlygate4sd3_1)
+            0.100    0.001    2.619 v _0490_/A (sg13g2_inv_1)
+   0.015    0.111    0.127    2.746 ^ _0490_/Y (sg13g2_inv_1)
+            0.111    0.001    2.747 ^ _0523_/C (sg13g2_nand4_1)
+   0.014    0.321    0.334    3.081 v _0523_/Y (sg13g2_nand4_1)
+            0.321    0.001    3.082 v _0596_/D (sg13g2_nor4_1)
+   0.020    0.601    0.576    3.658 ^ _0596_/Y (sg13g2_nor4_1)
+            0.601    0.001    3.659 ^ _0599_/D (sg13g2_nand4_1)
+   0.014    0.331    0.473    4.132 v _0599_/Y (sg13g2_nand4_1)
+            0.331    0.001    4.133 v _0601_/C (sg13g2_nor3_1)
+   0.006    0.220    0.258    4.391 ^ _0601_/Y (sg13g2_nor3_1)
+            0.220    0.000    4.391 ^ _0724_/B (sg13g2_xor2_1)
+   0.015    0.224    0.318    4.709 ^ _0724_/X (sg13g2_xor2_1)
+            0.224    0.001    4.710 ^ _0825_/A1 (sg13g2_mux2_1)
+   0.003    0.051    0.220    4.930 ^ _0825_/X (sg13g2_mux2_1)
+            0.051    0.000    4.930 ^ hold60/A (sg13g2_dlygate4sd3_1)
+   0.005    0.067    0.580    5.510 ^ hold60/X (sg13g2_dlygate4sd3_1)
+            0.067    0.001    5.510 ^ _0826_/B (sg13g2_nand2_1)
+   0.005    0.113    0.098    5.608 v _0826_/Y (sg13g2_nand2_1)
+            0.113    0.000    5.608 v _0827_/A2 (sg13g2_a21oi_1)
+   0.002    0.101    0.132    5.740 ^ _0827_/Y (sg13g2_a21oi_1)
+            0.101    0.000    5.740 ^ _0908_/D (sg13g2_dfrbpq_1)
+                              5.740   data arrival time
+
+                    20.000   20.000   clock core_clk (rise edge)
+                     0.511   20.511   clock network delay (propagated)
+                    -0.100   20.411   clock uncertainty
+                     0.000   20.411   clock reconvergence pessimism
+                             20.411 ^ _0908_/CLK (sg13g2_dfrbpq_1)
+                    -0.220   20.191   library setup time
+                             20.191   data required time
+---------------------------------------------------------------------------
+                             20.191   data required time
+                             -5.740   data arrival time
+---------------------------------------------------------------------------
+                             14.451   slack (MET)
+
+
+worst slack max 14.45
+worst slack min 0.24
+tns max 0.00
+PASS openroad_sta.tcl

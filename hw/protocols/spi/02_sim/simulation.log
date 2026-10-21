@@ -1,0 +1,3 @@
+VCD info: dumpfile 02_sim/spi_core.vcd opened for output.
+PASS SPI regression: all 256 bytes, all four modes, independent MOSI/MISO, divider, CS and reset abort
+02_sim/test.v:82: $finish called at 133307000 (1ps)

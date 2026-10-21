@@ -1,0 +1,23 @@
+%Warning-UNUSEDSIGNAL: 01_rtl/i2c_master_bit_ctrl.v:599:14: Signal is not driven, nor used: 'slave_adr_received_d'
+                                                          : ... note: In instance 'i2c_core.controller.byte_controller.bit_controller'
+  599 |    reg       slave_adr_received_d;
+      |              ^~~~~~~~~~~~~~~~~~~~
+                       ... For warning description see https://verilator.org/warn/UNUSEDSIGNAL?v=5.047
+                       ... Use "/* verilator lint_off UNUSEDSIGNAL */" and lint_on around source to disable this message.
+%Warning-CASEINCOMPLETE: 01_rtl/i2c_master_bit_ctrl.v:668:11: Case values incompletely covered (example pattern 0x3)
+  668 |           case (slave_state)
+      |           ^~~~
+                         ... For warning description see https://verilator.org/warn/CASEINCOMPLETE?v=5.047
+                         ... Use "/* verilator lint_off CASEINCOMPLETE */" and lint_on around source to disable this message.
+%Warning-SYNCASYNCNET: 01_rtl/i2c_core.v:24:40: Signal flopped as both synchronous and async: 'i2c_core.reset_release'
+                       01_rtl/i2c_core.v:24:40: ... Location of async usage
+   24 |     (* async_reg = "true" *) reg [1:0] reset_release;
+      |                                        ^~~~~~~~~~~~~
+                       01_rtl/i2c_core.v:27:32: ... Location of sync usage
+   27 |         else reset_release <= {reset_release[0], 1'b1};
+      |                                ^~~~~~~~~~~~~
+                       ... For warning description see https://verilator.org/warn/SYNCASYNCNET?v=5.047
+                       ... Use "/* verilator lint_off SYNCASYNCNET */" and lint_on around source to disable this message.
+- V e r i l a t i o n   R e p o r t: Verilator 5.047 devel rev v5.046-219-g56ed47ee7 (mod)
+- Verilator: Built from 0.227 MB sources in 5 modules, into 0.121 MB in 3 C++ files needing 0.000 MB
+- Verilator: Walltime 0.068 s (elab=0.003, cvt=0.015, bld=0.000); cpu 0.031 s on 1 threads; allocated 22.965 MB

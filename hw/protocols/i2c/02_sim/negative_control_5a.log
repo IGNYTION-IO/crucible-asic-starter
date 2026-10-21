@@ -1,0 +1,36 @@
+VCD info: dumpfile 02_sim/i2c_core.vcd opened for output.
+
+status:                    0 Testbench started
+
+
+
+INFO: WISHBONE MASTER MODEL INSTANTIATED (tst_bench_top.u0)
+
+status:                 5000 done reset
+status:               106000 programmed registers
+status:               146000 verified registers
+status:               176000 core enabled
+status:               226000 generate 'start', write cmd 20 (slave address+write)
+status:            108816000 tip==0
+status:            108866000 write slave memory address 01
+status:            205196000 tip==0
+status:            205246000 write data a5
+status:            395936000 tip==0
+status:            395986000 write next data 5a, generate 'stop'
+status:            503056000 tip==0
+status:            503106000 generate 'start', write cmd 20 (slave address+write)
+status:            611676000 tip==0
+status:            611726000 write slave address 01
+status:            708056000 tip==0
+status:            708106000 generate 'repeated start', write cmd 21 (slave address+read)
+status:            817216000 tip==0
+status:            817246000 read + ack
+status:            913606000 tip==0
+status:            913636000 received a5
+status:            913666000 read + ack
+status:           1009996000 tip==0
+FATAL: 02_sim/test.v:395: 
+ERROR: Expected 5a, received 5b at time           1010026000
+       Time: 1010026000  Scope: tst_bench_top
+Run failed: Process exited with a non-zero status (1).
+Full output: /home/hasan/.ignytion/.crucible/workspaces/i2c-133a2d8b/runs/20261003-004140-2321ae/stdout.log

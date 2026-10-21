@@ -1,0 +1,5 @@
+VCD info: dumpfile 02_sim/spi_core.vcd opened for output.
+FATAL: 02_sim/test.v:37: SPI injected mismatch rejected
+       Time: 387000  Scope: tst_bench_top.g[0].testcase
+Run failed: Process exited with a non-zero status (1).
+Full output: /home/hasan/.ignytion/.crucible/workspaces/spi-8b930456/runs/20261003-001315-c1cc63/stdout.log

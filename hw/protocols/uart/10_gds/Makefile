@@ -1,23 +1,16 @@
 # ===============================================================================
 # Ignytion IO - CRUCIBLE CORE
 # Copyright (c) 2026 Ignytion IO. All rights reserved.
+# Author      : IGNYTION_TECH
 # File        : hw/protocols/uart/10_gds/Makefile
-# Created     : 2026-09-21
-# Description : Make entrypoint for UART GDS streamout.
+# Created     : 2026-10-03
+# Description : WSL Igny UART reference build entrypoint.
 # ===============================================================================
 
+SHELL := /bin/bash
+.SHELLFLAGS := -eu -o pipefail -c
 PROJECT_ROOT := $(abspath ..)
-
-PDK_ROOT ?=
-export PDK_ROOT
-
-.PHONY: all gds clean
-
+.PHONY: all gds
 all: gds
-
 gds:
-	cd "$(PROJECT_ROOT)" && if [ ! -f 09_place_and_route/route.def ]; then $(MAKE) -C 09_place_and_route route; fi
-	cd "$(PROJECT_ROOT)" && bash 10_gds/run_gds_streamout.sh
-
-clean:
-	cd "$(PROJECT_ROOT)" && rm -f 10_gds/UartCore.gds
+	cd "$(PROJECT_ROOT)" && bash run_flow.sh gds

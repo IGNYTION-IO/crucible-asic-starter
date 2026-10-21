@@ -1,27 +1,16 @@
 # ===============================================================================
 # Ignytion IO - CRUCIBLE CORE
 # Copyright (c) 2026 Ignytion IO. All rights reserved.
+# Author      : IGNYTION_TECH
 # File        : hw/protocols/spi/02_sim/Makefile
-# Created     : 2026-09-21
-# Description : Make entrypoint for SPI Icarus simulation.
+# Created     : 2026-10-03
+# Description : WSL Igny SPI reference build entrypoint.
 # ===============================================================================
 
+SHELL := /bin/bash
+.SHELLFLAGS := -eu -o pipefail -c
 PROJECT_ROOT := $(abspath ..)
-SIM_OUT := 02_sim/spi_core_sim.out
-WAVE_OUT := 02_sim/spi_core.vcd
-
-.PHONY: all sim compile run clean
-
+.PHONY: all sim
 all: sim
-
-sim: compile run
-
-compile:
-	cd "$(PROJECT_ROOT)" && igny run iverilog -o "$(SIM_OUT)" -s test -I 01_rtl 01_rtl/spi_core.v 02_sim/test.v
-
-run:
-	cd "$(PROJECT_ROOT)" && igny run vvp "$(SIM_OUT)"
-	cd "$(PROJECT_ROOT)" && if [ -f waveform.vcd ]; then mv -f waveform.vcd "$(WAVE_OUT)"; fi
-
-clean:
-	cd "$(PROJECT_ROOT)" && rm -f "$(SIM_OUT)" "$(WAVE_OUT)"
+sim:
+	cd "$(PROJECT_ROOT)" && bash run_flow.sh sim

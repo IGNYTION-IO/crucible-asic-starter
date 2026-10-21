@@ -1,0 +1,2 @@
+PASS CRC equivalence: 297 upstream vectors and CRC32 known check
+03_verification/crc_equivalence.v:54: $finish called at 306000 (1ps)

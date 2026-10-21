@@ -1,0 +1,35 @@
+{
+  "top": "usb_ls_core",
+  "bytes": 4371854,
+  "sha256": "d2463e00a4e0e774e0a4b6283bb54836d6fc171e4dba94badeb9b90f5f769fc7",
+  "cells": 49,
+  "placed_instances": 49699,
+  "top_shape_layers": {
+    "189": 1,
+    "8": 121,
+    "10": 13835,
+    "30": 7396,
+    "50": 1142,
+    "67": 843,
+    "126": 16,
+    "134": 16
+  },
+  "raw_sha256_scope": "Run-specific byte fingerprint; GDS timestamps may change",
+  "non_stdcell_references": {
+    "via5_6_2200_440_1_2_840_840": 726,
+    "via4_5_2200_440_1_5_410_410": 726,
+    "via3_4_2200_440_1_5_410_410": 726,
+    "via2_3_2200_440_1_5_410_410": 726,
+    "via1_2_2200_440_1_5_410_410": 726,
+    "Via2_YX": 9166,
+    "Via3_XY": 1817,
+    "Via1_YY": 6239,
+    "Via1_XY": 3424,
+    "via6_7_5000_5000_2_2_1960_1960": 8,
+    "via6_7_2200_5000_2_1_1960_1960": 24,
+    "via6_7_2200_2200_1_1_1960_1960": 72,
+    "via6_7_5000_2200_1_2_1960_1960": 24,
+    "Via4_YX": 191
+  },
+  "status": "PASS structural export; DRC/LVS/signoff not performed"
+}

@@ -1,0 +1,34 @@
+{
+  "top": "uart_core",
+  "bytes": 1284780,
+  "sha256": "7df80d2d8f8204e980e820aa5b90475385188680f3f62d4327507ab5d5947dcf",
+  "cells": 45,
+  "placed_instances": 16512,
+  "top_shape_layers": {
+    "189": 1,
+    "8": 69,
+    "10": 2883,
+    "30": 1142,
+    "50": 74,
+    "67": 242,
+    "126": 11,
+    "134": 11
+  },
+  "raw_sha256_scope": "Run-specific byte fingerprint; GDS timestamps may change",
+  "non_stdcell_references": {
+    "via5_6_2200_440_1_2_840_840": 242,
+    "via4_5_2200_440_1_5_410_410": 242,
+    "via3_4_2200_440_1_5_410_410": 242,
+    "via2_3_2200_440_1_5_410_410": 242,
+    "via1_2_2200_440_1_5_410_410": 242,
+    "Via1_XY": 770,
+    "via6_7_2200_5000_2_1_1960_1960": 14,
+    "via6_7_2200_2200_1_1_1960_1960": 25,
+    "Via1_YY": 1233,
+    "Via2_YX": 1719,
+    "via6_7_5000_5000_2_2_1960_1960": 8,
+    "via6_7_5000_2200_1_2_1960_1960": 14,
+    "Via3_XY": 135
+  },
+  "status": "PASS structural export; DRC/LVS/signoff not performed"
+}

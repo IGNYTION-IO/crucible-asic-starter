@@ -1,0 +1,105 @@
+OpenROAD 26Q3-771-g7cfb2105c9 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 4 thread(s).
+Startpoint: _4377_ (rising edge-triggered flip-flop clocked by core_clk)
+Endpoint: _4378_ (rising edge-triggered flip-flop clocked by core_clk)
+Path Group: core_clk
+Path Type: min
+
+     Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------
+                     0.000    0.000   clock core_clk (rise edge)
+                     0.374    0.374   clock network delay (propagated)
+            0.031    0.000    0.374 ^ _4377_/CLK (sg13g2_dfrbpq_1)
+   0.021    0.072    0.207    0.581 v _4377_/Q (sg13g2_dfrbpq_1)
+            0.072    0.002    0.583 v _4378_/D (sg13g2_dfrbpq_1)
+                              0.583   data arrival time
+
+                     0.000    0.000   clock core_clk (rise edge)
+                     0.384    0.384   clock network delay (propagated)
+                     0.100    0.484   clock uncertainty
+                    -0.011    0.473   clock reconvergence pessimism
+                              0.473 ^ _4378_/CLK (sg13g2_dfrbpq_1)
+                    -0.048    0.425   library hold time
+                              0.425   data required time
+---------------------------------------------------------------------------
+                              0.425   data required time
+                             -0.583   data arrival time
+---------------------------------------------------------------------------
+                              0.158   slack (MET)
+
+
+Startpoint: rst (input port clocked by core_clk)
+Endpoint: _4362_ (rising edge-triggered flip-flop clocked by core_clk)
+Path Group: core_clk
+Path Type: max
+
+     Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------
+                     0.000    0.000   clock core_clk (rise edge)
+                     0.000    0.000   clock network delay (propagated)
+                     2.000    2.000 ^ input external delay
+   0.032    0.000    0.000    2.000 ^ rst (in)
+            0.004    0.002    2.002 ^ hold208/A (sg13g2_dlygate4sd3_1)
+   0.042    0.180    0.465    2.467 ^ hold208/X (sg13g2_dlygate4sd3_1)
+            0.180    0.004    2.472 ^ _2302_/A (sg13g2_or2_1)
+   0.038    0.162    0.227    2.698 ^ _2302_/X (sg13g2_or2_1)
+            0.162    0.003    2.701 ^ fanout144/A (sg13g2_buf_1)
+   0.061    0.254    0.269    2.970 ^ fanout144/X (sg13g2_buf_1)
+            0.254    0.007    2.977 ^ fanout143/A (sg13g2_buf_1)
+   0.054    0.227    0.269    3.246 ^ fanout143/X (sg13g2_buf_1)
+            0.227    0.003    3.249 ^ _2446_/B1 (sg13g2_a21o_1)
+   0.007    0.046    0.137    3.386 ^ _2446_/X (sg13g2_a21o_1)
+            0.046    0.000    3.386 ^ fanout106/A (sg13g2_buf_1)
+   0.048    0.199    0.194    3.580 ^ fanout106/X (sg13g2_buf_1)
+            0.199    0.003    3.583 ^ fanout97/A (sg13g2_buf_1)
+   0.038    0.161    0.216    3.799 ^ fanout97/X (sg13g2_buf_1)
+            0.161    0.002    3.801 ^ fanout94/A (sg13g2_buf_1)
+   0.047    0.198    0.230    4.031 ^ fanout94/X (sg13g2_buf_1)
+            0.198    0.002    4.033 ^ _2447_/A (sg13g2_inv_1)
+   0.031    0.136    0.181    4.214 v _2447_/Y (sg13g2_inv_1)
+            0.136    0.002    4.217 v fanout58/A (sg13g2_buf_1)
+   0.062    0.197    0.234    4.450 v fanout58/X (sg13g2_buf_1)
+            0.197    0.006    4.457 v fanout54/A (sg13g2_buf_1)
+   0.049    0.156    0.221    4.678 v fanout54/X (sg13g2_buf_1)
+            0.157    0.007    4.684 v _2836_/A (sg13g2_nor3_1)
+   0.039    0.523    0.455    5.139 ^ _2836_/Y (sg13g2_nor3_1)
+            0.523    0.003    5.143 ^ _2998_/B (sg13g2_nor4_1)
+   0.020    0.182    0.254    5.396 v _2998_/Y (sg13g2_nor4_1)
+            0.182    0.001    5.398 v _2999_/A2 (sg13g2_o21ai_1)
+   0.013    0.173    0.205    5.602 ^ _2999_/Y (sg13g2_o21ai_1)
+            0.173    0.001    5.603 ^ _3178_/B1 (sg13g2_a21oi_1)
+   0.005    0.085    0.071    5.674 v _3178_/Y (sg13g2_a21oi_1)
+            0.085    0.000    5.674 v _3179_/B1 (sg13g2_a21oi_1)
+   0.020    0.195    0.184    5.859 ^ _3179_/Y (sg13g2_a21oi_1)
+            0.195    0.002    5.860 ^ _3181_/A2 (sg13g2_a221oi_1)
+   0.004    0.108    0.135    5.995 v _3181_/Y (sg13g2_a221oi_1)
+            0.108    0.000    5.995 v _3198_/A1 (sg13g2_o21ai_1)
+   0.026    0.282    0.277    6.272 ^ _3198_/Y (sg13g2_o21ai_1)
+            0.283    0.003    6.275 ^ _3288_/A1 (sg13g2_a21oi_1)
+   0.004    0.101    0.126    6.401 v _3288_/Y (sg13g2_a21oi_1)
+            0.101    0.000    6.401 v _3289_/A2 (sg13g2_a21o_1)
+   0.002    0.028    0.137    6.538 v _3289_/X (sg13g2_a21o_1)
+            0.028    0.000    6.538 v _4362_/D (sg13g2_dfrbpq_1)
+                              6.538   data arrival time
+
+                    83.333   83.333   clock core_clk (rise edge)
+                     0.373   83.706   clock network delay (propagated)
+                    -0.100   83.606   clock uncertainty
+                     0.000   83.606   clock reconvergence pessimism
+                             83.606 ^ _4362_/CLK (sg13g2_dfrbpq_1)
+                    -0.113   83.494   library setup time
+                             83.494   data required time
+---------------------------------------------------------------------------
+                             83.494   data required time
+                             -6.538   data arrival time
+---------------------------------------------------------------------------
+                             76.955   slack (MET)
+
+
+worst slack max 76.96
+worst slack min 0.16
+tns max 0.00
+PASS openroad_sta.tcl

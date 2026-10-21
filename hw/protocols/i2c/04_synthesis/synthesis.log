@@ -1,0 +1,2106 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.63+188 (git sha1 cede13a74, clang++ 18.1.8 -fPIC -O3)
+
+1. Executing Verilog-2005 frontend: /mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_core.v
+Parsing Verilog input from `/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_core.v' to AST representation.
+Generating RTLIL representation for module `\i2c_core'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: /mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v
+Parsing Verilog input from `/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v' to AST representation.
+Warning: Encountered `full_case' comment! Such legacy hot comments are supported by Yosys, but are not part of any formal language specification. Using the Verilog `full_case' attribute or the SystemVerilog `unique' or `unique0' keywords is recommended!
+Warning: Encountered `parallel_case' comment! Such legacy hot comments are supported by Yosys, but are not part of any formal language specification. Using the Verilog `parallel_case' attribute or the SystemVerilog `unique' or `priority' keywords is recommended!
+Generating RTLIL representation for module `\i2c_master_bit_ctrl'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: /mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v
+Parsing Verilog input from `/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v' to AST representation.
+Generating RTLIL representation for module `\i2c_master_byte_ctrl'.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog-2005 frontend: /mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_defines.v
+Parsing Verilog input from `/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_defines.v' to AST representation.
+Successfully finished Verilog frontend.
+
+5. Executing Verilog-2005 frontend: /mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_top.v
+Parsing Verilog input from `/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_top.v' to AST representation.
+Generating RTLIL representation for module `\i2c_master_top'.
+Successfully finished Verilog frontend.
+
+6. Executing HIERARCHY pass (managing design hierarchy).
+
+6.1. Analyzing design hierarchy..
+Top module:  \i2c_core
+Used module:     \i2c_master_top
+Used module:         \i2c_master_byte_ctrl
+Used module:             \i2c_master_bit_ctrl
+Parameter \ARST_LVL = 1'0
+
+6.2. Executing AST frontend in derive mode using pre-parsed AST for module `\i2c_master_top'.
+Parameter \ARST_LVL = 1'0
+Generating RTLIL representation for module `$paramod\i2c_master_top\ARST_LVL=1'0'.
+
+6.3. Analyzing design hierarchy..
+Top module:  \i2c_core
+Used module:     $paramod\i2c_master_top\ARST_LVL=1'0
+Used module:         \i2c_master_byte_ctrl
+Used module:             \i2c_master_bit_ctrl
+
+6.4. Analyzing design hierarchy..
+Top module:  \i2c_core
+Used module:     $paramod\i2c_master_top\ARST_LVL=1'0
+Used module:         \i2c_master_byte_ctrl
+Used module:             \i2c_master_bit_ctrl
+Removing unused module `\i2c_master_top'.
+Removed 1 unused modules.
+
+7. Executing SYNTH pass.
+
+7.1. Executing HIERARCHY pass (managing design hierarchy).
+
+7.1.1. Analyzing design hierarchy..
+Top module:  \i2c_core
+Used module:     $paramod\i2c_master_top\ARST_LVL=1'0
+Used module:         \i2c_master_byte_ctrl
+Used module:             \i2c_master_bit_ctrl
+
+7.1.2. Analyzing design hierarchy..
+Top module:  \i2c_core
+Used module:     $paramod\i2c_master_top\ARST_LVL=1'0
+Used module:         \i2c_master_byte_ctrl
+Used module:             \i2c_master_bit_ctrl
+Removed 0 unused modules.
+
+7.2. Executing PROC pass (convert processes to netlists).
+
+7.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+7.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 2 switch rules as full_case in process $proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_top.v:307$193 in module $paramod\i2c_master_top\ARST_LVL=1'0.
+Marked 2 switch rules as full_case in process $proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_top.v:276$180 in module $paramod\i2c_master_top\ARST_LVL=1'0.
+Marked 3 switch rules as full_case in process $proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_top.v:206$175 in module $paramod\i2c_master_top\ARST_LVL=1'0.
+Marked 2 switch rules as full_case in process $proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_top.v:179$173 in module $paramod\i2c_master_top\ARST_LVL=1'0.
+Marked 1 switch rules as full_case in process $proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_top.v:164$172 in module $paramod\i2c_master_top\ARST_LVL=1'0.
+Marked 17 switch rules as full_case in process $proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:245$126 in module i2c_master_byte_ctrl.
+Marked 3 switch rules as full_case in process $proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:226$121 in module i2c_master_byte_ctrl.
+Marked 4 switch rules as full_case in process $proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:211$118 in module i2c_master_byte_ctrl.
+Marked 1 switch rules as full_case in process $proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:204$116 in module i2c_master_byte_ctrl.
+Marked 3 switch rules as full_case in process $proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:635$97 in module i2c_master_bit_ctrl.
+Marked 2 switch rules as full_case in process $proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:594$85 in module i2c_master_bit_ctrl.
+Marked 2 switch rules as full_case in process $proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:395$80 in module i2c_master_bit_ctrl.
+Marked 2 switch rules as full_case in process $proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:354$67 in module i2c_master_bit_ctrl.
+Marked 2 switch rules as full_case in process $proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:346$64 in module i2c_master_bit_ctrl.
+Marked 2 switch rules as full_case in process $proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:335$59 in module i2c_master_bit_ctrl.
+Marked 2 switch rules as full_case in process $proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:316$51 in module i2c_master_bit_ctrl.
+Marked 2 switch rules as full_case in process $proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:285$39 in module i2c_master_bit_ctrl.
+Marked 2 switch rules as full_case in process $proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:266$35 in module i2c_master_bit_ctrl.
+Marked 3 switch rules as full_case in process $proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:259$28 in module i2c_master_bit_ctrl.
+Marked 2 switch rules as full_case in process $proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:240$26 in module i2c_master_bit_ctrl.
+Marked 3 switch rules as full_case in process $proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:213$17 in module i2c_master_bit_ctrl.
+Marked 1 switch rules as full_case in process $proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:203$5 in module i2c_master_bit_ctrl.
+Marked 1 switch rules as full_case in process $proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_core.v:16$2 in module i2c_core.
+Removed a total of 0 dead cases.
+
+7.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 32 redundant assignments.
+Promoted 2 assignments to connections.
+
+7.2.4. Executing PROC_INIT pass (extract init attributes).
+
+7.2.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst_i in `$paramod\i2c_master_top\ARST_LVL=1'0.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_top.v:307$193'.
+Found async reset \rst_i in `$paramod\i2c_master_top\ARST_LVL=1'0.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_top.v:276$180'.
+Found async reset \rst_i in `$paramod\i2c_master_top\ARST_LVL=1'0.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_top.v:206$175'.
+Found async reset \rst_i in `$paramod\i2c_master_top\ARST_LVL=1'0.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_top.v:179$173'.
+Found async reset \nReset in `\i2c_master_byte_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:245$126'.
+Found async reset \nReset in `\i2c_master_byte_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:226$121'.
+Found async reset \nReset in `\i2c_master_byte_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:211$118'.
+Found async reset \nReset in `\i2c_master_byte_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:204$116'.
+Found async reset \nReset in `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:635$97'.
+Found async reset \nReset in `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:594$85'.
+Found async reset \nReset in `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:395$80'.
+Found async reset \nReset in `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:354$67'.
+Found async reset \nReset in `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:346$64'.
+Found async reset \nReset in `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:335$59'.
+Found async reset \nReset in `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:316$51'.
+Found async reset \nReset in `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:285$39'.
+Found async reset \nReset in `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:266$35'.
+Found async reset \nReset in `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:259$28'.
+Found async reset \nReset in `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:240$26'.
+Found async reset \nReset in `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:213$17'.
+Found async reset \nReset in `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:203$5'.
+Found async reset \reset_n in `\i2c_core.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_core.v:16$2'.
+
+7.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~73 debug messages>
+
+7.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod\i2c_master_top\ARST_LVL=1'0.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_top.v:307$193'.
+     1/1: $0\wb_inta_o[0:0]
+Creating decoders for process `$paramod\i2c_master_top\ARST_LVL=1'0.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_top.v:276$180'.
+     1/5: $0\irq_flag[0:0]
+     2/5: $0\tip[0:0]
+     3/5: $0\rxack[0:0]
+     4/5: $0\al[0:0]
+     5/5: $0\slave_mode[0:0]
+Creating decoders for process `$paramod\i2c_master_top\ARST_LVL=1'0.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_top.v:206$175'.
+     1/5: $0\cr[7:0] [7:4]
+     2/5: $0\cr[7:0] [3]
+     3/5: $0\cr[7:0] [2]
+     4/5: $0\cr[7:0] [1]
+     5/5: $0\cr[7:0] [0]
+Creating decoders for process `$paramod\i2c_master_top\ARST_LVL=1'0.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_top.v:179$173'.
+     1/5: $0\prer[15:0] [15:8]
+     2/5: $0\prer[15:0] [7:0]
+     3/5: $0\txr[7:0]
+     4/5: $0\ctr[7:0]
+     5/5: $0\sladr[6:0]
+Creating decoders for process `$paramod\i2c_master_top\ARST_LVL=1'0.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_top.v:164$172'.
+     1/1: $0\wb_dat_o[7:0]
+Creating decoders for process `$paramod\i2c_master_top\ARST_LVL=1'0.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_top.v:159$168'.
+Creating decoders for process `\i2c_master_byte_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:245$126'.
+     1/15: $0\slave_cmd_ack[0:0]
+     2/15: $0\slave_cmd_out[1:0]
+     3/15: $0\cmd_ack[0:0]
+     4/15: $0\ld[0:0]
+     5/15: $0\shift[0:0]
+     6/15: $0\core_txd[0:0]
+     7/15: $0\core_cmd[3:0]
+     8/15: $0\slave_dat_avail[0:0]
+     9/15: $0\slave_dat_req[0:0]
+    10/15: $0\ack_out[0:0]
+    11/15: $0\slave_act[0:0]
+    12/15: $0\c_state[9:0]
+    13/15: $0\sl_wait[0:0]
+    14/15: $0\slave_cmd[1:0]
+    15/15: $0\master_mode[0:0]
+Creating decoders for process `\i2c_master_byte_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:226$121'.
+     1/1: $0\dcnt[2:0]
+Creating decoders for process `\i2c_master_byte_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:211$118'.
+     1/1: $0\sr[7:0]
+Creating decoders for process `\i2c_master_byte_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:204$116'.
+     1/1: $0\slave_adr_received_d[0:0]
+Creating decoders for process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:635$97'.
+     1/4: $0\scl_oen_slave[0:0]
+     2/4: $0\cmd_slave_ack[0:0]
+     3/4: $0\sda_oen_slave[0:0]
+     4/4: $0\slave_state[4:0]
+Creating decoders for process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:594$85'.
+     1/4: $0\slave_adr_received[0:0]
+     2/4: $0\slave_act[0:0]
+     3/4: $0\slave_cnt[3:0]
+     4/4: $0\slave_adr[7:0]
+Creating decoders for process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:395$80'.
+     1/5: $0\cmd_ack[0:0]
+     2/5: $0\sda_oen_master[0:0]
+     3/5: $0\scl_oen_master[0:0]
+     4/5: $0\c_state[17:0]
+     5/5: $0\sda_chk[0:0]
+Creating decoders for process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:364$77'.
+     1/1: $0\dout[0:0]
+Creating decoders for process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:354$67'.
+     1/1: $0\al[0:0]
+Creating decoders for process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:346$64'.
+     1/1: $0\cmd_stop[0:0]
+Creating decoders for process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:335$59'.
+     1/1: $0\busy[0:0]
+Creating decoders for process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:316$51'.
+     1/2: $0\sto_condition[0:0]
+     2/2: $0\sta_condition[0:0]
+Creating decoders for process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:285$39'.
+     1/4: $0\dSDA[0:0]
+     2/4: $0\dSCL[0:0]
+     3/4: $0\sSDA[0:0]
+     4/4: $0\sSCL[0:0]
+Creating decoders for process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:266$35'.
+     1/2: $0\fSDA[2:0]
+     2/2: $0\fSCL[2:0]
+Creating decoders for process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:259$28'.
+     1/1: $0\filter_cnt[13:0]
+Creating decoders for process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:240$26'.
+     1/2: $0\cSDA[1:0]
+     2/2: $0\cSCL[1:0]
+Creating decoders for process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:213$17'.
+     1/2: $0\clk_en[0:0]
+     2/2: $0\cnt[15:0]
+Creating decoders for process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:203$5'.
+     1/1: $0\slave_wait[0:0]
+Creating decoders for process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:198$4'.
+Creating decoders for process `\i2c_core.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_core.v:16$2'.
+     1/1: $0\reset_release[1:0]
+
+7.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+7.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `$paramod\i2c_master_top\ARST_LVL=1'0.\wb_inta_o' using process `$paramod\i2c_master_top\ARST_LVL=1'0.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_top.v:307$193'.
+  created $adff cell `$procdff$973' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\i2c_master_top\ARST_LVL=1'0.\al' using process `$paramod\i2c_master_top\ARST_LVL=1'0.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_top.v:276$180'.
+  created $adff cell `$procdff$978' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\i2c_master_top\ARST_LVL=1'0.\rxack' using process `$paramod\i2c_master_top\ARST_LVL=1'0.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_top.v:276$180'.
+  created $adff cell `$procdff$983' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\i2c_master_top\ARST_LVL=1'0.\tip' using process `$paramod\i2c_master_top\ARST_LVL=1'0.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_top.v:276$180'.
+  created $adff cell `$procdff$988' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\i2c_master_top\ARST_LVL=1'0.\irq_flag' using process `$paramod\i2c_master_top\ARST_LVL=1'0.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_top.v:276$180'.
+  created $adff cell `$procdff$993' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\i2c_master_top\ARST_LVL=1'0.\slave_mode' using process `$paramod\i2c_master_top\ARST_LVL=1'0.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_top.v:276$180'.
+  created $adff cell `$procdff$998' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\i2c_master_top\ARST_LVL=1'0.\cr' using process `$paramod\i2c_master_top\ARST_LVL=1'0.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_top.v:206$175'.
+  created $adff cell `$procdff$1003' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\i2c_master_top\ARST_LVL=1'0.\prer' using process `$paramod\i2c_master_top\ARST_LVL=1'0.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_top.v:179$173'.
+  created $adff cell `$procdff$1008' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\i2c_master_top\ARST_LVL=1'0.\ctr' using process `$paramod\i2c_master_top\ARST_LVL=1'0.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_top.v:179$173'.
+  created $adff cell `$procdff$1013' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\i2c_master_top\ARST_LVL=1'0.\txr' using process `$paramod\i2c_master_top\ARST_LVL=1'0.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_top.v:179$173'.
+  created $adff cell `$procdff$1018' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\i2c_master_top\ARST_LVL=1'0.\sladr' using process `$paramod\i2c_master_top\ARST_LVL=1'0.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_top.v:179$173'.
+  created $adff cell `$procdff$1023' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\i2c_master_top\ARST_LVL=1'0.\wb_dat_o' using process `$paramod\i2c_master_top\ARST_LVL=1'0.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_top.v:164$172'.
+  created $dff cell `$procdff$1024' with positive edge clock.
+Creating register for signal `$paramod\i2c_master_top\ARST_LVL=1'0.\wb_ack_o' using process `$paramod\i2c_master_top\ARST_LVL=1'0.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_top.v:159$168'.
+  created $dff cell `$procdff$1025' with positive edge clock.
+Creating register for signal `\i2c_master_byte_ctrl.\cmd_ack' using process `\i2c_master_byte_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:245$126'.
+  created $adff cell `$procdff$1030' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_byte_ctrl.\master_mode' using process `\i2c_master_byte_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:245$126'.
+  created $adff cell `$procdff$1035' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_byte_ctrl.\slave_cmd' using process `\i2c_master_byte_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:245$126'.
+  created $adff cell `$procdff$1040' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_byte_ctrl.\sl_wait' using process `\i2c_master_byte_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:245$126'.
+  created $adff cell `$procdff$1045' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_byte_ctrl.\c_state' using process `\i2c_master_byte_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:245$126'.
+  created $adff cell `$procdff$1050' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_byte_ctrl.\slave_act' using process `\i2c_master_byte_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:245$126'.
+  created $adff cell `$procdff$1055' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_byte_ctrl.\ack_out' using process `\i2c_master_byte_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:245$126'.
+  created $adff cell `$procdff$1060' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_byte_ctrl.\slave_dat_req' using process `\i2c_master_byte_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:245$126'.
+  created $adff cell `$procdff$1065' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_byte_ctrl.\slave_dat_avail' using process `\i2c_master_byte_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:245$126'.
+  created $adff cell `$procdff$1070' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_byte_ctrl.\slave_cmd_ack' using process `\i2c_master_byte_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:245$126'.
+  created $adff cell `$procdff$1075' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_byte_ctrl.\core_cmd' using process `\i2c_master_byte_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:245$126'.
+  created $adff cell `$procdff$1080' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_byte_ctrl.\core_txd' using process `\i2c_master_byte_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:245$126'.
+  created $adff cell `$procdff$1085' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_byte_ctrl.\shift' using process `\i2c_master_byte_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:245$126'.
+  created $adff cell `$procdff$1090' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_byte_ctrl.\ld' using process `\i2c_master_byte_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:245$126'.
+  created $adff cell `$procdff$1095' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_byte_ctrl.\slave_cmd_out' using process `\i2c_master_byte_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:245$126'.
+  created $adff cell `$procdff$1100' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_byte_ctrl.\dcnt' using process `\i2c_master_byte_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:226$121'.
+  created $adff cell `$procdff$1105' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_byte_ctrl.\sr' using process `\i2c_master_byte_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:211$118'.
+  created $adff cell `$procdff$1110' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_byte_ctrl.\slave_adr_received_d' using process `\i2c_master_byte_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:204$116'.
+  created $adff cell `$procdff$1115' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_bit_ctrl.\cmd_slave_ack' using process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:635$97'.
+  created $adff cell `$procdff$1120' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_bit_ctrl.\slave_state' using process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:635$97'.
+  created $adff cell `$procdff$1125' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_bit_ctrl.\sda_oen_slave' using process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:635$97'.
+  created $adff cell `$procdff$1130' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_bit_ctrl.\scl_oen_slave' using process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:635$97'.
+  created $adff cell `$procdff$1135' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_bit_ctrl.\slave_adr_received' using process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:594$85'.
+  created $adff cell `$procdff$1140' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_bit_ctrl.\slave_adr' using process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:594$85'.
+  created $adff cell `$procdff$1145' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_bit_ctrl.\slave_cnt' using process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:594$85'.
+  created $adff cell `$procdff$1150' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_bit_ctrl.\slave_act' using process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:594$85'.
+  created $adff cell `$procdff$1155' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_bit_ctrl.\cmd_ack' using process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:395$80'.
+  created $adff cell `$procdff$1160' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_bit_ctrl.\sda_chk' using process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:395$80'.
+  created $adff cell `$procdff$1165' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_bit_ctrl.\c_state' using process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:395$80'.
+  created $adff cell `$procdff$1170' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_bit_ctrl.\scl_oen_master' using process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:395$80'.
+  created $adff cell `$procdff$1175' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_bit_ctrl.\sda_oen_master' using process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:395$80'.
+  created $adff cell `$procdff$1180' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_bit_ctrl.\dout' using process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:364$77'.
+  created $dff cell `$procdff$1181' with positive edge clock.
+Creating register for signal `\i2c_master_bit_ctrl.\al' using process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:354$67'.
+  created $adff cell `$procdff$1186' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_bit_ctrl.\cmd_stop' using process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:346$64'.
+  created $adff cell `$procdff$1191' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_bit_ctrl.\busy' using process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:335$59'.
+  created $adff cell `$procdff$1196' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_bit_ctrl.\sta_condition' using process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:316$51'.
+  created $adff cell `$procdff$1201' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_bit_ctrl.\sto_condition' using process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:316$51'.
+  created $adff cell `$procdff$1206' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_bit_ctrl.\sSCL' using process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:285$39'.
+  created $adff cell `$procdff$1211' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_bit_ctrl.\sSDA' using process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:285$39'.
+  created $adff cell `$procdff$1216' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_bit_ctrl.\dSCL' using process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:285$39'.
+  created $adff cell `$procdff$1221' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_bit_ctrl.\dSDA' using process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:285$39'.
+  created $adff cell `$procdff$1226' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_bit_ctrl.\fSCL' using process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:266$35'.
+  created $adff cell `$procdff$1231' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_bit_ctrl.\fSDA' using process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:266$35'.
+  created $adff cell `$procdff$1236' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_bit_ctrl.\filter_cnt' using process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:259$28'.
+  created $adff cell `$procdff$1241' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_bit_ctrl.\cSCL' using process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:240$26'.
+  created $adff cell `$procdff$1246' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_bit_ctrl.\cSDA' using process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:240$26'.
+  created $adff cell `$procdff$1251' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_bit_ctrl.\clk_en' using process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:213$17'.
+  created $adff cell `$procdff$1256' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_bit_ctrl.\cnt' using process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:213$17'.
+  created $adff cell `$procdff$1261' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_bit_ctrl.\slave_wait' using process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:203$5'.
+  created $adff cell `$procdff$1266' with positive edge clock and positive level reset.
+Creating register for signal `\i2c_master_bit_ctrl.\dscl_oen' using process `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:198$4'.
+  created $dff cell `$procdff$1267' with positive edge clock.
+Creating register for signal `\i2c_core.\reset_release' using process `\i2c_core.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_core.v:16$2'.
+  created $adff cell `$procdff$1272' with positive edge clock and positive level reset.
+
+7.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+7.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `$paramod\i2c_master_top\ARST_LVL=1'0.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_top.v:307$193'.
+Removing empty process `$paramod\i2c_master_top\ARST_LVL=1'0.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_top.v:307$193'.
+Found and cleaned up 2 empty switches in `$paramod\i2c_master_top\ARST_LVL=1'0.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_top.v:276$180'.
+Removing empty process `$paramod\i2c_master_top\ARST_LVL=1'0.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_top.v:276$180'.
+Found and cleaned up 4 empty switches in `$paramod\i2c_master_top\ARST_LVL=1'0.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_top.v:206$175'.
+Removing empty process `$paramod\i2c_master_top\ARST_LVL=1'0.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_top.v:206$175'.
+Found and cleaned up 3 empty switches in `$paramod\i2c_master_top\ARST_LVL=1'0.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_top.v:179$173'.
+Removing empty process `$paramod\i2c_master_top\ARST_LVL=1'0.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_top.v:179$173'.
+Found and cleaned up 1 empty switch in `$paramod\i2c_master_top\ARST_LVL=1'0.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_top.v:164$172'.
+Removing empty process `$paramod\i2c_master_top\ARST_LVL=1'0.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_top.v:164$172'.
+Removing empty process `$paramod\i2c_master_top\ARST_LVL=1'0.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_top.v:159$168'.
+Found and cleaned up 25 empty switches in `\i2c_master_byte_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:245$126'.
+Removing empty process `i2c_master_byte_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:245$126'.
+Found and cleaned up 3 empty switches in `\i2c_master_byte_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:226$121'.
+Removing empty process `i2c_master_byte_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:226$121'.
+Found and cleaned up 4 empty switches in `\i2c_master_byte_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:211$118'.
+Removing empty process `i2c_master_byte_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:211$118'.
+Removing empty process `i2c_master_byte_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:204$116'.
+Found and cleaned up 8 empty switches in `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:635$97'.
+Removing empty process `i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:635$97'.
+Found and cleaned up 4 empty switches in `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:594$85'.
+Removing empty process `i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:594$85'.
+Found and cleaned up 4 empty switches in `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:395$80'.
+Removing empty process `i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:395$80'.
+Found and cleaned up 1 empty switch in `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:364$77'.
+Removing empty process `i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:364$77'.
+Found and cleaned up 1 empty switch in `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:354$67'.
+Removing empty process `i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:354$67'.
+Found and cleaned up 2 empty switches in `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:346$64'.
+Removing empty process `i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:346$64'.
+Found and cleaned up 1 empty switch in `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:335$59'.
+Removing empty process `i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:335$59'.
+Found and cleaned up 1 empty switch in `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:316$51'.
+Removing empty process `i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:316$51'.
+Found and cleaned up 1 empty switch in `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:285$39'.
+Removing empty process `i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:285$39'.
+Found and cleaned up 2 empty switches in `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:266$35'.
+Removing empty process `i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:266$35'.
+Found and cleaned up 2 empty switches in `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:259$28'.
+Removing empty process `i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:259$28'.
+Found and cleaned up 1 empty switch in `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:240$26'.
+Removing empty process `i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:240$26'.
+Found and cleaned up 2 empty switches in `\i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:213$17'.
+Removing empty process `i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:213$17'.
+Removing empty process `i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:203$5'.
+Removing empty process `i2c_master_bit_ctrl.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:198$4'.
+Removing empty process `i2c_core.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_core.v:16$2'.
+Cleaned up 73 empty switches.
+
+7.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\i2c_master_top\ARST_LVL=1'0.
+<suppressed ~25 debug messages>
+Optimizing module i2c_master_byte_ctrl.
+<suppressed ~57 debug messages>
+Optimizing module i2c_master_bit_ctrl.
+<suppressed ~69 debug messages>
+Optimizing module i2c_core.
+<suppressed ~3 debug messages>
+
+7.3. Executing FLATTEN pass (flatten design).
+Deleting now unused module $paramod\i2c_master_top\ARST_LVL=1'0.
+Deleting now unused module i2c_master_byte_ctrl.
+Deleting now unused module i2c_master_bit_ctrl.
+<suppressed ~3 debug messages>
+
+7.4. Executing OPT_EXPR pass (perform const folding).
+Optimizing module i2c_core.
+
+7.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \i2c_core..
+Removed 86 unused cells and 413 unused wires.
+<suppressed ~89 debug messages>
+
+7.6. Executing CHECK pass (checking for obvious problems).
+Checking module i2c_core...
+Found and reported 0 problems.
+
+7.7. Executing OPT pass (performing simple optimizations).
+
+7.7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module i2c_core.
+
+7.7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\i2c_core'.
+Computing hashes of 547 cells of `\i2c_core'.
+Finding duplicate cells in `\i2c_core'.
+Computing hashes of 431 cells of `\i2c_core'.
+Finding duplicate cells in `\i2c_core'.
+Computing hashes of 427 cells of `\i2c_core'.
+Finding duplicate cells in `\i2c_core'.
+<suppressed ~360 debug messages>
+Removed a total of 120 cells.
+
+7.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \i2c_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~287 debug messages>
+
+7.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \i2c_core.
+    New ctrl vector for $pmux cell $flatten\controller.\byte_controller.\bit_controller.$procmux$792: $auto$opt_reduce.cc:137:opt_pmux$1277
+    New ctrl vector for $pmux cell $flatten\controller.\byte_controller.\bit_controller.$procmux$803: { $auto$opt_reduce.cc:137:opt_pmux$1283 $auto$opt_reduce.cc:137:opt_pmux$1281 $auto$opt_reduce.cc:137:opt_pmux$1279 }
+    New ctrl vector for $pmux cell $flatten\controller.\byte_controller.\bit_controller.$procmux$827: { $auto$opt_reduce.cc:137:opt_pmux$1287 $auto$opt_reduce.cc:137:opt_pmux$1285 }
+    New ctrl vector for $pmux cell $flatten\controller.\byte_controller.\bit_controller.$procmux$850: { $flatten\controller.\byte_controller.\bit_controller.$procmux$874_CMP $flatten\controller.\byte_controller.\bit_controller.$procmux$820_CMP $flatten\controller.\byte_controller.\bit_controller.$procmux$819_CMP $flatten\controller.\byte_controller.\bit_controller.$procmux$818_CMP $flatten\controller.\byte_controller.\bit_controller.$procmux$817_CMP $flatten\controller.\byte_controller.\bit_controller.$procmux$815_CMP $flatten\controller.\byte_controller.\bit_controller.$procmux$814_CMP $flatten\controller.\byte_controller.\bit_controller.$procmux$813_CMP $flatten\controller.\byte_controller.\bit_controller.$procmux$811_CMP $flatten\controller.\byte_controller.\bit_controller.$procmux$810_CMP $flatten\controller.\byte_controller.\bit_controller.$procmux$809_CMP $flatten\controller.\byte_controller.\bit_controller.$procmux$807_CMP $flatten\controller.\byte_controller.\bit_controller.$procmux$806_CMP $flatten\controller.\byte_controller.\bit_controller.$procmux$805_CMP $auto$opt_reduce.cc:137:opt_pmux$1289 }
+    New ctrl vector for $pmux cell $flatten\controller.\byte_controller.\bit_controller.$procmux$881: { $flatten\controller.\byte_controller.\bit_controller.$procmux$805_CMP $auto$opt_reduce.cc:137:opt_pmux$1291 }
+  Optimizing cells in module \i2c_core.
+Performed a total of 5 changes.
+
+7.7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\i2c_core'.
+Computing hashes of 435 cells of `\i2c_core'.
+Finding duplicate cells in `\i2c_core'.
+Computing hashes of 428 cells of `\i2c_core'.
+Finding duplicate cells in `\i2c_core'.
+<suppressed ~21 debug messages>
+Removed a total of 7 cells.
+
+7.7.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \i2c_core..
+Removed 0 unused cells and 127 unused wires.
+<suppressed ~1 debug messages>
+
+7.7.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module i2c_core.
+
+7.7.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+7.7.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \i2c_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~293 debug messages>
+
+7.7.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \i2c_core.
+    New ctrl vector for $pmux cell $flatten\controller.\byte_controller.\bit_controller.$procmux$742: { $flatten\controller.\byte_controller.\bit_controller.$procmux$736_CMP $flatten\controller.\byte_controller.\bit_controller.$procmux$731_CMP $flatten\controller.\byte_controller.\bit_controller.$procmux$748_CMP $flatten\controller.\byte_controller.\bit_controller.$procmux$747_CMP $flatten\controller.\byte_controller.\bit_controller.$procmux$746_CMP $auto$opt_reduce.cc:137:opt_pmux$1293 }
+    New ctrl vector for $pmux cell $flatten\controller.\byte_controller.\bit_controller.$procmux$715: $auto$opt_reduce.cc:137:opt_pmux$1295
+  Optimizing cells in module \i2c_core.
+Performed a total of 2 changes.
+
+7.7.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\i2c_core'.
+Computing hashes of 430 cells of `\i2c_core'.
+Finding duplicate cells in `\i2c_core'.
+Computing hashes of 429 cells of `\i2c_core'.
+Finding duplicate cells in `\i2c_core'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+7.7.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.7.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \i2c_core..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+7.7.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module i2c_core.
+
+7.7.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+7.7.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \i2c_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~291 debug messages>
+
+7.7.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \i2c_core.
+Performed a total of 0 changes.
+
+7.7.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\i2c_core'.
+Computing hashes of 429 cells of `\i2c_core'.
+Finding duplicate cells in `\i2c_core'.
+Removed a total of 0 cells.
+
+7.7.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.7.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \i2c_core..
+
+7.7.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module i2c_core.
+
+7.7.23. Finished fast OPT passes. (There is nothing left to do.)
+
+7.8. Executing FSM pass (extract and optimize FSM).
+
+7.8.1. Executing FSM_DETECT pass (finding FSMs in design).
+Found FSM state register i2c_core.controller.byte_controller.bit_controller.slave_state.
+Not marking i2c_core.controller.byte_controller.bit_controller.c_state as FSM state register:
+    Users of register don't seem to benefit from recoding.
+Found FSM state register i2c_core.controller.byte_controller.c_state.
+Not marking i2c_core.controller.byte_controller.slave_cmd as FSM state register:
+    Users of register don't seem to benefit from recoding.
+Found FSM state register i2c_core.controller.byte_controller.core_cmd.
+
+7.8.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+Extracting FSM `\controller.byte_controller.bit_controller.slave_state' from module `\i2c_core'.
+  found $adff cell for state register: $flatten\controller.\byte_controller.\bit_controller.$procdff$1125
+  root of input selection tree: $flatten\controller.\byte_controller.\bit_controller.$0\slave_state[4:0]
+  found reset state: 5'00000 (from async reset)
+  found ctrl input: $flatten\controller.\byte_controller.\bit_controller.$logic_or$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:643$101_Y
+  found ctrl input: $auto$opt_reduce.cc:137:opt_pmux$1293
+  found ctrl input: $flatten\controller.\byte_controller.\bit_controller.$procmux$746_CMP
+  found ctrl input: $flatten\controller.\byte_controller.\bit_controller.$procmux$747_CMP
+  found ctrl input: $flatten\controller.\byte_controller.\bit_controller.$procmux$748_CMP
+  found ctrl input: $flatten\controller.\byte_controller.\bit_controller.$procmux$731_CMP
+  found ctrl input: $flatten\controller.\byte_controller.\bit_controller.$procmux$736_CMP
+  found ctrl input: $flatten\controller.\byte_controller.\bit_controller.$and$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:209$15_Y
+  found state code: 5'10000
+  found ctrl input: $flatten\controller.\byte_controller.\bit_controller.$and$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:365$79_Y
+  found state code: 5'01000
+  found state code: 5'10001
+  found ctrl input: $flatten\controller.\byte_controller.\bit_controller.$and$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:682$104_Y
+  found state code: 5'00010
+  found ctrl input: $flatten\controller.\byte_controller.\bit_controller.$procmux$757_CMP
+  found ctrl input: $flatten\controller.\byte_controller.\bit_controller.$procmux$735_CMP
+  found state code: 5'00100
+  found state code: 5'00001
+  found ctrl output: $flatten\controller.\byte_controller.\bit_controller.$procmux$748_CMP
+  found ctrl output: $flatten\controller.\byte_controller.\bit_controller.$procmux$747_CMP
+  found ctrl output: $flatten\controller.\byte_controller.\bit_controller.$procmux$746_CMP
+  found ctrl output: $flatten\controller.\byte_controller.\bit_controller.$procmux$736_CMP
+  found ctrl output: $flatten\controller.\byte_controller.\bit_controller.$procmux$731_CMP
+  found ctrl output: $flatten\controller.\byte_controller.\bit_controller.$procmux$719_CMP
+  found ctrl output: $flatten\controller.\byte_controller.\bit_controller.$procmux$716_CMP
+  ctrl inputs: { $flatten\controller.\byte_controller.\bit_controller.$and$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:209$15_Y $flatten\controller.\byte_controller.\bit_controller.$and$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:365$79_Y $flatten\controller.\byte_controller.\bit_controller.$logic_or$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:643$101_Y $flatten\controller.\byte_controller.\bit_controller.$and$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:682$104_Y $flatten\controller.\byte_controller.\bit_controller.$procmux$735_CMP $flatten\controller.\byte_controller.\bit_controller.$procmux$757_CMP $auto$opt_reduce.cc:137:opt_pmux$1293 }
+  ctrl outputs: { $flatten\controller.\byte_controller.\bit_controller.$0\slave_state[4:0] $flatten\controller.\byte_controller.\bit_controller.$procmux$716_CMP $flatten\controller.\byte_controller.\bit_controller.$procmux$719_CMP $flatten\controller.\byte_controller.\bit_controller.$procmux$731_CMP $flatten\controller.\byte_controller.\bit_controller.$procmux$736_CMP $flatten\controller.\byte_controller.\bit_controller.$procmux$746_CMP $flatten\controller.\byte_controller.\bit_controller.$procmux$747_CMP $flatten\controller.\byte_controller.\bit_controller.$procmux$748_CMP }
+  transition:    5'00000 7'--0-00- ->    5'00000 12'000000001000
+  transition:    5'00000 7'--0-1-- ->    5'00001 12'000010001000
+  transition:    5'00000 7'--0--1- ->    5'00100 12'001000001000
+  transition:    5'00000 7'--1---- ->    5'00000 12'000000001000
+  transition:    5'10000 7'--0---- ->    5'10001 12'100010000001
+  transition:    5'10000 7'--1---- ->    5'00000 12'000000000001
+  transition:    5'01000 7'0-0---- ->    5'01000 12'010001000000
+  transition:    5'01000 7'1-0---- ->    5'10000 12'100001000000
+  transition:    5'01000 7'--1---- ->    5'00000 12'000001000000
+  transition:    5'00100 7'-00---- ->    5'00100 12'001000000100
+  transition:    5'00100 7'-10---- ->    5'01000 12'010000000100
+  transition:    5'00100 7'--1---- ->    5'00000 12'000000000100
+  transition:    5'00010 7'0-0---- ->    5'00010 12'000100100000
+  transition:    5'00010 7'1-0---- ->    5'10000 12'100000100000
+  transition:    5'00010 7'--1---- ->    5'00000 12'000000100000
+  transition:    5'00001 7'--00--- ->    5'00001 12'000010010000
+  transition:    5'00001 7'--01--- ->    5'00010 12'000100010000
+  transition:    5'00001 7'--1---- ->    5'00000 12'000000010000
+  transition:    5'10001 7'--0---- ->    5'00000 12'000000000010
+  transition:    5'10001 7'--1---- ->    5'00000 12'000000000010
+Extracting FSM `\controller.byte_controller.c_state' from module `\i2c_core'.
+  found $adff cell for state register: $flatten\controller.\byte_controller.$procdff$1050
+  root of input selection tree: $flatten\controller.\byte_controller.$0\c_state[9:0]
+  found reset state: 10'0000000000 (from async reset)
+  found ctrl input: $flatten\controller.\byte_controller.$or$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:264$129_Y
+  found ctrl input: $flatten\controller.\byte_controller.$procmux$333_CMP
+  found ctrl input: $flatten\controller.\byte_controller.$procmux$340_CMP
+  found ctrl input: $flatten\controller.\byte_controller.$procmux$371_CMP
+  found ctrl input: $flatten\controller.\byte_controller.$procmux$377_CMP
+  found ctrl input: $flatten\controller.\byte_controller.$procmux$352_CMP
+  found ctrl input: $flatten\controller.\byte_controller.$procmux$322_CMP
+  found ctrl input: $flatten\controller.\byte_controller.$procmux$584_CMP
+  found ctrl input: $flatten\controller.\byte_controller.$procmux$355_CMP
+  found ctrl input: $flatten\controller.\byte_controller.$procmux$380_CMP
+  found ctrl input: $flatten\controller.\byte_controller.$procmux$386_CMP
+  found ctrl input: $flatten\controller.\byte_controller.$procmux$361_CMP
+  found ctrl input: \controller.byte_controller.bit_controller.cmd_ack
+  found ctrl input: \controller.cr [6]
+  found state code: 10'0000010000
+  found ctrl input: $flatten\controller.\byte_controller.$reduce_or$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:236$124_Y
+  found state code: 10'0000001000
+  found state code: 10'0000000010
+  found state code: 10'0000000100
+  found ctrl input: \controller.cr [5]
+  found ctrl input: \controller.byte_controller.bit_controller.cmd_slave_ack
+  found ctrl input: \controller.byte_controller.bit_controller.dout
+  found state code: 10'0100000000
+  found ctrl input: \controller.byte_controller.bit_controller.slave_adr [0]
+  found state code: 10'0010000000
+  found state code: 10'0001000000
+  found ctrl input: \controller.cr [1]
+  found state code: 10'1000000000
+  found state code: 10'0000100000
+  found ctrl input: $flatten\controller.\byte_controller.$and$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:296$132_Y
+  found ctrl input: $flatten\controller.\byte_controller.$logic_and$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:306$134_Y
+  found ctrl input: \controller.cr [7]
+  found ctrl input: \controller.cr [4]
+  found state code: 10'0000000001
+  found ctrl output: $flatten\controller.\byte_controller.$procmux$333_CMP
+  found ctrl output: $flatten\controller.\byte_controller.$procmux$340_CMP
+  found ctrl output: $flatten\controller.\byte_controller.$procmux$371_CMP
+  found ctrl output: $flatten\controller.\byte_controller.$procmux$377_CMP
+  found ctrl output: $flatten\controller.\byte_controller.$procmux$352_CMP
+  found ctrl output: $flatten\controller.\byte_controller.$procmux$355_CMP
+  found ctrl output: $flatten\controller.\byte_controller.$procmux$322_CMP
+  found ctrl output: $flatten\controller.\byte_controller.$procmux$584_CMP
+  found ctrl output: $flatten\controller.\byte_controller.$procmux$380_CMP
+  found ctrl output: $flatten\controller.\byte_controller.$procmux$386_CMP
+  found ctrl output: $flatten\controller.\byte_controller.$procmux$361_CMP
+  ctrl inputs: { \controller.cr [7:4] \controller.cr [1] \controller.byte_controller.bit_controller.cmd_ack \controller.byte_controller.bit_controller.dout \controller.byte_controller.bit_controller.slave_adr [0] \controller.byte_controller.bit_controller.cmd_slave_ack $flatten\controller.\byte_controller.$logic_and$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:306$134_Y $flatten\controller.\byte_controller.$and$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:296$132_Y $flatten\controller.\byte_controller.$or$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:264$129_Y $flatten\controller.\byte_controller.$reduce_or$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:236$124_Y }
+  ctrl outputs: { $flatten\controller.\byte_controller.$procmux$584_CMP $flatten\controller.\byte_controller.$procmux$386_CMP $flatten\controller.\byte_controller.$procmux$380_CMP $flatten\controller.\byte_controller.$procmux$377_CMP $flatten\controller.\byte_controller.$procmux$371_CMP $flatten\controller.\byte_controller.$procmux$361_CMP $flatten\controller.\byte_controller.$procmux$355_CMP $flatten\controller.\byte_controller.$procmux$352_CMP $flatten\controller.\byte_controller.$procmux$340_CMP $flatten\controller.\byte_controller.$procmux$333_CMP $flatten\controller.\byte_controller.$procmux$322_CMP $flatten\controller.\byte_controller.$0\c_state[9:0] }
+  transition: 10'0000000000 13'---------000- -> 10'0000000000 21'000001000000000000000
+  transition: 10'0000000000 13'0-00-----100- -> 10'0000010000 21'000001000000000010000
+  transition: 10'0000000000 13'0-01-----100- -> 10'0000000100 21'000001000000000000100
+  transition: 10'0000000000 13'0-1------100- -> 10'0000000010 21'000001000000000000010
+  transition: 10'0000000000 13'1--------100- -> 10'0000000001 21'000001000000000000001
+  transition: 10'0000000000 13'----------10- -> 10'0000100000 21'000001000000000100000
+  transition: 10'0000000000 13'-----------1- -> 10'0000000000 21'000001000000000000000
+  transition: 10'1000000000 13'-------0---0- -> 10'0010000000 21'100000000000010000000
+  transition: 10'1000000000 13'-------1---0- -> 10'0001000000 21'100000000000001000000
+  transition: 10'1000000000 13'-----------1- -> 10'0000000000 21'100000000000000000000
+  transition: 10'0100000000 13'----0------0- -> 10'0100000000 21'000000100000100000000
+  transition: 10'0100000000 13'----1------0- -> 10'1000000000 21'000000100001000000000
+  transition: 10'0100000000 13'-----------1- -> 10'0000000000 21'000000100000000000000
+  transition: 10'0010000000 13'--------0--0- -> 10'0010000000 21'001000000000010000000
+  transition: 10'0010000000 13'--------1--00 -> 10'0000100000 21'001000000000000100000
+  transition: 10'0010000000 13'--------1--01 -> 10'0010000000 21'001000000000010000000
+  transition: 10'0010000000 13'-----------1- -> 10'0000000000 21'001000000000000000000
+  transition: 10'0001000000 13'--------0--0- -> 10'0001000000 21'010000000000001000000
+  transition: 10'0001000000 13'--------1--00 -> 10'0000100000 21'010000000000000100000
+  transition: 10'0001000000 13'--------1--01 -> 10'0001000000 21'010000000000001000000
+  transition: 10'0001000000 13'-----------1- -> 10'0000000000 21'010000000000000000000
+  transition: 10'0000100000 13'--------0--0- -> 10'0000100000 21'000000000010000100000
+  transition: 10'0000100000 13'------0-1--0- -> 10'0100000000 21'000000000010100000000
+  transition: 10'0000100000 13'------1-1--0- -> 10'0000000000 21'000000000010000000000
+  transition: 10'0000100000 13'-----------1- -> 10'0000000000 21'000000000010000000000
+  transition: 10'0000010000 13'-----0-----0- -> 10'0000010000 21'000000000100000010000
+  transition: 10'0000010000 13'-----1-----0- -> 10'0000000000 21'000000000100000000000
+  transition: 10'0000010000 13'-----------1- -> 10'0000000000 21'000000000100000000000
+  transition: 10'0000001000 13'-----0-----0- -> 10'0000001000 21'000000001000000001000
+  transition: 10'0000001000 13'-0---1-----0- -> 10'0000000000 21'000000001000000000000
+  transition: 10'0000001000 13'-1---1-----0- -> 10'0000010000 21'000000001000000010000
+  transition: 10'0000001000 13'-----------1- -> 10'0000000000 21'000000001000000000000
+  transition: 10'0000000100 13'-----0-----0- -> 10'0000000100 21'000100000000000000100
+  transition: 10'0000000100 13'-----1-----00 -> 10'0000001000 21'000100000000000001000
+  transition: 10'0000000100 13'-----1-----01 -> 10'0000000100 21'000100000000000000100
+  transition: 10'0000000100 13'-----------1- -> 10'0000000000 21'000100000000000000000
+  transition: 10'0000000010 13'-----0-----0- -> 10'0000000010 21'000010000000000000010
+  transition: 10'0000000010 13'-----1-----00 -> 10'0000001000 21'000010000000000001000
+  transition: 10'0000000010 13'-----1-----01 -> 10'0000000010 21'000010000000000000010
+  transition: 10'0000000010 13'-----------1- -> 10'0000000000 21'000010000000000000000
+  transition: 10'0000000001 13'-----0-----0- -> 10'0000000001 21'000000010000000000001
+  transition: 10'0000000001 13'--0--1-----0- -> 10'0000000100 21'000000010000000000100
+  transition: 10'0000000001 13'--1--1-----0- -> 10'0000000010 21'000000010000000000010
+  transition: 10'0000000001 13'-----------1- -> 10'0000000000 21'000000010000000000000
+Extracting FSM `\controller.byte_controller.core_cmd' from module `\i2c_core'.
+  found $adff cell for state register: $flatten\controller.\byte_controller.$procdff$1080
+  root of input selection tree: $flatten\controller.\byte_controller.$0\core_cmd[3:0]
+  found reset state: 4'0000 (from async reset)
+  found ctrl input: $flatten\controller.\byte_controller.$or$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:264$129_Y
+  found ctrl input: $flatten\controller.\byte_controller.$procmux$333_CMP
+  found ctrl input: $flatten\controller.\byte_controller.$procmux$340_CMP
+  found ctrl input: $flatten\controller.\byte_controller.$procmux$371_CMP
+  found ctrl input: $flatten\controller.\byte_controller.$procmux$377_CMP
+  found ctrl input: $flatten\controller.\byte_controller.$procmux$352_CMP
+  found ctrl input: $flatten\controller.\byte_controller.$procmux$361_CMP
+  found ctrl input: \controller.byte_controller.bit_controller.cmd_ack
+  found ctrl input: \controller.cr [6]
+  found state code: 4'0010
+  found ctrl input: $flatten\controller.\byte_controller.$reduce_or$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:236$124_Y
+  found state code: 4'0100
+  found state code: 4'1000
+  found ctrl input: \controller.cr [5]
+  found ctrl input: $flatten\controller.\byte_controller.$and$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:296$132_Y
+  found ctrl input: $flatten\controller.\byte_controller.$logic_and$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:306$134_Y
+  found ctrl input: \controller.cr [7]
+  found ctrl input: \controller.cr [4]
+  found state code: 4'0001
+  found ctrl output: $flatten\controller.\byte_controller.\bit_controller.$procmux$873_CMP
+  found ctrl output: $flatten\controller.\byte_controller.\bit_controller.$procmux$871_CMP
+  found ctrl output: $flatten\controller.\byte_controller.\bit_controller.$procmux$870_CMP
+  found ctrl output: $flatten\controller.\byte_controller.\bit_controller.$eq$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:352$66_Y
+  ctrl inputs: { \controller.cr [7:4] \controller.byte_controller.bit_controller.cmd_ack $flatten\controller.\byte_controller.$procmux$377_CMP $flatten\controller.\byte_controller.$procmux$371_CMP $flatten\controller.\byte_controller.$procmux$361_CMP $flatten\controller.\byte_controller.$procmux$352_CMP $flatten\controller.\byte_controller.$procmux$340_CMP $flatten\controller.\byte_controller.$procmux$333_CMP $flatten\controller.\byte_controller.$logic_and$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:306$134_Y $flatten\controller.\byte_controller.$and$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:296$132_Y $flatten\controller.\byte_controller.$or$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:264$129_Y $flatten\controller.\byte_controller.$reduce_or$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:236$124_Y }
+  ctrl outputs: { $flatten\controller.\byte_controller.\bit_controller.$eq$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:352$66_Y $flatten\controller.\byte_controller.\bit_controller.$procmux$870_CMP $flatten\controller.\byte_controller.\bit_controller.$procmux$871_CMP $flatten\controller.\byte_controller.\bit_controller.$procmux$873_CMP $flatten\controller.\byte_controller.$0\core_cmd[3:0] }
+  transition:     4'0000 15'-----000000--0- ->     4'0000 8'00000000
+  transition:     4'0000 15'-------1---000- ->     4'0000 8'00000000
+  transition:     4'0000 15'0-00---1---100- ->     4'0010 8'00000010
+  transition:     4'0000 15'0-01---1---100- ->     4'0100 8'00000100
+  transition:     4'0000 15'0-1----1---100- ->     4'1000 8'00001000
+  transition:     4'0000 15'1------1---100- ->     4'0001 8'00000001
+  transition:     4'0000 15'-------1----10- ->     4'0000 8'00000000
+  transition:     4'0000 15'----0---1----0- ->     4'0000 8'00000000
+  transition:     4'0000 15'--0-1---1----0- ->     4'0100 8'00000100
+  transition:     4'0000 15'--1-1---1----0- ->     4'1000 8'00001000
+  transition:     4'0000 15'----01-------0- ->     4'0000 8'00000000
+  transition:     4'0000 15'----11-------00 ->     4'1000 8'00001000
+  transition:     4'0000 15'----11-------01 ->     4'0100 8'00000100
+  transition:     4'0000 15'----0-1------0- ->     4'0000 8'00000000
+  transition:     4'0000 15'----1-1------00 ->     4'0100 8'00000100
+  transition:     4'0000 15'----1-1------01 ->     4'1000 8'00001000
+  transition:     4'0000 15'----0----1---0- ->     4'0000 8'00000000
+  transition:     4'0000 15'-0--1----1---0- ->     4'0000 8'00000000
+  transition:     4'0000 15'-1--1----1---0- ->     4'0010 8'00000010
+  transition:     4'0000 15'----0-----1--0- ->     4'0000 8'00000000
+  transition:     4'0000 15'----1-----1--0- ->     4'0000 8'00000000
+  transition:     4'0000 15'-------------1- ->     4'0000 8'00000000
+  transition:     4'1000 15'-----000000--0- ->     4'1000 8'01001000
+  transition:     4'1000 15'-------1---000- ->     4'1000 8'01001000
+  transition:     4'1000 15'0-00---1---100- ->     4'0010 8'01000010
+  transition:     4'1000 15'0-01---1---100- ->     4'0100 8'01000100
+  transition:     4'1000 15'0-1----1---100- ->     4'1000 8'01001000
+  transition:     4'1000 15'1------1---100- ->     4'0001 8'01000001
+  transition:     4'1000 15'-------1----10- ->     4'1000 8'01001000
+  transition:     4'1000 15'----0---1----0- ->     4'1000 8'01001000
+  transition:     4'1000 15'--0-1---1----0- ->     4'0100 8'01000100
+  transition:     4'1000 15'--1-1---1----0- ->     4'1000 8'01001000
+  transition:     4'1000 15'----01-------0- ->     4'1000 8'01001000
+  transition:     4'1000 15'----11-------00 ->     4'1000 8'01001000
+  transition:     4'1000 15'----11-------01 ->     4'0100 8'01000100
+  transition:     4'1000 15'----0-1------0- ->     4'1000 8'01001000
+  transition:     4'1000 15'----1-1------00 ->     4'0100 8'01000100
+  transition:     4'1000 15'----1-1------01 ->     4'1000 8'01001000
+  transition:     4'1000 15'----0----1---0- ->     4'1000 8'01001000
+  transition:     4'1000 15'-0--1----1---0- ->     4'0000 8'01000000
+  transition:     4'1000 15'-1--1----1---0- ->     4'0010 8'01000010
+  transition:     4'1000 15'----0-----1--0- ->     4'1000 8'01001000
+  transition:     4'1000 15'----1-----1--0- ->     4'0000 8'01000000
+  transition:     4'1000 15'-------------1- ->     4'0000 8'01000000
+  transition:     4'0100 15'-----000000--0- ->     4'0100 8'00100100
+  transition:     4'0100 15'-------1---000- ->     4'0100 8'00100100
+  transition:     4'0100 15'0-00---1---100- ->     4'0010 8'00100010
+  transition:     4'0100 15'0-01---1---100- ->     4'0100 8'00100100
+  transition:     4'0100 15'0-1----1---100- ->     4'1000 8'00101000
+  transition:     4'0100 15'1------1---100- ->     4'0001 8'00100001
+  transition:     4'0100 15'-------1----10- ->     4'0100 8'00100100
+  transition:     4'0100 15'----0---1----0- ->     4'0100 8'00100100
+  transition:     4'0100 15'--0-1---1----0- ->     4'0100 8'00100100
+  transition:     4'0100 15'--1-1---1----0- ->     4'1000 8'00101000
+  transition:     4'0100 15'----01-------0- ->     4'0100 8'00100100
+  transition:     4'0100 15'----11-------00 ->     4'1000 8'00101000
+  transition:     4'0100 15'----11-------01 ->     4'0100 8'00100100
+  transition:     4'0100 15'----0-1------0- ->     4'0100 8'00100100
+  transition:     4'0100 15'----1-1------00 ->     4'0100 8'00100100
+  transition:     4'0100 15'----1-1------01 ->     4'1000 8'00101000
+  transition:     4'0100 15'----0----1---0- ->     4'0100 8'00100100
+  transition:     4'0100 15'-0--1----1---0- ->     4'0000 8'00100000
+  transition:     4'0100 15'-1--1----1---0- ->     4'0010 8'00100010
+  transition:     4'0100 15'----0-----1--0- ->     4'0100 8'00100100
+  transition:     4'0100 15'----1-----1--0- ->     4'0000 8'00100000
+  transition:     4'0100 15'-------------1- ->     4'0000 8'00100000
+  transition:     4'0010 15'-----000000--0- ->     4'0010 8'10000010
+  transition:     4'0010 15'-------1---000- ->     4'0010 8'10000010
+  transition:     4'0010 15'0-00---1---100- ->     4'0010 8'10000010
+  transition:     4'0010 15'0-01---1---100- ->     4'0100 8'10000100
+  transition:     4'0010 15'0-1----1---100- ->     4'1000 8'10001000
+  transition:     4'0010 15'1------1---100- ->     4'0001 8'10000001
+  transition:     4'0010 15'-------1----10- ->     4'0010 8'10000010
+  transition:     4'0010 15'----0---1----0- ->     4'0010 8'10000010
+  transition:     4'0010 15'--0-1---1----0- ->     4'0100 8'10000100
+  transition:     4'0010 15'--1-1---1----0- ->     4'1000 8'10001000
+  transition:     4'0010 15'----01-------0- ->     4'0010 8'10000010
+  transition:     4'0010 15'----11-------00 ->     4'1000 8'10001000
+  transition:     4'0010 15'----11-------01 ->     4'0100 8'10000100
+  transition:     4'0010 15'----0-1------0- ->     4'0010 8'10000010
+  transition:     4'0010 15'----1-1------00 ->     4'0100 8'10000100
+  transition:     4'0010 15'----1-1------01 ->     4'1000 8'10001000
+  transition:     4'0010 15'----0----1---0- ->     4'0010 8'10000010
+  transition:     4'0010 15'-0--1----1---0- ->     4'0000 8'10000000
+  transition:     4'0010 15'-1--1----1---0- ->     4'0010 8'10000010
+  transition:     4'0010 15'----0-----1--0- ->     4'0010 8'10000010
+  transition:     4'0010 15'----1-----1--0- ->     4'0000 8'10000000
+  transition:     4'0010 15'-------------1- ->     4'0000 8'10000000
+  transition:     4'0001 15'-----000000--0- ->     4'0001 8'00010001
+  transition:     4'0001 15'-------1---000- ->     4'0001 8'00010001
+  transition:     4'0001 15'0-00---1---100- ->     4'0010 8'00010010
+  transition:     4'0001 15'0-01---1---100- ->     4'0100 8'00010100
+  transition:     4'0001 15'0-1----1---100- ->     4'1000 8'00011000
+  transition:     4'0001 15'1------1---100- ->     4'0001 8'00010001
+  transition:     4'0001 15'-------1----10- ->     4'0001 8'00010001
+  transition:     4'0001 15'----0---1----0- ->     4'0001 8'00010001
+  transition:     4'0001 15'--0-1---1----0- ->     4'0100 8'00010100
+  transition:     4'0001 15'--1-1---1----0- ->     4'1000 8'00011000
+  transition:     4'0001 15'----01-------0- ->     4'0001 8'00010001
+  transition:     4'0001 15'----11-------00 ->     4'1000 8'00011000
+  transition:     4'0001 15'----11-------01 ->     4'0100 8'00010100
+  transition:     4'0001 15'----0-1------0- ->     4'0001 8'00010001
+  transition:     4'0001 15'----1-1------00 ->     4'0100 8'00010100
+  transition:     4'0001 15'----1-1------01 ->     4'1000 8'00011000
+  transition:     4'0001 15'----0----1---0- ->     4'0001 8'00010001
+  transition:     4'0001 15'-0--1----1---0- ->     4'0000 8'00010000
+  transition:     4'0001 15'-1--1----1---0- ->     4'0010 8'00010010
+  transition:     4'0001 15'----0-----1--0- ->     4'0001 8'00010001
+  transition:     4'0001 15'----1-----1--0- ->     4'0000 8'00010000
+  transition:     4'0001 15'-------------1- ->     4'0000 8'00010000
+
+7.8.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\controller.byte_controller.core_cmd$1318' from module `\i2c_core'.
+  Merging pattern 15'----0-----1--0- and 15'----1-----1--0- from group (0 0 8'00000000).
+  Merging pattern 15'----1-----1--0- and 15'----0-----1--0- from group (0 0 8'00000000).
+Optimizing FSM `$fsm$\controller.byte_controller.c_state$1305' from module `\i2c_core'.
+Optimizing FSM `$fsm$\controller.byte_controller.bit_controller.slave_state$1296' from module `\i2c_core'.
+  Merging pattern 7'--0---- and 7'--1---- from group (6 0 12'000000000010).
+  Merging pattern 7'--1---- and 7'--0---- from group (6 0 12'000000000010).
+  Removing unused input signal $auto$opt_reduce.cc:137:opt_pmux$1293.
+
+7.8.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \i2c_core..
+Removed 71 unused cells and 72 unused wires.
+<suppressed ~73 debug messages>
+
+7.8.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\controller.byte_controller.bit_controller.slave_state$1296' from module `\i2c_core'.
+  Removing unused output signal $flatten\controller.\byte_controller.\bit_controller.$procmux$748_CMP.
+  Removing unused output signal $flatten\controller.\byte_controller.\bit_controller.$procmux$747_CMP.
+  Removing unused output signal $flatten\controller.\byte_controller.\bit_controller.$procmux$746_CMP.
+  Removing unused output signal $flatten\controller.\byte_controller.\bit_controller.$0\slave_state[4:0] [0].
+  Removing unused output signal $flatten\controller.\byte_controller.\bit_controller.$0\slave_state[4:0] [1].
+  Removing unused output signal $flatten\controller.\byte_controller.\bit_controller.$0\slave_state[4:0] [2].
+  Removing unused output signal $flatten\controller.\byte_controller.\bit_controller.$0\slave_state[4:0] [3].
+  Removing unused output signal $flatten\controller.\byte_controller.\bit_controller.$0\slave_state[4:0] [4].
+Optimizing FSM `$fsm$\controller.byte_controller.c_state$1305' from module `\i2c_core'.
+  Removing unused output signal $flatten\controller.\byte_controller.$0\c_state[9:0] [0].
+  Removing unused output signal $flatten\controller.\byte_controller.$0\c_state[9:0] [1].
+  Removing unused output signal $flatten\controller.\byte_controller.$0\c_state[9:0] [2].
+  Removing unused output signal $flatten\controller.\byte_controller.$0\c_state[9:0] [3].
+  Removing unused output signal $flatten\controller.\byte_controller.$0\c_state[9:0] [4].
+  Removing unused output signal $flatten\controller.\byte_controller.$0\c_state[9:0] [5].
+  Removing unused output signal $flatten\controller.\byte_controller.$0\c_state[9:0] [6].
+  Removing unused output signal $flatten\controller.\byte_controller.$0\c_state[9:0] [7].
+  Removing unused output signal $flatten\controller.\byte_controller.$0\c_state[9:0] [8].
+  Removing unused output signal $flatten\controller.\byte_controller.$0\c_state[9:0] [9].
+Optimizing FSM `$fsm$\controller.byte_controller.core_cmd$1318' from module `\i2c_core'.
+  Removing unused output signal $flatten\controller.\byte_controller.$0\core_cmd[3:0] [0].
+  Removing unused output signal $flatten\controller.\byte_controller.$0\core_cmd[3:0] [1].
+  Removing unused output signal $flatten\controller.\byte_controller.$0\core_cmd[3:0] [2].
+  Removing unused output signal $flatten\controller.\byte_controller.$0\core_cmd[3:0] [3].
+
+7.8.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+Recoding FSM `$fsm$\controller.byte_controller.bit_controller.slave_state$1296' from module `\i2c_core' using `auto' encoding:
+  mapping auto encoding to `one-hot` for this FSM.
+  00000 -> ------1
+  10000 -> -----1-
+  01000 -> ----1--
+  00100 -> ---1---
+  00010 -> --1----
+  00001 -> -1-----
+  10001 -> 1------
+Recoding FSM `$fsm$\controller.byte_controller.c_state$1305' from module `\i2c_core' using `auto' encoding:
+  mapping auto encoding to `one-hot` for this FSM.
+  0000000000 -> ----------1
+  1000000000 -> ---------1-
+  0100000000 -> --------1--
+  0010000000 -> -------1---
+  0001000000 -> ------1----
+  0000100000 -> -----1-----
+  0000010000 -> ----1------
+  0000001000 -> ---1-------
+  0000000100 -> --1--------
+  0000000010 -> -1---------
+  0000000001 -> 1----------
+Recoding FSM `$fsm$\controller.byte_controller.core_cmd$1318' from module `\i2c_core' using `auto' encoding:
+  mapping auto encoding to `one-hot` for this FSM.
+  0000 -> ----1
+  1000 -> ---1-
+  0100 -> --1--
+  0010 -> -1---
+  0001 -> 1----
+
+7.8.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+FSM `$fsm$\controller.byte_controller.bit_controller.slave_state$1296' from module `i2c_core':
+-------------------------------------
+
+  Information on FSM $fsm$\controller.byte_controller.bit_controller.slave_state$1296 (\controller.byte_controller.bit_controller.slave_state):
+
+  Number of input signals:    6
+  Number of output signals:   4
+  Number of state bits:       7
+
+  Input signals:
+    0: $flatten\controller.\byte_controller.\bit_controller.$procmux$757_CMP
+    1: $flatten\controller.\byte_controller.\bit_controller.$procmux$735_CMP
+    2: $flatten\controller.\byte_controller.\bit_controller.$and$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:682$104_Y
+    3: $flatten\controller.\byte_controller.\bit_controller.$logic_or$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:643$101_Y
+    4: $flatten\controller.\byte_controller.\bit_controller.$and$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:365$79_Y
+    5: $flatten\controller.\byte_controller.\bit_controller.$and$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:209$15_Y
+
+  Output signals:
+    0: $flatten\controller.\byte_controller.\bit_controller.$procmux$736_CMP
+    1: $flatten\controller.\byte_controller.\bit_controller.$procmux$731_CMP
+    2: $flatten\controller.\byte_controller.\bit_controller.$procmux$719_CMP
+    3: $flatten\controller.\byte_controller.\bit_controller.$procmux$716_CMP
+
+  State encoding:
+    0:  7'------1  <RESET STATE>
+    1:  7'-----1-
+    2:  7'----1--
+    3:  7'---1---
+    4:  7'--1----
+    5:  7'-1-----
+    6:  7'1------
+
+  Transition Table (state_in, ctrl_in, state_out, ctrl_out):
+      0:     0 6'--0-00   ->     0 4'0001
+      1:     0 6'--1---   ->     0 4'0001
+      2:     0 6'--0--1   ->     3 4'0001
+      3:     0 6'--0-1-   ->     5 4'0001
+      4:     1 6'--1---   ->     0 4'0000
+      5:     1 6'--0---   ->     6 4'0000
+      6:     2 6'--1---   ->     0 4'1000
+      7:     2 6'1-0---   ->     1 4'1000
+      8:     2 6'0-0---   ->     2 4'1000
+      9:     3 6'--1---   ->     0 4'0000
+     10:     3 6'-10---   ->     2 4'0000
+     11:     3 6'-00---   ->     3 4'0000
+     12:     4 6'--1---   ->     0 4'0100
+     13:     4 6'1-0---   ->     1 4'0100
+     14:     4 6'0-0---   ->     4 4'0100
+     15:     5 6'--1---   ->     0 4'0010
+     16:     5 6'--01--   ->     4 4'0010
+     17:     5 6'--00--   ->     5 4'0010
+     18:     6 6'------   ->     0 4'0000
+
+-------------------------------------
+
+FSM `$fsm$\controller.byte_controller.c_state$1305' from module `i2c_core':
+-------------------------------------
+
+  Information on FSM $fsm$\controller.byte_controller.c_state$1305 (\controller.byte_controller.c_state):
+
+  Number of input signals:   13
+  Number of output signals:  11
+  Number of state bits:      11
+
+  Input signals:
+    0: $flatten\controller.\byte_controller.$reduce_or$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:236$124_Y
+    1: $flatten\controller.\byte_controller.$or$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:264$129_Y
+    2: $flatten\controller.\byte_controller.$and$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:296$132_Y
+    3: $flatten\controller.\byte_controller.$logic_and$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:306$134_Y
+    4: \controller.byte_controller.bit_controller.cmd_slave_ack
+    5: \controller.byte_controller.bit_controller.slave_adr [0]
+    6: \controller.byte_controller.bit_controller.dout
+    7: \controller.byte_controller.bit_controller.cmd_ack
+    8: \controller.cr [1]
+    9: \controller.cr [4]
+   10: \controller.cr [5]
+   11: \controller.cr [6]
+   12: \controller.cr [7]
+
+  Output signals:
+    0: $flatten\controller.\byte_controller.$procmux$322_CMP
+    1: $flatten\controller.\byte_controller.$procmux$333_CMP
+    2: $flatten\controller.\byte_controller.$procmux$340_CMP
+    3: $flatten\controller.\byte_controller.$procmux$352_CMP
+    4: $flatten\controller.\byte_controller.$procmux$355_CMP
+    5: $flatten\controller.\byte_controller.$procmux$361_CMP
+    6: $flatten\controller.\byte_controller.$procmux$371_CMP
+    7: $flatten\controller.\byte_controller.$procmux$377_CMP
+    8: $flatten\controller.\byte_controller.$procmux$380_CMP
+    9: $flatten\controller.\byte_controller.$procmux$386_CMP
+   10: $flatten\controller.\byte_controller.$procmux$584_CMP
+
+  State encoding:
+    0: 11'----------1  <RESET STATE>
+    1: 11'---------1-
+    2: 11'--------1--
+    3: 11'-------1---
+    4: 11'------1----
+    5: 11'-----1-----
+    6: 11'----1------
+    7: 11'---1-------
+    8: 11'--1--------
+    9: 11'-1---------
+   10: 11'1----------
+
+  Transition Table (state_in, ctrl_in, state_out, ctrl_out):
+      0:     0 13'---------000-   ->     0 11'00000100000
+      1:     0 13'-----------1-   ->     0 11'00000100000
+      2:     0 13'----------10-   ->     5 11'00000100000
+      3:     0 13'0-00-----100-   ->     6 11'00000100000
+      4:     0 13'0-01-----100-   ->     8 11'00000100000
+      5:     0 13'0-1------100-   ->     9 11'00000100000
+      6:     0 13'1--------100-   ->    10 11'00000100000
+      7:     1 13'-----------1-   ->     0 11'10000000000
+      8:     1 13'-------0---0-   ->     3 11'10000000000
+      9:     1 13'-------1---0-   ->     4 11'10000000000
+     10:     2 13'-----------1-   ->     0 11'00000010000
+     11:     2 13'----1------0-   ->     1 11'00000010000
+     12:     2 13'----0------0-   ->     2 11'00000010000
+     13:     3 13'-----------1-   ->     0 11'00100000000
+     14:     3 13'--------1--01   ->     3 11'00100000000
+     15:     3 13'--------0--0-   ->     3 11'00100000000
+     16:     3 13'--------1--00   ->     5 11'00100000000
+     17:     4 13'-----------1-   ->     0 11'01000000000
+     18:     4 13'--------1--01   ->     4 11'01000000000
+     19:     4 13'--------0--0-   ->     4 11'01000000000
+     20:     4 13'--------1--00   ->     5 11'01000000000
+     21:     5 13'------1-1--0-   ->     0 11'00000000001
+     22:     5 13'-----------1-   ->     0 11'00000000001
+     23:     5 13'------0-1--0-   ->     2 11'00000000001
+     24:     5 13'--------0--0-   ->     5 11'00000000001
+     25:     6 13'-----1-----0-   ->     0 11'00000000010
+     26:     6 13'-----------1-   ->     0 11'00000000010
+     27:     6 13'-----0-----0-   ->     6 11'00000000010
+     28:     7 13'-0---1-----0-   ->     0 11'00000000100
+     29:     7 13'-----------1-   ->     0 11'00000000100
+     30:     7 13'-1---1-----0-   ->     6 11'00000000100
+     31:     7 13'-----0-----0-   ->     7 11'00000000100
+     32:     8 13'-----------1-   ->     0 11'00010000000
+     33:     8 13'-----1-----00   ->     7 11'00010000000
+     34:     8 13'-----1-----01   ->     8 11'00010000000
+     35:     8 13'-----0-----0-   ->     8 11'00010000000
+     36:     9 13'-----------1-   ->     0 11'00001000000
+     37:     9 13'-----1-----00   ->     7 11'00001000000
+     38:     9 13'-----1-----01   ->     9 11'00001000000
+     39:     9 13'-----0-----0-   ->     9 11'00001000000
+     40:    10 13'-----------1-   ->     0 11'00000001000
+     41:    10 13'--0--1-----0-   ->     8 11'00000001000
+     42:    10 13'--1--1-----0-   ->     9 11'00000001000
+     43:    10 13'-----0-----0-   ->    10 11'00000001000
+
+-------------------------------------
+
+FSM `$fsm$\controller.byte_controller.core_cmd$1318' from module `i2c_core':
+-------------------------------------
+
+  Information on FSM $fsm$\controller.byte_controller.core_cmd$1318 (\controller.byte_controller.core_cmd):
+
+  Number of input signals:   15
+  Number of output signals:   4
+  Number of state bits:       5
+
+  Input signals:
+    0: $flatten\controller.\byte_controller.$reduce_or$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:236$124_Y
+    1: $flatten\controller.\byte_controller.$or$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:264$129_Y
+    2: $flatten\controller.\byte_controller.$and$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:296$132_Y
+    3: $flatten\controller.\byte_controller.$logic_and$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:306$134_Y
+    4: $flatten\controller.\byte_controller.$procmux$333_CMP
+    5: $flatten\controller.\byte_controller.$procmux$340_CMP
+    6: $flatten\controller.\byte_controller.$procmux$352_CMP
+    7: $flatten\controller.\byte_controller.$procmux$361_CMP
+    8: $flatten\controller.\byte_controller.$procmux$371_CMP
+    9: $flatten\controller.\byte_controller.$procmux$377_CMP
+   10: \controller.byte_controller.bit_controller.cmd_ack
+   11: \controller.cr [4]
+   12: \controller.cr [5]
+   13: \controller.cr [6]
+   14: \controller.cr [7]
+
+  Output signals:
+    0: $flatten\controller.\byte_controller.\bit_controller.$procmux$873_CMP
+    1: $flatten\controller.\byte_controller.\bit_controller.$procmux$871_CMP
+    2: $flatten\controller.\byte_controller.\bit_controller.$procmux$870_CMP
+    3: $flatten\controller.\byte_controller.\bit_controller.$eq$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:352$66_Y
+
+  State encoding:
+    0:    5'----1  <RESET STATE>
+    1:    5'---1-
+    2:    5'--1--
+    3:    5'-1---
+    4:    5'1----
+
+  Transition Table (state_in, ctrl_in, state_out, ctrl_out):
+      0:     0 15'-------1---000-   ->     0 4'0000
+      1:     0 15'-------1----10-   ->     0 4'0000
+      2:     0 15'-----000000--0-   ->     0 4'0000
+      3:     0 15'----------1--0-   ->     0 4'0000
+      4:     0 15'----0----1---0-   ->     0 4'0000
+      5:     0 15'-0--1----1---0-   ->     0 4'0000
+      6:     0 15'----0---1----0-   ->     0 4'0000
+      7:     0 15'----0-1------0-   ->     0 4'0000
+      8:     0 15'----01-------0-   ->     0 4'0000
+      9:     0 15'-------------1-   ->     0 4'0000
+     10:     0 15'----11-------00   ->     1 4'0000
+     11:     0 15'----1-1------01   ->     1 4'0000
+     12:     0 15'0-1----1---100-   ->     1 4'0000
+     13:     0 15'--1-1---1----0-   ->     1 4'0000
+     14:     0 15'----1-1------00   ->     2 4'0000
+     15:     0 15'----11-------01   ->     2 4'0000
+     16:     0 15'0-01---1---100-   ->     2 4'0000
+     17:     0 15'--0-1---1----0-   ->     2 4'0000
+     18:     0 15'0-00---1---100-   ->     3 4'0000
+     19:     0 15'-1--1----1---0-   ->     3 4'0000
+     20:     0 15'1------1---100-   ->     4 4'0000
+     21:     1 15'----1-----1--0-   ->     0 4'0100
+     22:     1 15'-0--1----1---0-   ->     0 4'0100
+     23:     1 15'-------------1-   ->     0 4'0100
+     24:     1 15'----11-------00   ->     1 4'0100
+     25:     1 15'----1-1------01   ->     1 4'0100
+     26:     1 15'-------1---000-   ->     1 4'0100
+     27:     1 15'0-1----1---100-   ->     1 4'0100
+     28:     1 15'-------1----10-   ->     1 4'0100
+     29:     1 15'-----000000--0-   ->     1 4'0100
+     30:     1 15'----0-----1--0-   ->     1 4'0100
+     31:     1 15'----0----1---0-   ->     1 4'0100
+     32:     1 15'----0---1----0-   ->     1 4'0100
+     33:     1 15'--1-1---1----0-   ->     1 4'0100
+     34:     1 15'----0-1------0-   ->     1 4'0100
+     35:     1 15'----01-------0-   ->     1 4'0100
+     36:     1 15'----1-1------00   ->     2 4'0100
+     37:     1 15'----11-------01   ->     2 4'0100
+     38:     1 15'0-01---1---100-   ->     2 4'0100
+     39:     1 15'--0-1---1----0-   ->     2 4'0100
+     40:     1 15'0-00---1---100-   ->     3 4'0100
+     41:     1 15'-1--1----1---0-   ->     3 4'0100
+     42:     1 15'1------1---100-   ->     4 4'0100
+     43:     2 15'----1-----1--0-   ->     0 4'0010
+     44:     2 15'-0--1----1---0-   ->     0 4'0010
+     45:     2 15'-------------1-   ->     0 4'0010
+     46:     2 15'----11-------00   ->     1 4'0010
+     47:     2 15'----1-1------01   ->     1 4'0010
+     48:     2 15'0-1----1---100-   ->     1 4'0010
+     49:     2 15'--1-1---1----0-   ->     1 4'0010
+     50:     2 15'----1-1------00   ->     2 4'0010
+     51:     2 15'----11-------01   ->     2 4'0010
+     52:     2 15'-------1---000-   ->     2 4'0010
+     53:     2 15'0-01---1---100-   ->     2 4'0010
+     54:     2 15'-------1----10-   ->     2 4'0010
+     55:     2 15'-----000000--0-   ->     2 4'0010
+     56:     2 15'----0-----1--0-   ->     2 4'0010
+     57:     2 15'----0----1---0-   ->     2 4'0010
+     58:     2 15'----0---1----0-   ->     2 4'0010
+     59:     2 15'--0-1---1----0-   ->     2 4'0010
+     60:     2 15'----0-1------0-   ->     2 4'0010
+     61:     2 15'----01-------0-   ->     2 4'0010
+     62:     2 15'0-00---1---100-   ->     3 4'0010
+     63:     2 15'-1--1----1---0-   ->     3 4'0010
+     64:     2 15'1------1---100-   ->     4 4'0010
+     65:     3 15'----1-----1--0-   ->     0 4'1000
+     66:     3 15'-0--1----1---0-   ->     0 4'1000
+     67:     3 15'-------------1-   ->     0 4'1000
+     68:     3 15'----11-------00   ->     1 4'1000
+     69:     3 15'----1-1------01   ->     1 4'1000
+     70:     3 15'0-1----1---100-   ->     1 4'1000
+     71:     3 15'--1-1---1----0-   ->     1 4'1000
+     72:     3 15'----1-1------00   ->     2 4'1000
+     73:     3 15'----11-------01   ->     2 4'1000
+     74:     3 15'0-01---1---100-   ->     2 4'1000
+     75:     3 15'--0-1---1----0-   ->     2 4'1000
+     76:     3 15'-------1---000-   ->     3 4'1000
+     77:     3 15'0-00---1---100-   ->     3 4'1000
+     78:     3 15'-------1----10-   ->     3 4'1000
+     79:     3 15'-----000000--0-   ->     3 4'1000
+     80:     3 15'----0-----1--0-   ->     3 4'1000
+     81:     3 15'----0----1---0-   ->     3 4'1000
+     82:     3 15'-1--1----1---0-   ->     3 4'1000
+     83:     3 15'----0---1----0-   ->     3 4'1000
+     84:     3 15'----0-1------0-   ->     3 4'1000
+     85:     3 15'----01-------0-   ->     3 4'1000
+     86:     3 15'1------1---100-   ->     4 4'1000
+     87:     4 15'----1-----1--0-   ->     0 4'0001
+     88:     4 15'-0--1----1---0-   ->     0 4'0001
+     89:     4 15'-------------1-   ->     0 4'0001
+     90:     4 15'----11-------00   ->     1 4'0001
+     91:     4 15'----1-1------01   ->     1 4'0001
+     92:     4 15'0-1----1---100-   ->     1 4'0001
+     93:     4 15'--1-1---1----0-   ->     1 4'0001
+     94:     4 15'----1-1------00   ->     2 4'0001
+     95:     4 15'----11-------01   ->     2 4'0001
+     96:     4 15'0-01---1---100-   ->     2 4'0001
+     97:     4 15'--0-1---1----0-   ->     2 4'0001
+     98:     4 15'0-00---1---100-   ->     3 4'0001
+     99:     4 15'-1--1----1---0-   ->     3 4'0001
+    100:     4 15'-------1---000-   ->     4 4'0001
+    101:     4 15'1------1---100-   ->     4 4'0001
+    102:     4 15'-------1----10-   ->     4 4'0001
+    103:     4 15'-----000000--0-   ->     4 4'0001
+    104:     4 15'----0-----1--0-   ->     4 4'0001
+    105:     4 15'----0----1---0-   ->     4 4'0001
+    106:     4 15'----0---1----0-   ->     4 4'0001
+    107:     4 15'----0-1------0-   ->     4 4'0001
+    108:     4 15'----01-------0-   ->     4 4'0001
+
+-------------------------------------
+
+7.8.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+Mapping FSM `$fsm$\controller.byte_controller.bit_controller.slave_state$1296' from module `\i2c_core'.
+Mapping FSM `$fsm$\controller.byte_controller.c_state$1305' from module `\i2c_core'.
+Mapping FSM `$fsm$\controller.byte_controller.core_cmd$1318' from module `\i2c_core'.
+
+7.9. Executing OPT pass (performing simple optimizations).
+
+7.9.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module i2c_core.
+<suppressed ~25 debug messages>
+
+7.9.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\i2c_core'.
+Computing hashes of 561 cells of `\i2c_core'.
+Finding duplicate cells in `\i2c_core'.
+Computing hashes of 520 cells of `\i2c_core'.
+Finding duplicate cells in `\i2c_core'.
+<suppressed ~123 debug messages>
+Removed a total of 41 cells.
+
+7.9.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \i2c_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~242 debug messages>
+
+7.9.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \i2c_core.
+Performed a total of 0 changes.
+
+7.9.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\i2c_core'.
+Computing hashes of 520 cells of `\i2c_core'.
+Finding duplicate cells in `\i2c_core'.
+Removed a total of 0 cells.
+
+7.9.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $flatten\controller.$procdff$1003 ($adff) from module i2c_core (D = $flatten\controller.$0\cr[7:0] [7:4], Q = \controller.cr [7:4]).
+Adding EN signal on $flatten\controller.$procdff$1003 ($adff) from module i2c_core (D = $flatten\controller.$0\cr[7:0] [3], Q = \controller.cr [3]).
+Adding EN signal on $flatten\controller.$procdff$1003 ($adff) from module i2c_core (D = $flatten\controller.$0\cr[7:0] [2:0], Q = \controller.cr [2:0]).
+Adding EN signal on $flatten\controller.$procdff$1018 ($adff) from module i2c_core (D = $flatten\controller.$0\txr[7:0], Q = \controller.txr).
+Adding EN signal on $flatten\controller.$procdff$998 ($adff) from module i2c_core (D = $flatten\controller.$0\slave_mode[0:0], Q = \controller.slave_mode).
+Adding EN signal on $flatten\controller.$procdff$1023 ($adff) from module i2c_core (D = $flatten\controller.$0\sladr[6:0], Q = \controller.sladr).
+Adding EN signal on $flatten\controller.\byte_controller.$procdff$1035 ($adff) from module i2c_core (D = $flatten\controller.\byte_controller.$0\master_mode[0:0], Q = \controller.byte_controller.master_mode).
+Adding EN signal on $flatten\controller.\byte_controller.$procdff$1040 ($adff) from module i2c_core (D = $flatten\controller.\byte_controller.$0\slave_cmd[1:0], Q = \controller.byte_controller.slave_cmd).
+Adding EN signal on $flatten\controller.\byte_controller.$procdff$1045 ($adff) from module i2c_core (D = $flatten\controller.\byte_controller.$0\sl_wait[0:0], Q = \controller.byte_controller.sl_wait).
+Adding EN signal on $flatten\controller.$procdff$1013 ($adff) from module i2c_core (D = $flatten\controller.$0\ctr[7:0], Q = \controller.ctr).
+Adding EN signal on $flatten\controller.\byte_controller.$procdff$1055 ($adff) from module i2c_core (D = $flatten\controller.\byte_controller.$0\slave_act[0:0], Q = \controller.byte_controller.slave_act).
+Adding EN signal on $flatten\controller.\byte_controller.$procdff$1060 ($adff) from module i2c_core (D = $flatten\controller.\byte_controller.$0\ack_out[0:0], Q = \controller.byte_controller.ack_out).
+Adding EN signal on $flatten\controller.\byte_controller.$procdff$1110 ($adff) from module i2c_core (D = $flatten\controller.\byte_controller.$0\sr[7:0], Q = \controller.byte_controller.sr).
+Adding EN signal on $flatten\controller.\byte_controller.$procdff$1065 ($adff) from module i2c_core (D = $flatten\controller.\byte_controller.$0\slave_dat_req[0:0], Q = \controller.byte_controller.slave_dat_req).
+Adding EN signal on $flatten\controller.\byte_controller.$procdff$1070 ($adff) from module i2c_core (D = $flatten\controller.\byte_controller.$0\slave_dat_avail[0:0], Q = \controller.byte_controller.slave_dat_avail).
+Adding EN signal on $flatten\controller.$procdff$1008 ($adff) from module i2c_core (D = $flatten\controller.$0\prer[15:0] [7:0], Q = \controller.prer [7:0]).
+Adding EN signal on $flatten\controller.$procdff$1008 ($adff) from module i2c_core (D = $flatten\controller.$0\prer[15:0] [15:8], Q = \controller.prer [15:8]).
+Adding EN signal on $flatten\controller.\byte_controller.$procdff$1105 ($adff) from module i2c_core (D = $flatten\controller.\byte_controller.$0\dcnt[2:0], Q = \controller.byte_controller.dcnt).
+Adding EN signal on $flatten\controller.\byte_controller.\bit_controller.$procdff$1261 ($adff) from module i2c_core (D = $flatten\controller.\byte_controller.\bit_controller.$0\cnt[15:0], Q = \controller.byte_controller.bit_controller.cnt).
+Adding EN signal on $flatten\controller.\byte_controller.\bit_controller.$procdff$1191 ($adff) from module i2c_core (D = $flatten\controller.\byte_controller.\bit_controller.$0\cmd_stop[0:0], Q = \controller.byte_controller.bit_controller.cmd_stop).
+Adding EN signal on $flatten\controller.\byte_controller.\bit_controller.$procdff$1181 ($dff) from module i2c_core (D = \controller.byte_controller.bit_controller.sSDA, Q = \controller.byte_controller.bit_controller.dout).
+Adding EN signal on $flatten\controller.\byte_controller.\bit_controller.$procdff$1180 ($adff) from module i2c_core (D = $flatten\controller.\byte_controller.\bit_controller.$0\sda_oen_master[0:0], Q = \controller.byte_controller.bit_controller.sda_oen_master).
+Adding EN signal on $flatten\controller.\byte_controller.\bit_controller.$procdff$1175 ($adff) from module i2c_core (D = $flatten\controller.\byte_controller.\bit_controller.$0\scl_oen_master[0:0], Q = \controller.byte_controller.bit_controller.scl_oen_master).
+Adding EN signal on $flatten\controller.\byte_controller.\bit_controller.$procdff$1170 ($adff) from module i2c_core (D = $flatten\controller.\byte_controller.\bit_controller.$0\c_state[17:0], Q = \controller.byte_controller.bit_controller.c_state).
+Adding EN signal on $flatten\controller.\byte_controller.\bit_controller.$procdff$1236 ($adff) from module i2c_core (D = $flatten\controller.\byte_controller.\bit_controller.$0\fSDA[2:0], Q = \controller.byte_controller.bit_controller.fSDA).
+Adding EN signal on $flatten\controller.\byte_controller.\bit_controller.$procdff$1165 ($adff) from module i2c_core (D = $flatten\controller.\byte_controller.\bit_controller.$0\sda_chk[0:0], Q = \controller.byte_controller.bit_controller.sda_chk).
+Adding EN signal on $flatten\controller.\byte_controller.\bit_controller.$procdff$1155 ($adff) from module i2c_core (D = $flatten\controller.\byte_controller.\bit_controller.$0\slave_act[0:0], Q = \controller.byte_controller.bit_controller.slave_act).
+Adding EN signal on $flatten\controller.\byte_controller.\bit_controller.$procdff$1231 ($adff) from module i2c_core (D = $flatten\controller.\byte_controller.\bit_controller.$0\fSCL[2:0], Q = \controller.byte_controller.bit_controller.fSCL).
+Adding EN signal on $flatten\controller.\byte_controller.\bit_controller.$procdff$1150 ($adff) from module i2c_core (D = $flatten\controller.\byte_controller.\bit_controller.$0\slave_cnt[3:0], Q = \controller.byte_controller.bit_controller.slave_cnt).
+Adding EN signal on $flatten\controller.\byte_controller.\bit_controller.$procdff$1145 ($adff) from module i2c_core (D = $flatten\controller.\byte_controller.\bit_controller.$0\slave_adr[7:0], Q = \controller.byte_controller.bit_controller.slave_adr).
+Adding EN signal on $flatten\controller.\byte_controller.\bit_controller.$procdff$1130 ($adff) from module i2c_core (D = $flatten\controller.\byte_controller.\bit_controller.$0\sda_oen_slave[0:0], Q = \controller.byte_controller.bit_controller.sda_oen_slave).
+
+7.9.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \i2c_core..
+Removed 1 unused cells and 76 unused wires.
+<suppressed ~2 debug messages>
+
+7.9.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module i2c_core.
+<suppressed ~38 debug messages>
+
+7.9.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+7.9.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \i2c_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~240 debug messages>
+
+7.9.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \i2c_core.
+Performed a total of 0 changes.
+
+7.9.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\i2c_core'.
+Computing hashes of 597 cells of `\i2c_core'.
+Finding duplicate cells in `\i2c_core'.
+Computing hashes of 579 cells of `\i2c_core'.
+Finding duplicate cells in `\i2c_core'.
+<suppressed ~54 debug messages>
+Removed a total of 18 cells.
+
+7.9.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.9.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \i2c_core..
+Removed 0 unused cells and 18 unused wires.
+<suppressed ~1 debug messages>
+
+7.9.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module i2c_core.
+
+7.9.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+7.9.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \i2c_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~242 debug messages>
+
+7.9.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \i2c_core.
+Performed a total of 0 changes.
+
+7.9.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\i2c_core'.
+Computing hashes of 579 cells of `\i2c_core'.
+Finding duplicate cells in `\i2c_core'.
+Removed a total of 0 cells.
+
+7.9.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.9.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \i2c_core..
+
+7.9.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module i2c_core.
+
+7.9.23. Finished fast OPT passes. (There is nothing left to do.)
+
+7.10. Executing WREDUCE pass (reducing word size of cells).
+Removed top 2 bits (of 3) from port B of cell i2c_core.$auto$opt_dff.cc:235:make_patterns_logic$1882 ($ne).
+Removed top 2 bits (of 3) from port B of cell i2c_core.$auto$opt_dff.cc:235:make_patterns_logic$1816 ($ne).
+Removed top 2 bits (of 3) from port B of cell i2c_core.$auto$opt_dff.cc:235:make_patterns_logic$1814 ($ne).
+Removed top 2 bits (of 3) from port B of cell i2c_core.$auto$opt_dff.cc:235:make_patterns_logic$1805 ($ne).
+Removed top 2 bits (of 3) from port B of cell i2c_core.$auto$opt_dff.cc:235:make_patterns_logic$1791 ($ne).
+Removed top 2 bits (of 3) from port B of cell i2c_core.$auto$opt_dff.cc:235:make_patterns_logic$1769 ($ne).
+Removed top 1 bits (of 3) from port B of cell i2c_core.$auto$fsm_map.cc:77:implement_pattern_cache$1714 ($eq).
+Removed top 1 bits (of 3) from port B of cell i2c_core.$auto$fsm_map.cc:77:implement_pattern_cache$1710 ($eq).
+Removed top 1 bits (of 3) from port B of cell i2c_core.$auto$fsm_map.cc:77:implement_pattern_cache$1706 ($eq).
+Removed top 1 bits (of 3) from port B of cell i2c_core.$auto$fsm_map.cc:77:implement_pattern_cache$1702 ($eq).
+Removed top 1 bits (of 3) from port B of cell i2c_core.$auto$fsm_map.cc:77:implement_pattern_cache$1683 ($eq).
+Removed top 3 bits (of 7) from port B of cell i2c_core.$auto$fsm_map.cc:77:implement_pattern_cache$1655 ($eq).
+Removed top 1 bits (of 4) from port B of cell i2c_core.$auto$fsm_map.cc:77:implement_pattern_cache$1640 ($eq).
+Removed top 2 bits (of 7) from port B of cell i2c_core.$auto$fsm_map.cc:77:implement_pattern_cache$1618 ($eq).
+Removed top 1 bits (of 6) from port B of cell i2c_core.$auto$fsm_map.cc:77:implement_pattern_cache$1577 ($eq).
+Removed top 1 bits (of 4) from port B of cell i2c_core.$auto$fsm_map.cc:77:implement_pattern_cache$1552 ($eq).
+Removed top 1 bits (of 5) from port B of cell i2c_core.$auto$fsm_map.cc:77:implement_pattern_cache$1504 ($eq).
+Removed top 1 bits (of 3) from port B of cell i2c_core.$auto$fsm_map.cc:77:implement_pattern_cache$1495 ($eq).
+Removed top 2 bits (of 6) from port B of cell i2c_core.$auto$fsm_map.cc:77:implement_pattern_cache$1487 ($eq).
+Removed top 3 bits (of 6) from port B of cell i2c_core.$auto$fsm_map.cc:77:implement_pattern_cache$1459 ($eq).
+Removed top 1 bits (of 3) from port B of cell i2c_core.$auto$fsm_map.cc:77:implement_pattern_cache$1409 ($eq).
+Removed top 1 bits (of 3) from port B of cell i2c_core.$auto$fsm_map.cc:77:implement_pattern_cache$1394 ($eq).
+Removed top 1 bits (of 2) from port B of cell i2c_core.$auto$fsm_map.cc:77:implement_pattern_cache$1369 ($eq).
+Removed top 1 bits (of 2) from port B of cell i2c_core.$auto$fsm_map.cc:77:implement_pattern_cache$1360 ($eq).
+Removed top 1 bits (of 2) from port B of cell i2c_core.$auto$fsm_map.cc:77:implement_pattern_cache$1351 ($eq).
+Removed top 2 bits (of 3) from port B of cell i2c_core.$flatten\controller.\byte_controller.$sub$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:234$123 ($sub).
+Removed top 4 bits (of 18) from mux cell i2c_core.$flatten\controller.\byte_controller.\bit_controller.$procmux$869 ($pmux).
+Removed top 17 bits (of 18) from port B of cell i2c_core.$flatten\controller.\byte_controller.\bit_controller.$procmux$820_CMP0 ($eq).
+Removed top 16 bits (of 18) from port B of cell i2c_core.$flatten\controller.\byte_controller.\bit_controller.$procmux$819_CMP0 ($eq).
+Removed top 15 bits (of 18) from port B of cell i2c_core.$flatten\controller.\byte_controller.\bit_controller.$procmux$818_CMP0 ($eq).
+Removed top 14 bits (of 18) from port B of cell i2c_core.$flatten\controller.\byte_controller.\bit_controller.$procmux$817_CMP0 ($eq).
+Removed top 12 bits (of 18) from port B of cell i2c_core.$flatten\controller.\byte_controller.\bit_controller.$procmux$815_CMP0 ($eq).
+Removed top 11 bits (of 18) from port B of cell i2c_core.$flatten\controller.\byte_controller.\bit_controller.$procmux$814_CMP0 ($eq).
+Removed top 10 bits (of 18) from port B of cell i2c_core.$flatten\controller.\byte_controller.\bit_controller.$procmux$813_CMP0 ($eq).
+Removed top 8 bits (of 18) from port B of cell i2c_core.$flatten\controller.\byte_controller.\bit_controller.$procmux$811_CMP0 ($eq).
+Removed top 7 bits (of 18) from port B of cell i2c_core.$flatten\controller.\byte_controller.\bit_controller.$procmux$810_CMP0 ($eq).
+Removed top 6 bits (of 18) from port B of cell i2c_core.$flatten\controller.\byte_controller.\bit_controller.$procmux$809_CMP0 ($eq).
+Removed top 4 bits (of 18) from port B of cell i2c_core.$flatten\controller.\byte_controller.\bit_controller.$procmux$807_CMP0 ($eq).
+Removed top 3 bits (of 18) from port B of cell i2c_core.$flatten\controller.\byte_controller.\bit_controller.$procmux$806_CMP0 ($eq).
+Removed top 2 bits (of 18) from port B of cell i2c_core.$flatten\controller.\byte_controller.\bit_controller.$procmux$805_CMP0 ($eq).
+Removed top 13 bits (of 18) from port B of cell i2c_core.$flatten\controller.\byte_controller.\bit_controller.$procmux$796_CMP0 ($eq).
+Removed top 9 bits (of 18) from port B of cell i2c_core.$flatten\controller.\byte_controller.\bit_controller.$procmux$795_CMP0 ($eq).
+Removed top 5 bits (of 18) from port B of cell i2c_core.$flatten\controller.\byte_controller.\bit_controller.$procmux$794_CMP0 ($eq).
+Removed top 1 bits (of 18) from port B of cell i2c_core.$flatten\controller.\byte_controller.\bit_controller.$procmux$793_CMP0 ($eq).
+Removed top 1 bits (of 2) from port B of cell i2c_core.$flatten\controller.\byte_controller.\bit_controller.$procmux$735_CMP0 ($eq).
+Removed top 3 bits (of 4) from port B of cell i2c_core.$flatten\controller.\byte_controller.\bit_controller.$sub$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:606$92 ($sub).
+Removed top 13 bits (of 14) from port B of cell i2c_core.$flatten\controller.\byte_controller.\bit_controller.$sub$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:263$34 ($sub).
+Removed top 15 bits (of 16) from port B of cell i2c_core.$flatten\controller.\byte_controller.\bit_controller.$sub$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:231$25 ($sub).
+Removed top 2 bits (of 3) from port B of cell i2c_core.$flatten\controller.$procmux$310_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell i2c_core.$flatten\controller.$procmux$309_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell i2c_core.$flatten\controller.$procmux$308_CMP0 ($eq).
+Removed top 4 bits (of 18) from wire i2c_core.$flatten\controller.\byte_controller.\bit_controller.$procmux$869_Y.
+
+7.11. Executing PEEPOPT pass (run peephole optimizers).
+
+7.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \i2c_core..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+7.13. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module i2c_core:
+  creating $macc model for $flatten\controller.\byte_controller.\bit_controller.$sub$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:231$25 ($sub).
+  creating $macc model for $flatten\controller.\byte_controller.\bit_controller.$sub$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:263$34 ($sub).
+  creating $macc model for $flatten\controller.\byte_controller.\bit_controller.$sub$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:606$92 ($sub).
+  creating $macc model for $flatten\controller.\byte_controller.$sub$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:234$123 ($sub).
+  creating $alu model for $macc $flatten\controller.\byte_controller.$sub$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:234$123.
+  creating $alu model for $macc $flatten\controller.\byte_controller.\bit_controller.$sub$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:606$92.
+  creating $alu model for $macc $flatten\controller.\byte_controller.\bit_controller.$sub$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:263$34.
+  creating $alu model for $macc $flatten\controller.\byte_controller.\bit_controller.$sub$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:231$25.
+  creating $alu cell for $flatten\controller.\byte_controller.\bit_controller.$sub$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:231$25: $auto$alumacc.cc:512:replace_alu$1904
+  creating $alu cell for $flatten\controller.\byte_controller.\bit_controller.$sub$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:263$34: $auto$alumacc.cc:512:replace_alu$1907
+  creating $alu cell for $flatten\controller.\byte_controller.\bit_controller.$sub$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_bit_ctrl.v:606$92: $auto$alumacc.cc:512:replace_alu$1910
+  creating $alu cell for $flatten\controller.\byte_controller.$sub$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/i2c/01_rtl/i2c_master_byte_ctrl.v:234$123: $auto$alumacc.cc:512:replace_alu$1913
+  created 4 $alu and 0 $macc cells.
+
+7.14. Executing SHARE pass (SAT-based resource sharing).
+
+7.15. Executing OPT pass (performing simple optimizations).
+
+7.15.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module i2c_core.
+
+7.15.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\i2c_core'.
+Computing hashes of 579 cells of `\i2c_core'.
+Finding duplicate cells in `\i2c_core'.
+Removed a total of 0 cells.
+
+7.15.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \i2c_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~242 debug messages>
+
+7.15.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \i2c_core.
+Performed a total of 0 changes.
+
+7.15.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\i2c_core'.
+Computing hashes of 579 cells of `\i2c_core'.
+Finding duplicate cells in `\i2c_core'.
+Removed a total of 0 cells.
+
+7.15.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.15.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \i2c_core..
+
+7.15.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module i2c_core.
+
+7.15.9. Finished fast OPT passes. (There is nothing left to do.)
+
+7.16. Executing MEMORY pass.
+
+7.16.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+7.16.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+7.16.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+7.16.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+7.16.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+7.16.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \i2c_core..
+
+7.16.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+7.16.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+7.16.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \i2c_core..
+
+7.16.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+7.17. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \i2c_core..
+
+7.18. Executing OPT pass (performing simple optimizations).
+
+7.18.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module i2c_core.
+<suppressed ~97 debug messages>
+
+7.18.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\i2c_core'.
+Computing hashes of 518 cells of `\i2c_core'.
+Finding duplicate cells in `\i2c_core'.
+Computing hashes of 515 cells of `\i2c_core'.
+Finding duplicate cells in `\i2c_core'.
+Computing hashes of 514 cells of `\i2c_core'.
+Finding duplicate cells in `\i2c_core'.
+<suppressed ~12 debug messages>
+Removed a total of 4 cells.
+
+7.18.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.18.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \i2c_core..
+Removed 0 unused cells and 64 unused wires.
+<suppressed ~1 debug messages>
+
+7.18.5. Finished fast OPT passes.
+
+7.19. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+7.20. Executing OPT pass (performing simple optimizations).
+
+7.20.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module i2c_core.
+<suppressed ~2 debug messages>
+
+7.20.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\i2c_core'.
+Computing hashes of 513 cells of `\i2c_core'.
+Finding duplicate cells in `\i2c_core'.
+Removed a total of 0 cells.
+
+7.20.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \i2c_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~127 debug messages>
+
+7.20.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \i2c_core.
+    Consolidated identical input bits for $pmux cell $flatten\controller.\byte_controller.\bit_controller.$procmux$850:
+      Old ports: A={ 4'0000 $auto$wreduce.cc:514:run$1903 [13:0] }, B=252'000000000000000010000000000000000100000000000000001000000000000000010000000000000001000000000000000010000000000000000100000000000000010000000000000000100000000000000001000000000000000100000000000000001000000000000000010000000000000000000000000000000000, Y=$flatten\controller.\byte_controller.\bit_controller.$procmux$850_Y
+      New ports: A={ 3'000 $auto$wreduce.cc:514:run$1903 [13:0] }, B=238'0000000000000001000000000000000100000000000000010000000000000001000000000000001000000000000000100000000000000010000000000000010000000000000001000000000000000100000000000000100000000000000010000000000000001000000000000000000000000000000000, Y=$flatten\controller.\byte_controller.\bit_controller.$procmux$850_Y [16:0]
+      New connections: $flatten\controller.\byte_controller.\bit_controller.$procmux$850_Y [17] = 1'0
+    Consolidated identical input bits for $pmux cell $flatten\controller.\byte_controller.\bit_controller.$procmux$869:
+      Old ports: A=14'00000000000000, B=56'00000000000001000000001000001000000000000000001000000000, Y=$auto$wreduce.cc:514:run$1903 [13:0]
+      New ports: A=4'0000, B=16'0001001010000100, Y={ $auto$wreduce.cc:514:run$1903 [13] $auto$wreduce.cc:514:run$1903 [9] $auto$wreduce.cc:514:run$1903 [5] $auto$wreduce.cc:514:run$1903 [0] }
+      New connections: { $auto$wreduce.cc:514:run$1903 [12:10] $auto$wreduce.cc:514:run$1903 [8:6] $auto$wreduce.cc:514:run$1903 [4:1] } = 10'0000000000
+  Optimizing cells in module \i2c_core.
+    Consolidated identical input bits for $mux cell $flatten\controller.\byte_controller.\bit_controller.$procmux$878:
+      Old ports: A=$flatten\controller.\byte_controller.\bit_controller.$procmux$850_Y, B=18'000000000000000000, Y=$flatten\controller.\byte_controller.\bit_controller.$0\c_state[17:0]
+      New ports: A=$flatten\controller.\byte_controller.\bit_controller.$procmux$850_Y [16:0], B=17'00000000000000000, Y=$flatten\controller.\byte_controller.\bit_controller.$0\c_state[17:0] [16:0]
+      New connections: $flatten\controller.\byte_controller.\bit_controller.$0\c_state[17:0] [17] = 1'0
+  Optimizing cells in module \i2c_core.
+Performed a total of 3 changes.
+
+7.20.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\i2c_core'.
+Computing hashes of 513 cells of `\i2c_core'.
+Finding duplicate cells in `\i2c_core'.
+Removed a total of 0 cells.
+
+7.20.6. Executing OPT_SHARE pass.
+    Found cells that share an operand and can be merged by moving the $pmux $flatten\controller.\byte_controller.$procmux$370 in front of them:
+        $flatten\controller.\byte_controller.$procmux$375
+        $flatten\controller.\byte_controller.$procmux$384
+
+7.20.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.20.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \i2c_core..
+Removed 0 unused cells and 3 unused wires.
+<suppressed ~1 debug messages>
+
+7.20.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module i2c_core.
+<suppressed ~1 debug messages>
+
+7.20.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+7.20.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \i2c_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~129 debug messages>
+
+7.20.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \i2c_core.
+    New ctrl vector for $pmux cell $flatten\controller.\byte_controller.$procmux$370: { \controller.byte_controller.c_state [3] $auto$opt_reduce.cc:137:opt_pmux$1920 \controller.byte_controller.c_state [9] }
+  Optimizing cells in module \i2c_core.
+Performed a total of 1 changes.
+
+7.20.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\i2c_core'.
+Computing hashes of 514 cells of `\i2c_core'.
+Finding duplicate cells in `\i2c_core'.
+Removed a total of 0 cells.
+
+7.20.14. Executing OPT_SHARE pass.
+
+7.20.15. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 17 on $auto$ff.cc:337:slice$1861 ($adffe) from module i2c_core.
+
+7.20.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \i2c_core..
+
+7.20.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module i2c_core.
+<suppressed ~2 debug messages>
+
+7.20.18. Rerunning OPT passes. (Maybe there is more to do..)
+
+7.20.19. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \i2c_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~129 debug messages>
+
+7.20.20. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \i2c_core.
+Performed a total of 0 changes.
+
+7.20.21. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\i2c_core'.
+Computing hashes of 514 cells of `\i2c_core'.
+Finding duplicate cells in `\i2c_core'.
+Removed a total of 0 cells.
+
+7.20.22. Executing OPT_SHARE pass.
+
+7.20.23. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.20.24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \i2c_core..
+
+7.20.25. Executing OPT_EXPR pass (perform const folding).
+Optimizing module i2c_core.
+
+7.20.26. Finished fast OPT passes. (There is nothing left to do.)
+
+7.21. Executing TECHMAP pass (map to technology primitives).
+
+7.21.1. Executing Verilog-2005 frontend: /home/hasan/Crucible/tools/yosys/0.63.0/yosys/libexec/../share/yosys/techmap.v
+Parsing Verilog input from `/home/hasan/Crucible/tools/yosys/0.63.0/yosys/libexec/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+7.21.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $adffe.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $mux.
+Using template $paramod$b8c0a997bce700f23568a5ada79cc6781d1f5ca0\_90_alu for cells of type $alu.
+Using template $paramod$8742280fdebca84e1c87f2a86ed84f62d558f4cc\_90_alu for cells of type $alu.
+Using template $paramod$1ed7ec530b1ba361931392f2f8504f82ccdfecaa\_90_alu for cells of type $alu.
+Using template $paramod$a1665ef28c749ebcdbe9aecd466e644647b56463\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $reduce_bool.
+Using extmapper simplemap for cells of type $ne.
+Using extmapper simplemap for cells of type $dffe.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $adff.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $logic_and.
+Using template $paramod$c5c783b17ab1d780abfad8cfe6563a0a7b47a3b0\_90_pmux for cells of type $pmux.
+Using template $paramod$d629d85c8826a74239b9178d1930215a43b0ceb0\_90_pmux for cells of type $pmux.
+Using template $paramod$2407ada40cc3dda6c6015be2b49b748cddb5a800\_90_pmux for cells of type $pmux.
+Using template $paramod$068ad458e7761d78e5eed8238508872e7b0aef95\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $dff.
+Using template $paramod$20d3ee62d72123142eb855d7ddafd835e31ba009\_90_pmux for cells of type $pmux.
+Using template $paramod$9d38a59b9a726c5e01ae1f4873ae028b181ede32\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $logic_or.
+Using template $paramod$d7387fdb214042e5ef2d69a3f74948694b4bb65e\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000001110 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000001110 for cells of type $lcu.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000100 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000100 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000011 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000011 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000010000 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000010000 for cells of type $lcu.
+No more expansions possible.
+<suppressed ~1544 debug messages>
+
+7.22. Executing OPT pass (performing simple optimizations).
+
+7.22.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module i2c_core.
+<suppressed ~1279 debug messages>
+
+7.22.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\i2c_core'.
+Computing hashes of 1927 cells of `\i2c_core'.
+Finding duplicate cells in `\i2c_core'.
+Computing hashes of 1678 cells of `\i2c_core'.
+Finding duplicate cells in `\i2c_core'.
+Computing hashes of 1591 cells of `\i2c_core'.
+Finding duplicate cells in `\i2c_core'.
+Computing hashes of 1567 cells of `\i2c_core'.
+Finding duplicate cells in `\i2c_core'.
+Computing hashes of 1565 cells of `\i2c_core'.
+Finding duplicate cells in `\i2c_core'.
+Computing hashes of 1564 cells of `\i2c_core'.
+Finding duplicate cells in `\i2c_core'.
+<suppressed ~1089 debug messages>
+Removed a total of 363 cells.
+
+7.22.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.22.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \i2c_core..
+Removed 48 unused cells and 897 unused wires.
+<suppressed ~49 debug messages>
+
+7.22.5. Finished fast OPT passes.
+
+7.23. Executing ABC pass (technology mapping using ABC).
+
+7.23.1. Extracting gate netlist of module `\i2c_core' to `<abc-temp-dir>/input.blif'..
+
+7.23.1.1. Executed ABC.
+Extracted 1309 gates and 1521 wires to a netlist network with 210 inputs and 205 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Apr  1 2026 04:06:44)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+7.23.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:      273
+ABC RESULTS:            ANDNOT cells:      104
+ABC RESULTS:               MUX cells:       36
+ABC RESULTS:              NAND cells:      218
+ABC RESULTS:               NOR cells:       43
+ABC RESULTS:               NOT cells:       13
+ABC RESULTS:                OR cells:       78
+ABC RESULTS:             ORNOT cells:       38
+ABC RESULTS:              XNOR cells:       25
+ABC RESULTS:               XOR cells:        4
+ABC RESULTS:        internal signals:     1106
+ABC RESULTS:           input signals:      210
+ABC RESULTS:          output signals:      205
+Removing temp directory.
+Removing global temp directory.
+
+7.24. Executing OPT pass (performing simple optimizations).
+
+7.24.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module i2c_core.
+
+7.24.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\i2c_core'.
+Computing hashes of 1039 cells of `\i2c_core'.
+Finding duplicate cells in `\i2c_core'.
+Computing hashes of 1037 cells of `\i2c_core'.
+Finding duplicate cells in `\i2c_core'.
+Computing hashes of 1036 cells of `\i2c_core'.
+Finding duplicate cells in `\i2c_core'.
+<suppressed ~9 debug messages>
+Removed a total of 3 cells.
+
+7.24.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+7.24.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \i2c_core..
+Removed 0 unused cells and 1036 unused wires.
+<suppressed ~6 debug messages>
+
+7.24.5. Finished fast OPT passes.
+
+7.25. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `i2c_core'. Setting top module to i2c_core.
+
+7.25.1. Analyzing design hierarchy..
+Top module:  \i2c_core
+
+7.25.2. Analyzing design hierarchy..
+Top module:  \i2c_core
+Removed 0 unused modules.
+
+7.26. Printing statistics.
+
+=== i2c_core ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      981 wires
+     1227 wire bits
+      160 public wires
+      399 public wire bits
+       17 ports
+       33 port bits
+     1036 cells
+      104   $_ANDNOT_
+      271   $_AND_
+       92   $_DFFE_PN0P_
+       32   $_DFFE_PN1P_
+        1   $_DFFE_PP_
+       60   $_DFF_PN0_
+        8   $_DFF_PN1_
+       10   $_DFF_P_
+       36   $_MUX_
+      218   $_NAND_
+       43   $_NOR_
+       13   $_NOT_
+       38   $_ORNOT_
+       78   $_OR_
+       25   $_XNOR_
+        4   $_XOR_
+        3   $scopeinfo
+
+7.27. Executing CHECK pass (checking for obvious problems).
+Checking module i2c_core...
+Found and reported 0 problems.
+
+8. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell sg13g2_dfrbpq_1 (noninv, pins=4, area=48.99) is a direct match for cell type $_DFF_PN0_.
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    unmapped dff cell: $_DFF_P_
+    unmapped dff cell: $_DFF_NN0_
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \sg13g2_dfrbpq_1 _DFF_PN0_ (.CLK( C), .D( D), .Q( Q), .RESET_B( R));
+    unmapped dff cell: $_DFF_PN1_
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    unmapped dff cell: $_DFFE_NN_
+    unmapped dff cell: $_DFFE_NP_
+    unmapped dff cell: $_DFFE_PN_
+    unmapped dff cell: $_DFFE_PP_
+    unmapped dff cell: $_DFFSR_NNN_
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    unmapped dff cell: $_DFFSR_PNN_
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+8.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+<suppressed ~4 debug messages>
+Mapping DFF cells in module `\i2c_core':
+  mapped 203 $_DFF_PN0_ cells to \sg13g2_dfrbpq_1 cells.
+
+9. Executing ABC pass (technology mapping using ABC).
+
+9.1. Extracting gate netlist of module `\i2c_core' to `<abc-temp-dir>/input.blif'..
+
+9.1.1. Executed ABC.
+Extracted 1035 gates and 1244 wires to a netlist network with 209 inputs and 201 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Apr  1 2026 04:06:44)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lib -w /home/hasan/.ciel/ciel/ihp-sg13g2/versions/22f43352dd8219f9007eb659e422e0d5fe28c5fb/ihp-sg13g2/libs.ref/sg13g2_stdcell/lib/sg13g2_stdcell_slow_1p08V_125C.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.01 sec
+ABC: Scl_LibertyReadGenlib() skipped cell "sg13g2_antennanp" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "sg13g2_decap_4" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "sg13g2_decap_8" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sg13g2_dfrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sg13g2_dfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sg13g2_dfrbpq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sg13g2_dfrbpq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sg13g2_dlhq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sg13g2_dlhr_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sg13g2_dlhrq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sg13g2_dllr_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sg13g2_dllrq_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sg13g2_ebufn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sg13g2_ebufn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sg13g2_ebufn_8".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sg13g2_einvn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sg13g2_einvn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sg13g2_einvn_8".
+ABC: Scl_LibertyReadGenlib() skipped cell "sg13g2_fill_1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "sg13g2_fill_2" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "sg13g2_fill_4" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "sg13g2_fill_8" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "sg13g2_lgcp_1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sg13g2_sdfbbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sg13g2_sdfrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sg13g2_sdfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sg13g2_sdfrbpq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sg13g2_sdfrbpq_2".
+ABC: Scl_LibertyReadGenlib() skipped cell "sg13g2_sighold" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "sg13g2_slgcp_1" due to dont_use attribute.
+ABC: Library "sg13g2_stdcell_slow_1p08V_125C" from "/home/hasan/.ciel/ciel/ihp-sg13g2/versions/22f43352dd8219f9007eb659e422e0d5fe28c5fb/ihp-sg13g2/libs.ref/sg13g2_stdcell/lib/sg13g2_stdcell_slow_1p08V_125C.lib" has 54 cells (30 skipped: 14 seq; 6 tri-state; 0 no func; 10 dont_use; 0 with 2 outputs; 0 with 3+ outputs).  Time =     0.01 sec
+ABC: Memory =    2.86 MB. Time =     0.01 sec
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + retime -o -D 20000 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf -D 20000 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+9.1.2. Re-integrating ABC results.
+ABC RESULTS:     sg13g2_a21o_1 cells:        6
+ABC RESULTS:    sg13g2_a21oi_1 cells:       58
+ABC RESULTS:   sg13g2_a221oi_1 cells:       14
+ABC RESULTS:    sg13g2_a22oi_1 cells:       43
+ABC RESULTS:     sg13g2_and2_1 cells:       22
+ABC RESULTS:     sg13g2_and3_1 cells:        5
+ABC RESULTS:     sg13g2_and4_1 cells:        4
+ABC RESULTS:      sg13g2_inv_1 cells:       68
+ABC RESULTS:     sg13g2_mux2_1 cells:        6
+ABC RESULTS:    sg13g2_nand2_1 cells:      151
+ABC RESULTS:   sg13g2_nand2b_1 cells:       36
+ABC RESULTS:    sg13g2_nand3_1 cells:       28
+ABC RESULTS:   sg13g2_nand3b_1 cells:        7
+ABC RESULTS:    sg13g2_nand4_1 cells:       25
+ABC RESULTS:     sg13g2_nor2_1 cells:       61
+ABC RESULTS:    sg13g2_nor2b_1 cells:       33
+ABC RESULTS:     sg13g2_nor3_1 cells:       25
+ABC RESULTS:     sg13g2_nor4_1 cells:       21
+ABC RESULTS:    sg13g2_o21ai_1 cells:      130
+ABC RESULTS:      sg13g2_or2_1 cells:       20
+ABC RESULTS:      sg13g2_or3_1 cells:        4
+ABC RESULTS:      sg13g2_or4_1 cells:       10
+ABC RESULTS:    sg13g2_xnor2_1 cells:        8
+ABC RESULTS:     sg13g2_xor2_1 cells:        5
+ABC RESULTS:        internal signals:      834
+ABC RESULTS:           input signals:      209
+ABC RESULTS:          output signals:      201
+Removing temp directory.
+Removing global temp directory.
+
+10. Executing HILOMAP pass (mapping to constant drivers).
+Removed 7 unused cells and 1233 unused wires.
+
+11. Executing Liberty frontend: /home/hasan/.ciel/ciel/ihp-sg13g2/versions/22f43352dd8219f9007eb659e422e0d5fe28c5fb/ihp-sg13g2/libs.ref/sg13g2_stdcell/lib/sg13g2_stdcell_typ_1p20V_25C.lib
+Imported 84 cell types from liberty file.
+
+12. Executing CHECK pass (checking for obvious problems).
+Checking module i2c_core...
+Found and reported 0 problems.
+
+13. Printing statistics.
+
+=== i2c_core ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+      973        - wires
+     1170        - wire bits
+      140        - public wires
+      330        - public wire bits
+       17        - ports
+       33        - port bits
+     1010 1.71E+04 cells
+        3        -   $scopeinfo
+        6   76.205   sg13g2_a21o_1
+       58  526.176   sg13g2_a21oi_1
+       14  203.213   sg13g2_a221oi_1
+       43   466.49   sg13g2_a22oi_1
+       22  199.584   sg13g2_and2_1
+        5   63.504   sg13g2_and3_1
+        4   58.061   sg13g2_and4_1
+      203 9.94E+03   sg13g2_dfrbpq_1
+       68  370.138   sg13g2_inv_1
+        6  108.864   sg13g2_mux2_1
+      151  1.1E+03   sg13g2_nand2_1
+       36  326.592   sg13g2_nand2b_1
+       28  254.016   sg13g2_nand3_1
+        7   88.906   sg13g2_nand3b_1
+       25   272.16   sg13g2_nand4_1
+       61  442.714   sg13g2_nor2_1
+       33  299.376   sg13g2_nor2b_1
+       25    226.8   sg13g2_nor3_1
+       21  228.614   sg13g2_nor4_1
+      130  1179.36   sg13g2_o21ai_1
+       20   181.44   sg13g2_or2_1
+        4   50.803   sg13g2_or3_1
+       10  145.152   sg13g2_or4_1
+       12   87.091   sg13g2_tiehi
+        2   14.515   sg13g2_tielo
+        8  116.122   sg13g2_xnor2_1
+        5   72.576   sg13g2_xor2_1
+
+   Area for cell type $scopeinfo is unknown!
+
+   Chip area for module '\i2c_core': 17099.094600
+     of which used for sequential elements: 9944.726400 (58.16%)
+
+14. Executing JSON backend.
+
+15. Executing Verilog backend.
+PASS SG13G2 synthesis
+Dumping module `\i2c_core'.
+
+Warnings: 2 unique messages, 2 total
+End of script. Logfile hash: 2e43b25f5f, time: 0.97s, user: 0.37s, system: 0.09s, MEM: 50.80 MB peak
+Yosys 0.63+188 (git sha1 cede13a74, clang++ 18.1.8 -fPIC -O3)
+Time spent: 40% 2x abc (0 sec), 8% 23x opt_clean (0 sec), ...

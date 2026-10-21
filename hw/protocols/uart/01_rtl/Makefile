@@ -1,16 +1,16 @@
 # ===============================================================================
 # Ignytion IO - CRUCIBLE CORE
 # Copyright (c) 2026 Ignytion IO. All rights reserved.
+# Author      : IGNYTION_TECH
 # File        : hw/protocols/uart/01_rtl/Makefile
-# Created     : 2026-09-21
-# Description : Make entrypoint for the UART RTL source stage.
+# Created     : 2026-10-03
+# Description : WSL Igny UART reference build entrypoint.
 # ===============================================================================
 
-.PHONY: all rtl list
-
-all: rtl
-
-rtl: list
-
-list:
-	@printf '%s\n' uart_core.v
+SHELL := /bin/bash
+.SHELLFLAGS := -eu -o pipefail -c
+PROJECT_ROOT := $(abspath ..)
+.PHONY: all lint
+all: lint
+lint:
+	cd "$(PROJECT_ROOT)" && bash run_flow.sh lint

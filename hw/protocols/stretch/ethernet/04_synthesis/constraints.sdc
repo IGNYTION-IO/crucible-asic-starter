@@ -1,0 +1,15 @@
+# Ignytion IO - CRUCIBLE CORE; IGNYTION_TECH; 2026-10-03; generated reference constraints.
+create_clock -name tx_clk -period 400.0 [get_ports mii_tx_clk]
+create_clock -name rx_clk -period 400.0 [get_ports mii_rx_clk]
+set_input_delay -clock tx_clk -max 2.0 [get_ports {rst tx_data* tx_valid tx_last tx_user}]
+set_input_delay -clock tx_clk -min 0.2 [get_ports {rst tx_data* tx_valid tx_last tx_user}]
+set_input_delay -clock rx_clk -max 2.0 -add_delay [get_ports rst]
+set_input_delay -clock rx_clk -min 0.2 -add_delay [get_ports rst]
+set_input_delay -clock rx_clk -max 2.0 [get_ports {mii_rxd* mii_rx_dv mii_rx_er}]
+set_input_delay -clock rx_clk -min 0.2 [get_ports {mii_rxd* mii_rx_dv mii_rx_er}]
+set_output_delay -clock tx_clk -max 2.0 [get_ports {mii_txd* mii_tx_en mii_tx_er tx_ready tx_underflow}]
+set_output_delay -clock tx_clk -min 0.2 [get_ports {mii_txd* mii_tx_en mii_tx_er tx_ready tx_underflow}]
+set_output_delay -clock rx_clk -max 2.0 [get_ports {rx_data* rx_valid rx_last rx_user rx_bad_frame rx_bad_fcs}]
+set_output_delay -clock rx_clk -min 0.2 [get_ports {rx_data* rx_valid rx_last rx_user rx_bad_frame rx_bad_fcs}]
+set_clock_uncertainty 0.1 [all_clocks]
+# Reference I/O budgets; actual PHY timing and system CDC remain integration work.

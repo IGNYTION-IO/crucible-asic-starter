@@ -1,0 +1,4 @@
+FATAL: 02_sim/test.v:75: Ethernet RX mismatch index=3 got=83
+       Time: 383874000  Scope: tst_bench_top
+Run failed: Process exited with a non-zero status (1).
+Full output: /home/hasan/.ignytion/.crucible/workspaces/ethernet-610b7285/runs/20261003-004043-53d375/stdout.log

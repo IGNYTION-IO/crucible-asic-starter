@@ -14,7 +14,7 @@ areas, and each member should be strong in at least one.
 **Design box:** IHP 130nm SG13G2 via Tiny Tapeout · 6 × 4 tiles (~0.7 mm²) ·
 26 pins (8 in, 8 out, 8 bidirectional, `clk`, `rst_n`) · single clock, active-low reset.
 
-- **RTL:** synthesizable Verilog, FSMs, counters, shift registers, no latches,
+- **RTL:** synthesisable Verilog, FSMs, counters, shift registers, no latches,
   reset handling, input synchronizers, bidirectional and open-drain pins
 - **Verification:** self-checking testbenches that fail on mismatch, waveform debug,
   reference models, basic Python for cocotb. Good to have: constrained-random,

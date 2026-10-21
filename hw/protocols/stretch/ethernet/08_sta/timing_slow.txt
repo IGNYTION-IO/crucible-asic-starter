@@ -1,0 +1,165 @@
+OpenROAD 26Q3-771-g7cfb2105c9 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 4 thread(s).
+Startpoint: mii_rxd[2] (input port clocked by rx_clk)
+Endpoint: _1735_ (rising edge-triggered flip-flop clocked by rx_clk)
+Path Group: rx_clk
+Path Type: min
+
+     Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------
+                     0.000    0.000   clock rx_clk (rise edge)
+                     0.000    0.000   clock network delay (propagated)
+                     0.200    0.200 v input external delay
+   0.010    0.000    0.000    0.200 v mii_rxd[2] (in)
+            0.001    0.000    0.200 v hold59/A (sg13g2_dlygate4sd3_1)
+   0.011    0.098    0.616    0.816 v hold59/X (sg13g2_dlygate4sd3_1)
+            0.098    0.001    0.817 v _1735_/D (sg13g2_dfrbpq_1)
+                              0.817   data arrival time
+
+                     0.000    0.000   clock rx_clk (rise edge)
+                     0.519    0.519   clock network delay (propagated)
+                     0.100    0.619   clock uncertainty
+                     0.000    0.619   clock reconvergence pessimism
+                              0.619 ^ _1735_/CLK (sg13g2_dfrbpq_1)
+                    -0.074    0.545   library hold time
+                              0.545   data required time
+---------------------------------------------------------------------------
+                              0.545   data required time
+                             -0.817   data arrival time
+---------------------------------------------------------------------------
+                              0.273   slack (MET)
+
+
+Startpoint: _1706_ (rising edge-triggered flip-flop clocked by tx_clk)
+Endpoint: _1706_ (rising edge-triggered flip-flop clocked by tx_clk)
+Path Group: tx_clk
+Path Type: min
+
+     Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------
+                     0.000    0.000   clock tx_clk (rise edge)
+                     0.512    0.512   clock network delay (propagated)
+            0.037    0.000    0.512 ^ _1706_/CLK (sg13g2_dfrbpq_1)
+   0.003    0.033    0.260    0.771 v _1706_/Q (sg13g2_dfrbpq_1)
+            0.033    0.000    0.771 v _0939_/B (sg13g2_nand2_1)
+   0.007    0.064    0.070    0.842 ^ _0939_/Y (sg13g2_nand2_1)
+            0.064    0.000    0.842 ^ _1562_/B1 (sg13g2_o21ai_1)
+   0.002    0.045    0.067    0.910 v _1562_/Y (sg13g2_o21ai_1)
+            0.045    0.000    0.910 v _1706_/D (sg13g2_dfrbpq_1)
+                              0.910   data arrival time
+
+                     0.000    0.000   clock tx_clk (rise edge)
+                     0.521    0.521   clock network delay (propagated)
+                     0.100    0.621   clock uncertainty
+                    -0.010    0.612   clock reconvergence pessimism
+                              0.612 ^ _1706_/CLK (sg13g2_dfrbpq_1)
+                    -0.054    0.558   library hold time
+                              0.558   data required time
+---------------------------------------------------------------------------
+                              0.558   data required time
+                             -0.910   data arrival time
+---------------------------------------------------------------------------
+                              0.352   slack (MET)
+
+
+Startpoint: _1661_ (rising edge-triggered flip-flop clocked by rx_clk)
+Endpoint: _1599_ (rising edge-triggered flip-flop clocked by rx_clk)
+Path Group: rx_clk
+Path Type: max
+
+     Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------
+                     0.000    0.000   clock rx_clk (rise edge)
+                     0.523    0.523   clock network delay (propagated)
+            0.046    0.000    0.523 ^ _1661_/CLK (sg13g2_dfrbpq_1)
+   0.031    0.202    0.391    0.914 ^ _1661_/Q (sg13g2_dfrbpq_1)
+            0.202    0.001    0.914 ^ _0976_/B (sg13g2_xor2_1)
+   0.013    0.200    0.297    1.211 ^ _0976_/X (sg13g2_xor2_1)
+            0.200    0.001    1.212 ^ fanout33/A (sg13g2_buf_1)
+   0.067    0.430    0.444    1.655 ^ fanout33/X (sg13g2_buf_1)
+            0.430    0.004    1.660 ^ _0978_/A (sg13g2_xor2_1)
+   0.054    0.729    0.749    2.409 ^ _0978_/X (sg13g2_xor2_1)
+            0.729    0.001    2.410 ^ _0990_/B (sg13g2_xnor2_1)
+   0.036    0.581    0.701    3.111 ^ _0990_/Y (sg13g2_xnor2_1)
+            0.581    0.001    3.113 ^ _1046_/B (sg13g2_xnor2_1)
+   0.023    0.411    0.521    3.634 ^ _1046_/Y (sg13g2_xnor2_1)
+            0.411    0.001    3.635 ^ _1047_/B (sg13g2_xor2_1)
+   0.006    0.143    0.294    3.929 ^ _1047_/X (sg13g2_xor2_1)
+            0.143    0.000    3.930 ^ _1067_/B (sg13g2_nand4_1)
+   0.007    0.206    0.245    4.175 v _1067_/Y (sg13g2_nand4_1)
+            0.206    0.000    4.175 v _1068_/D (sg13g2_or4_1)
+   0.017    0.146    0.385    4.560 v _1068_/X (sg13g2_or4_1)
+            0.146    0.001    4.561 v _1100_/B (sg13g2_nor4_1)
+   0.016    0.486    0.491    5.052 ^ _1100_/Y (sg13g2_nor4_1)
+            0.486    0.002    5.055 ^ _1543_/C (sg13g2_nor3_1)
+   0.002    0.107    0.141    5.196 v _1543_/Y (sg13g2_nor3_1)
+            0.107    0.000    5.196 v _1599_/D (sg13g2_dfrbpq_1)
+                              5.196   data arrival time
+
+                   400.000  400.000   clock rx_clk (rise edge)
+                     0.506  400.506   clock network delay (propagated)
+                    -0.100  400.406   clock uncertainty
+                     0.003  400.409   clock reconvergence pessimism
+                            400.409 ^ _1599_/CLK (sg13g2_dfrbpq_1)
+                    -0.211  400.198   library setup time
+                            400.198   data required time
+---------------------------------------------------------------------------
+                            400.198   data required time
+                             -5.196   data arrival time
+---------------------------------------------------------------------------
+                            395.002   slack (MET)
+
+
+Startpoint: _1715_ (rising edge-triggered flip-flop clocked by tx_clk)
+Endpoint: _1724_ (rising edge-triggered flip-flop clocked by tx_clk)
+Path Group: tx_clk
+Path Type: max
+
+     Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------
+                     0.000    0.000   clock tx_clk (rise edge)
+                     0.519    0.519   clock network delay (propagated)
+            0.036    0.000    0.519 ^ _1715_/CLK (sg13g2_dfrbpq_1)
+   0.012    0.072    0.293    0.812 v _1715_/Q (sg13g2_dfrbpq_1)
+            0.072    0.001    0.812 v _0917_/A (sg13g2_or4_1)
+   0.014    0.126    0.389    1.201 v _0917_/X (sg13g2_or4_1)
+            0.126    0.001    1.203 v _0918_/B (sg13g2_or2_1)
+   0.023    0.139    0.279    1.482 v _0918_/X (sg13g2_or2_1)
+            0.139    0.001    1.483 v _0922_/D (sg13g2_nor4_1)
+   0.063    1.678    1.313    2.796 ^ _0922_/Y (sg13g2_nor4_1)
+            1.678    0.003    2.799 ^ _0940_/B (sg13g2_nand2b_1)
+   0.005    0.250    0.339    3.138 v _0940_/Y (sg13g2_nand2b_1)
+            0.250    0.000    3.138 v _0941_/B1 (sg13g2_o21ai_1)
+   0.004    0.207    0.120    3.258 ^ _0941_/Y (sg13g2_o21ai_1)
+            0.207    0.000    3.258 ^ _0943_/A (sg13g2_nor2_1)
+   0.004    0.071    0.116    3.374 v _0943_/Y (sg13g2_nor2_1)
+            0.071    0.000    3.374 v _0944_/B1 (sg13g2_o21ai_1)
+   0.011    0.321    0.115    3.490 ^ _0944_/Y (sg13g2_o21ai_1)
+            0.321    0.001    3.491 ^ _0945_/B1 (sg13g2_a22oi_1)
+   0.004    0.141    0.179    3.669 v _0945_/Y (sg13g2_a22oi_1)
+            0.141    0.000    3.670 v _0946_/A2 (sg13g2_o21ai_1)
+   0.008    0.179    0.213    3.883 ^ _0946_/Y (sg13g2_o21ai_1)
+            0.179    0.001    3.883 ^ _1724_/D (sg13g2_dfrbpq_1)
+                              3.883   data arrival time
+
+                   400.000  400.000   clock tx_clk (rise edge)
+                     0.507  400.507   clock network delay (propagated)
+                    -0.100  400.407   clock uncertainty
+                     0.003  400.410   clock reconvergence pessimism
+                            400.410 ^ _1724_/CLK (sg13g2_dfrbpq_1)
+                    -0.254  400.156   library setup time
+                            400.156   data required time
+---------------------------------------------------------------------------
+                            400.156   data required time
+                             -3.883   data arrival time
+---------------------------------------------------------------------------
+                            396.273   slack (MET)
+
+
+worst slack max 395.00
+worst slack min 0.27
+tns max 0.00
+PASS openroad_sta.tcl

@@ -1,0 +1,549 @@
+%Warning-PINCONNECTEMPTY: 01_rtl/axis_gmii_rx.v:165:6: Instance pin connected by name with empty reference: 'data_out'
+  165 |     .data_out(),
+      |      ^~~~~~~~
+                          ... For warning description see https://verilator.org/warn/PINCONNECTEMPTY?v=5.047
+                          ... Use "/* verilator lint_off PINCONNECTEMPTY */" and lint_on around source to disable this message.
+%Warning-PINCONNECTEMPTY: 01_rtl/axis_gmii_tx.v:175:6: Instance pin connected by name with empty reference: 'data_out'
+  175 |     .data_out(),
+      |      ^~~~~~~~
+%Warning-PINMISSING: 01_rtl/ethernet_core.v:27:59: Instance has missing pin: 'm_axis_ptp_ts'
+   27 |  axis_gmii_tx #(.ENABLE_PADDING(1),.MIN_FRAME_LENGTH(64)) tx(
+      |                                                           ^~
+                     01_rtl/axis_gmii_tx.v:78:38: ... Location of port declaration
+   78 |     output wire [PTP_TS_WIDTH-1:0]   m_axis_ptp_ts,
+      |                                      ^~~~~~~~~~~~~
+                     ... For warning description see https://verilator.org/warn/PINMISSING?v=5.047
+                     ... Use "/* verilator lint_off PINMISSING */" and lint_on around source to disable this message.
+%Warning-PINMISSING: 01_rtl/ethernet_core.v:27:59: Instance has missing pin: 'm_axis_ptp_ts_tag'
+   27 |  axis_gmii_tx #(.ENABLE_PADDING(1),.MIN_FRAME_LENGTH(64)) tx(
+      |                                                           ^~
+                     01_rtl/axis_gmii_tx.v:79:38: ... Location of port declaration
+   79 |     output wire [PTP_TAG_WIDTH-1:0]  m_axis_ptp_ts_tag,
+      |                                      ^~~~~~~~~~~~~~~~~
+%Warning-PINMISSING: 01_rtl/ethernet_core.v:27:59: Instance has missing pin: 'm_axis_ptp_ts_valid'
+   27 |  axis_gmii_tx #(.ENABLE_PADDING(1),.MIN_FRAME_LENGTH(64)) tx(
+      |                                                           ^~
+                     01_rtl/axis_gmii_tx.v:80:38: ... Location of port declaration
+   80 |     output wire                      m_axis_ptp_ts_valid,
+      |                                      ^~~~~~~~~~~~~~~~~~~
+%Warning-PINMISSING: 01_rtl/ethernet_core.v:27:59: Instance has missing pin: 'start_packet'
+   27 |  axis_gmii_tx #(.ENABLE_PADDING(1),.MIN_FRAME_LENGTH(64)) tx(
+      |                                                           ^~
+                     01_rtl/axis_gmii_tx.v:97:38: ... Location of port declaration
+   97 |     output wire                      start_packet,
+      |                                      ^~~~~~~~~~~~
+%Warning-PINMISSING: 01_rtl/ethernet_core.v:35:15: Instance has missing pin: 'start_packet'
+   35 |  axis_gmii_rx rx(
+      |               ^~
+                     01_rtl/axis_gmii_rx.v:87:37: ... Location of port declaration
+   87 |     output wire                     start_packet,
+      |                                     ^~~~~~~~~~~~
+%Warning-WIDTHEXPAND: 01_rtl/axis_gmii_tx.v:204:51: Operator SHIFTR expects 16 bits on the LHS, but LHS's VARREF 's_axis_tuser' generates 1 bits.
+                                                  : ... note: In instance 'ethernet_core.tx'
+  204 |             m_axis_ptp_ts_tag_next = s_axis_tuser >> 2;
+      |                                                   ^~
+                      ... For warning description see https://verilator.org/warn/WIDTHEXPAND?v=5.047
+                      ... Use "/* verilator lint_off WIDTHEXPAND */" and lint_on around source to disable this message.
+%Warning-SELRANGE: 01_rtl/axis_gmii_tx.v:205:52: Selection index out of range: 1:1 outside 0:0
+                                               : ... note: In instance 'ethernet_core.tx'
+  205 |             m_axis_ptp_ts_valid_next = s_axis_tuser[1];
+      |                                                    ^
+                   ... For warning description see https://verilator.org/warn/SELRANGE?v=5.047
+                   ... Use "/* verilator lint_off SELRANGE */" and lint_on around source to disable this message.
+%Warning-WIDTHEXPAND: 01_rtl/axis_gmii_tx.v:207:51: Operator SHIFTR expects 16 bits on the LHS, but LHS's VARREF 's_axis_tuser' generates 1 bits.
+                                                  : ... note: In instance 'ethernet_core.tx'
+  207 |             m_axis_ptp_ts_tag_next = s_axis_tuser >> 1;
+      |                                                   ^~
+%Warning-WIDTHTRUNC: 01_rtl/axis_gmii_tx.v:251:38: Operator ASSIGN expects 6 bits on the Assign RHS, but Assign RHS's SUB generates 32 or 7 bits.
+                                                 : ... note: In instance 'ethernet_core.tx'
+  251 |                 frame_min_count_next = MIN_FRAME_LENGTH-4-1;
+      |                                      ^
+                     ... For warning description see https://verilator.org/warn/WIDTHTRUNC?v=5.047
+                     ... Use "/* verilator lint_off WIDTHTRUNC */" and lint_on around source to disable this message.
+%Warning-WIDTHTRUNC: 01_rtl/axis_gmii_tx.v:302:17: Logical operator IF expects 1 bit on the If, but If's VARREF 'frame_min_count_reg' generates 6 bits.
+                                                 : ... note: In instance 'ethernet_core.tx'
+  302 |                 if (frame_min_count_reg) begin
+      |                 ^~
+%Warning-WIDTHTRUNC: 01_rtl/axis_gmii_tx.v:332:36: Logical operator LOGAND expects 1 bit on the RHS, but RHS's VARREF 'frame_min_count_reg' generates 6 bits.
+                                                 : ... note: In instance 'ethernet_core.tx'
+  332 |                 if (ENABLE_PADDING && frame_min_count_reg) begin
+      |                                    ^~
+%Warning-WIDTHTRUNC: 01_rtl/axis_gmii_tx.v:353:17: Logical operator IF expects 1 bit on the If, but If's VARREF 'frame_min_count_reg' generates 6 bits.
+                                                 : ... note: In instance 'ethernet_core.tx'
+  353 |                 if (frame_min_count_reg) begin
+      |                 ^~
+%Warning-WIDTHEXPAND: 01_rtl/axis_gmii_tx.v:368:17: Operator CASE expects 8 bits on the Case Item, but Case Item's CONST '2'h0' generates 2 bits.
+                                                  : ... note: In instance 'ethernet_core.tx'
+  368 |                 case (frame_ptr_reg)
+      |                 ^~~~
+%Warning-WIDTHEXPAND: 01_rtl/axis_gmii_tx.v:368:17: Operator CASE expects 8 bits on the Case Item, but Case Item's CONST '2'h1' generates 2 bits.
+                                                  : ... note: In instance 'ethernet_core.tx'
+  368 |                 case (frame_ptr_reg)
+      |                 ^~~~
+%Warning-WIDTHEXPAND: 01_rtl/axis_gmii_tx.v:368:17: Operator CASE expects 8 bits on the Case Item, but Case Item's CONST '2'h2' generates 2 bits.
+                                                  : ... note: In instance 'ethernet_core.tx'
+  368 |                 case (frame_ptr_reg)
+      |                 ^~~~
+%Warning-WIDTHEXPAND: 01_rtl/axis_gmii_tx.v:368:17: Operator CASE expects 8 bits on the Case Item, but Case Item's CONST '2'h3' generates 2 bits.
+                                                  : ... note: In instance 'ethernet_core.tx'
+  368 |                 case (frame_ptr_reg)
+      |                 ^~~~
+%Warning-WIDTHEXPAND: 01_rtl/axis_gmii_rx.v:154:37: Operator COND expects 97 bits on the Conditional False, but Conditional False's VARREF 'm_axis_tuser_reg' generates 1 bits.
+                                                  : ... note: In instance 'ethernet_core.rx'
+  154 | assign m_axis_tuser = PTP_TS_ENABLE ? {ptp_ts_reg, m_axis_tuser_reg} : m_axis_tuser_reg;
+      |                                     ^
+%Warning-WIDTHTRUNC: 01_rtl/axis_gmii_rx.v:154:21: Operator ASSIGNW expects 1 bits on the Assign RHS, but Assign RHS's COND generates 97 bits.
+                                                 : ... note: In instance 'ethernet_core.rx'
+  154 | assign m_axis_tuser = PTP_TS_ENABLE ? {ptp_ts_reg, m_axis_tuser_reg} : m_axis_tuser_reg;
+      |                     ^
+%Warning-UNUSEDSIGNAL: 01_rtl/ethernet_core.v:24:13: Bits of signal are not used: 'tx_gmii'[7:4]
+                                                   : ... note: In instance 'ethernet_core'
+   24 |  wire [7:0] tx_gmii;
+      |             ^~~~~~~
+                       ... For warning description see https://verilator.org/warn/UNUSEDSIGNAL?v=5.047
+                       ... Use "/* verilator lint_off UNUSEDSIGNAL */" and lint_on around source to disable this message.
+%Warning-UNUSEDPARAM: 01_rtl/axis_gmii_rx.v:101:5: Parameter is not used: 'ETH_PRE'
+                                                 : ... note: In instance 'ethernet_core.rx'
+  101 |     ETH_PRE = 8'h55,
+      |     ^~~~~~~
+                      ... For warning description see https://verilator.org/warn/UNUSEDPARAM?v=5.047
+                      ... Use "/* verilator lint_off UNUSEDPARAM */" and lint_on around source to disable this message.
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_rx.v:109:23: Procedural assignment to declaration with initial value: 'state_reg'
+                                                  : ... note: In instance 'ethernet_core.rx'
+                                                  : ... Location of variable initialization
+  109 | reg [2:0] state_reg = STATE_IDLE, state_next;
+      |                       ^~~~~~~~~~
+                      01_rtl/axis_gmii_rx.v:249:5: ... Location of variable process write
+                                                 : ... Perhaps should initialize instead using a reset in this process
+  249 |     state_reg <= state_next;
+      |     ^~~~~~~~~
+                      ... For warning description see https://verilator.org/warn/PROCASSINIT?v=5.047
+                      ... Use "/* verilator lint_off PROCASSINIT */" and lint_on around source to disable this message.
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_rx.v:115:15: Procedural assignment to declaration with initial value: 'mii_odd'
+                                                  : ... note: In instance 'ethernet_core.rx'
+                                                  : ... Location of variable initialization
+  115 | reg mii_odd = 1'b0;
+      |               ^~~~
+                      01_rtl/axis_gmii_rx.v:266:13: ... Location of variable process write
+                                                  : ... Perhaps should initialize instead using a reset in this process
+  266 |             mii_odd <= !mii_odd;
+      |             ^~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_rx.v:116:16: Procedural assignment to declaration with initial value: 'in_frame'
+                                                  : ... note: In instance 'ethernet_core.rx'
+                                                  : ... Location of variable initialization
+  116 | reg in_frame = 1'b0;
+      |                ^~~~
+                      01_rtl/axis_gmii_rx.v:269:17: ... Location of variable process write
+                                                  : ... Perhaps should initialize instead using a reset in this process
+  269 |                 in_frame <= gmii_rx_dv;
+      |                 ^~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_rx.v:118:47: Procedural assignment to declaration with initial value: 'gmii_rxd_d0'
+                                                  : ... note: In instance 'ethernet_core.rx'
+                                                  : ... Location of variable initialization
+  118 | reg [DATA_WIDTH-1:0] gmii_rxd_d0 = {DATA_WIDTH{1'b0}};
+      |                                               ^
+                      01_rtl/axis_gmii_rx.v:276:13: ... Location of variable process write
+                                                  : ... Perhaps should initialize instead using a reset in this process
+  276 |             gmii_rxd_d0 <= {gmii_rxd[3:0], gmii_rxd_d0[7:4]};
+      |             ^~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_rx.v:119:47: Procedural assignment to declaration with initial value: 'gmii_rxd_d1'
+                                                  : ... note: In instance 'ethernet_core.rx'
+                                                  : ... Location of variable initialization
+  119 | reg [DATA_WIDTH-1:0] gmii_rxd_d1 = {DATA_WIDTH{1'b0}};
+      |                                               ^
+                      01_rtl/axis_gmii_rx.v:279:17: ... Location of variable process write
+                                                  : ... Perhaps should initialize instead using a reset in this process
+  279 |                 gmii_rxd_d1 <= gmii_rxd_d0;
+      |                 ^~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_rx.v:120:47: Procedural assignment to declaration with initial value: 'gmii_rxd_d2'
+                                                  : ... note: In instance 'ethernet_core.rx'
+                                                  : ... Location of variable initialization
+  120 | reg [DATA_WIDTH-1:0] gmii_rxd_d2 = {DATA_WIDTH{1'b0}};
+      |                                               ^
+                      01_rtl/axis_gmii_rx.v:280:17: ... Location of variable process write
+                                                  : ... Perhaps should initialize instead using a reset in this process
+  280 |                 gmii_rxd_d2 <= gmii_rxd_d1;
+      |                 ^~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_rx.v:121:47: Procedural assignment to declaration with initial value: 'gmii_rxd_d3'
+                                                  : ... note: In instance 'ethernet_core.rx'
+                                                  : ... Location of variable initialization
+  121 | reg [DATA_WIDTH-1:0] gmii_rxd_d3 = {DATA_WIDTH{1'b0}};
+      |                                               ^
+                      01_rtl/axis_gmii_rx.v:281:17: ... Location of variable process write
+                                                  : ... Perhaps should initialize instead using a reset in this process
+  281 |                 gmii_rxd_d3 <= gmii_rxd_d2;
+      |                 ^~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_rx.v:122:47: Procedural assignment to declaration with initial value: 'gmii_rxd_d4'
+                                                  : ... note: In instance 'ethernet_core.rx'
+                                                  : ... Location of variable initialization
+  122 | reg [DATA_WIDTH-1:0] gmii_rxd_d4 = {DATA_WIDTH{1'b0}};
+      |                                               ^
+                      01_rtl/axis_gmii_rx.v:282:17: ... Location of variable process write
+                                                  : ... Perhaps should initialize instead using a reset in this process
+  282 |                 gmii_rxd_d4 <= gmii_rxd_d3;
+      |                 ^~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_rx.v:124:21: Procedural assignment to declaration with initial value: 'gmii_rx_dv_d0'
+                                                  : ... note: In instance 'ethernet_core.rx'
+                                                  : ... Location of variable initialization
+  124 | reg gmii_rx_dv_d0 = 1'b0;
+      |                     ^~~~
+                      01_rtl/axis_gmii_rx.v:284:17: ... Location of variable process write
+                                                  : ... Perhaps should initialize instead using a reset in this process
+  284 |                 gmii_rx_dv_d0 <= gmii_rx_dv & gmii_rx_dv_d0;
+      |                 ^~~~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_rx.v:125:21: Procedural assignment to declaration with initial value: 'gmii_rx_dv_d1'
+                                                  : ... note: In instance 'ethernet_core.rx'
+                                                  : ... Location of variable initialization
+  125 | reg gmii_rx_dv_d1 = 1'b0;
+      |                     ^~~~
+                      01_rtl/axis_gmii_rx.v:285:17: ... Location of variable process write
+                                                  : ... Perhaps should initialize instead using a reset in this process
+  285 |                 gmii_rx_dv_d1 <= gmii_rx_dv_d0 & gmii_rx_dv;
+      |                 ^~~~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_rx.v:126:21: Procedural assignment to declaration with initial value: 'gmii_rx_dv_d2'
+                                                  : ... note: In instance 'ethernet_core.rx'
+                                                  : ... Location of variable initialization
+  126 | reg gmii_rx_dv_d2 = 1'b0;
+      |                     ^~~~
+                      01_rtl/axis_gmii_rx.v:286:17: ... Location of variable process write
+                                                  : ... Perhaps should initialize instead using a reset in this process
+  286 |                 gmii_rx_dv_d2 <= gmii_rx_dv_d1 & gmii_rx_dv;
+      |                 ^~~~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_rx.v:127:21: Procedural assignment to declaration with initial value: 'gmii_rx_dv_d3'
+                                                  : ... note: In instance 'ethernet_core.rx'
+                                                  : ... Location of variable initialization
+  127 | reg gmii_rx_dv_d3 = 1'b0;
+      |                     ^~~~
+                      01_rtl/axis_gmii_rx.v:287:17: ... Location of variable process write
+                                                  : ... Perhaps should initialize instead using a reset in this process
+  287 |                 gmii_rx_dv_d3 <= gmii_rx_dv_d2 & gmii_rx_dv;
+      |                 ^~~~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_rx.v:128:21: Procedural assignment to declaration with initial value: 'gmii_rx_dv_d4'
+                                                  : ... note: In instance 'ethernet_core.rx'
+                                                  : ... Location of variable initialization
+  128 | reg gmii_rx_dv_d4 = 1'b0;
+      |                     ^~~~
+                      01_rtl/axis_gmii_rx.v:288:17: ... Location of variable process write
+                                                  : ... Perhaps should initialize instead using a reset in this process
+  288 |                 gmii_rx_dv_d4 <= gmii_rx_dv_d3 & gmii_rx_dv;
+      |                 ^~~~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_rx.v:130:21: Procedural assignment to declaration with initial value: 'gmii_rx_er_d0'
+                                                  : ... note: In instance 'ethernet_core.rx'
+                                                  : ... Location of variable initialization
+  130 | reg gmii_rx_er_d0 = 1'b0;
+      |                     ^~~~
+                      01_rtl/axis_gmii_rx.v:290:17: ... Location of variable process write
+                                                  : ... Perhaps should initialize instead using a reset in this process
+  290 |                 gmii_rx_er_d0 <= gmii_rx_er | gmii_rx_er_d0;
+      |                 ^~~~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_rx.v:131:21: Procedural assignment to declaration with initial value: 'gmii_rx_er_d1'
+                                                  : ... note: In instance 'ethernet_core.rx'
+                                                  : ... Location of variable initialization
+  131 | reg gmii_rx_er_d1 = 1'b0;
+      |                     ^~~~
+                      01_rtl/axis_gmii_rx.v:291:17: ... Location of variable process write
+                                                  : ... Perhaps should initialize instead using a reset in this process
+  291 |                 gmii_rx_er_d1 <= gmii_rx_er_d0;
+      |                 ^~~~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_rx.v:132:21: Procedural assignment to declaration with initial value: 'gmii_rx_er_d2'
+                                                  : ... note: In instance 'ethernet_core.rx'
+                                                  : ... Location of variable initialization
+  132 | reg gmii_rx_er_d2 = 1'b0;
+      |                     ^~~~
+                      01_rtl/axis_gmii_rx.v:292:17: ... Location of variable process write
+                                                  : ... Perhaps should initialize instead using a reset in this process
+  292 |                 gmii_rx_er_d2 <= gmii_rx_er_d1;
+      |                 ^~~~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_rx.v:133:21: Procedural assignment to declaration with initial value: 'gmii_rx_er_d3'
+                                                  : ... note: In instance 'ethernet_core.rx'
+                                                  : ... Location of variable initialization
+  133 | reg gmii_rx_er_d3 = 1'b0;
+      |                     ^~~~
+                      01_rtl/axis_gmii_rx.v:293:17: ... Location of variable process write
+                                                  : ... Perhaps should initialize instead using a reset in this process
+  293 |                 gmii_rx_er_d3 <= gmii_rx_er_d2;
+      |                 ^~~~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_rx.v:134:21: Procedural assignment to declaration with initial value: 'gmii_rx_er_d4'
+                                                  : ... note: In instance 'ethernet_core.rx'
+                                                  : ... Location of variable initialization
+  134 | reg gmii_rx_er_d4 = 1'b0;
+      |                     ^~~~
+                      01_rtl/axis_gmii_rx.v:294:17: ... Location of variable process write
+                                                  : ... Perhaps should initialize instead using a reset in this process
+  294 |                 gmii_rx_er_d4 <= gmii_rx_er_d3;
+      |                 ^~~~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_rx.v:136:52: Procedural assignment to declaration with initial value: 'm_axis_tdata_reg'
+                                                  : ... note: In instance 'ethernet_core.rx'
+                                                  : ... Location of variable initialization
+  136 | reg [DATA_WIDTH-1:0] m_axis_tdata_reg = {DATA_WIDTH{1'b0}}, m_axis_tdata_next;
+      |                                                    ^
+                      01_rtl/axis_gmii_rx.v:251:5: ... Location of variable process write
+                                                 : ... Perhaps should initialize instead using a reset in this process
+  251 |     m_axis_tdata_reg <= m_axis_tdata_next;
+      |     ^~~~~~~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_rx.v:137:25: Procedural assignment to declaration with initial value: 'm_axis_tvalid_reg'
+                                                  : ... note: In instance 'ethernet_core.rx'
+                                                  : ... Location of variable initialization
+  137 | reg m_axis_tvalid_reg = 1'b0, m_axis_tvalid_next;
+      |                         ^~~~
+                      01_rtl/axis_gmii_rx.v:252:5: ... Location of variable process write
+                                                 : ... Perhaps should initialize instead using a reset in this process
+  252 |     m_axis_tvalid_reg <= m_axis_tvalid_next;
+      |     ^~~~~~~~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_rx.v:138:24: Procedural assignment to declaration with initial value: 'm_axis_tlast_reg'
+                                                  : ... note: In instance 'ethernet_core.rx'
+                                                  : ... Location of variable initialization
+  138 | reg m_axis_tlast_reg = 1'b0, m_axis_tlast_next;
+      |                        ^~~~
+                      01_rtl/axis_gmii_rx.v:253:5: ... Location of variable process write
+                                                 : ... Perhaps should initialize instead using a reset in this process
+  253 |     m_axis_tlast_reg <= m_axis_tlast_next;
+      |     ^~~~~~~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_rx.v:139:24: Procedural assignment to declaration with initial value: 'm_axis_tuser_reg'
+                                                  : ... note: In instance 'ethernet_core.rx'
+                                                  : ... Location of variable initialization
+  139 | reg m_axis_tuser_reg = 1'b0, m_axis_tuser_next;
+      |                        ^~~~
+                      01_rtl/axis_gmii_rx.v:254:5: ... Location of variable process write
+                                                 : ... Perhaps should initialize instead using a reset in this process
+  254 |     m_axis_tuser_reg <= m_axis_tuser_next;
+      |     ^~~~~~~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_rx.v:141:28: Procedural assignment to declaration with initial value: 'start_packet_int_reg'
+                                                  : ... note: In instance 'ethernet_core.rx'
+                                                  : ... Location of variable initialization
+  141 | reg start_packet_int_reg = 1'b0;
+      |                            ^~~~
+                      01_rtl/axis_gmii_rx.v:256:5: ... Location of variable process write
+                                                 : ... Perhaps should initialize instead using a reset in this process
+  256 |     start_packet_int_reg <= 1'b0;
+      |     ^~~~~~~~~~~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_rx.v:142:24: Procedural assignment to declaration with initial value: 'start_packet_reg'
+                                                  : ... note: In instance 'ethernet_core.rx'
+                                                  : ... Location of variable initialization
+  142 | reg start_packet_reg = 1'b0;
+      |                        ^~~~
+                      01_rtl/axis_gmii_rx.v:257:5: ... Location of variable process write
+                                                 : ... Perhaps should initialize instead using a reset in this process
+  257 |     start_packet_reg <= 1'b0;
+      |     ^~~~~~~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_rx.v:143:27: Procedural assignment to declaration with initial value: 'error_bad_frame_reg'
+                                                  : ... note: In instance 'ethernet_core.rx'
+                                                  : ... Location of variable initialization
+  143 | reg error_bad_frame_reg = 1'b0, error_bad_frame_next;
+      |                           ^~~~
+                      01_rtl/axis_gmii_rx.v:333:5: ... Location of variable process write
+                                                 : ... Perhaps should initialize instead using a reset in this process
+  333 |     error_bad_frame_reg <= error_bad_frame_next;
+      |     ^~~~~~~~~~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_rx.v:144:25: Procedural assignment to declaration with initial value: 'error_bad_fcs_reg'
+                                                  : ... note: In instance 'ethernet_core.rx'
+                                                  : ... Location of variable initialization
+  144 | reg error_bad_fcs_reg = 1'b0, error_bad_fcs_next;
+      |                         ^~~~
+                      01_rtl/axis_gmii_rx.v:334:5: ... Location of variable process write
+                                                 : ... Perhaps should initialize instead using a reset in this process
+  334 |     error_bad_fcs_reg <= error_bad_fcs_next;
+      |     ^~~~~~~~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_rx.v:146:37: Procedural assignment to declaration with initial value: 'ptp_ts_reg'
+                                                  : ... note: In instance 'ethernet_core.rx'
+                                                  : ... Location of variable initialization
+  146 | reg [PTP_TS_WIDTH-1:0] ptp_ts_reg = 0;
+      |                                     ^
+                      01_rtl/axis_gmii_rx.v:260:9: ... Location of variable process write
+                                                 : ... Perhaps should initialize instead using a reset in this process
+  260 |         ptp_ts_reg <= ptp_ts;
+      |         ^~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_rx.v:148:24: Procedural assignment to declaration with initial value: 'crc_state'
+                                                  : ... note: In instance 'ethernet_core.rx'
+                                                  : ... Location of variable initialization
+  148 | reg [31:0] crc_state = 32'hFFFFFFFF;
+      |                        ^~~~~~~~~~~~
+                      01_rtl/axis_gmii_rx.v:328:9: ... Location of variable process write
+                                                 : ... Perhaps should initialize instead using a reset in this process
+  328 |         crc_state <= 32'hFFFFFFFF;
+      |         ^~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_tx.v:124:23: Procedural assignment to declaration with initial value: 'state_reg'
+                                                  : ... note: In instance 'ethernet_core.tx'
+                                                  : ... Location of variable initialization
+  124 | reg [2:0] state_reg = STATE_IDLE, state_next;
+      |                       ^~~~~~~~~~
+                      01_rtl/axis_gmii_tx.v:407:5: ... Location of variable process write
+                                                 : ... Perhaps should initialize instead using a reset in this process
+  407 |     state_reg <= state_next;
+      |     ^~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_tx.v:130:25: Procedural assignment to declaration with initial value: 's_tdata_reg'
+                                                  : ... note: In instance 'ethernet_core.tx'
+                                                  : ... Location of variable initialization
+  130 | reg [7:0] s_tdata_reg = 8'd0, s_tdata_next;
+      |                         ^~~~
+                      01_rtl/axis_gmii_tx.v:421:5: ... Location of variable process write
+                                                 : ... Perhaps should initialize instead using a reset in this process
+  421 |     s_tdata_reg <= s_tdata_next;
+      |     ^~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_tx.v:132:19: Procedural assignment to declaration with initial value: 'mii_odd_reg'
+                                                  : ... note: In instance 'ethernet_core.tx'
+                                                  : ... Location of variable initialization
+  132 | reg mii_odd_reg = 1'b0, mii_odd_next;
+      |                   ^~~~
+                      01_rtl/axis_gmii_tx.v:418:5: ... Location of variable process write
+                                                 : ... Perhaps should initialize instead using a reset in this process
+  418 |     mii_odd_reg <= mii_odd_next;
+      |     ^~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_tx.v:133:25: Procedural assignment to declaration with initial value: 'mii_msn_reg'
+                                                  : ... note: In instance 'ethernet_core.tx'
+                                                  : ... Location of variable initialization
+  133 | reg [3:0] mii_msn_reg = 4'b0, mii_msn_next;
+      |                         ^~~~
+                      01_rtl/axis_gmii_tx.v:419:5: ... Location of variable process write
+                                                 : ... Perhaps should initialize instead using a reset in this process
+  419 |     mii_msn_reg <= mii_msn_next;
+      |     ^~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_tx.v:135:17: Procedural assignment to declaration with initial value: 'frame_reg'
+                                                  : ... note: In instance 'ethernet_core.tx'
+                                                  : ... Location of variable initialization
+  135 | reg frame_reg = 1'b0, frame_next;
+      |                 ^~~~
+                      01_rtl/axis_gmii_tx.v:409:5: ... Location of variable process write
+                                                 : ... Perhaps should initialize instead using a reset in this process
+  409 |     frame_reg <= frame_next;
+      |     ^~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_tx.v:136:23: Procedural assignment to declaration with initial value: 'frame_error_reg'
+                                                  : ... note: In instance 'ethernet_core.tx'
+                                                  : ... Location of variable initialization
+  136 | reg frame_error_reg = 1'b0, frame_error_next;
+      |                       ^~~~
+                      01_rtl/axis_gmii_tx.v:410:5: ... Location of variable process write
+                                                 : ... Perhaps should initialize instead using a reset in this process
+  410 |     frame_error_reg <= frame_error_next;
+      |     ^~~~~~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_tx.v:137:27: Procedural assignment to declaration with initial value: 'frame_ptr_reg'
+                                                  : ... note: In instance 'ethernet_core.tx'
+                                                  : ... Location of variable initialization
+  137 | reg [7:0] frame_ptr_reg = 0, frame_ptr_next;
+      |                           ^
+                      01_rtl/axis_gmii_tx.v:411:5: ... Location of variable process write
+                                                 : ... Perhaps should initialize instead using a reset in this process
+  411 |     frame_ptr_reg <= frame_ptr_next;
+      |     ^~~~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_tx.v:138:47: Procedural assignment to declaration with initial value: 'frame_min_count_reg'
+                                                  : ... note: In instance 'ethernet_core.tx'
+                                                  : ... Location of variable initialization
+  138 | reg [MIN_LEN_WIDTH-1:0] frame_min_count_reg = 0, frame_min_count_next;
+      |                                               ^
+                      01_rtl/axis_gmii_tx.v:412:5: ... Location of variable process write
+                                                 : ... Perhaps should initialize instead using a reset in this process
+  412 |     frame_min_count_reg <= frame_min_count_next;
+      |     ^~~~~~~~~~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_tx.v:140:26: Procedural assignment to declaration with initial value: 'gmii_txd_reg'
+                                                  : ... note: In instance 'ethernet_core.tx'
+                                                  : ... Location of variable initialization
+  140 | reg [7:0] gmii_txd_reg = 8'd0, gmii_txd_next;
+      |                          ^~~~
+                      01_rtl/axis_gmii_tx.v:425:5: ... Location of variable process write
+                                                 : ... Perhaps should initialize instead using a reset in this process
+  425 |     gmii_txd_reg <= gmii_txd_next;
+      |     ^~~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_tx.v:141:22: Procedural assignment to declaration with initial value: 'gmii_tx_en_reg'
+                                                  : ... note: In instance 'ethernet_core.tx'
+                                                  : ... Location of variable initialization
+  141 | reg gmii_tx_en_reg = 1'b0, gmii_tx_en_next;
+      |                      ^~~~
+                      01_rtl/axis_gmii_tx.v:426:5: ... Location of variable process write
+                                                 : ... Perhaps should initialize instead using a reset in this process
+  426 |     gmii_tx_en_reg <= gmii_tx_en_next;
+      |     ^~~~~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_tx.v:142:22: Procedural assignment to declaration with initial value: 'gmii_tx_er_reg'
+                                                  : ... note: In instance 'ethernet_core.tx'
+                                                  : ... Location of variable initialization
+  142 | reg gmii_tx_er_reg = 1'b0, gmii_tx_er_next;
+      |                      ^~~~
+                      01_rtl/axis_gmii_tx.v:427:5: ... Location of variable process write
+                                                 : ... Perhaps should initialize instead using a reset in this process
+  427 |     gmii_tx_er_reg <= gmii_tx_er_next;
+      |     ^~~~~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_tx.v:144:25: Procedural assignment to declaration with initial value: 's_axis_tready_reg'
+                                                  : ... note: In instance 'ethernet_core.tx'
+                                                  : ... Location of variable initialization
+  144 | reg s_axis_tready_reg = 1'b0, s_axis_tready_next;
+      |                         ^~~~
+                      01_rtl/axis_gmii_tx.v:423:5: ... Location of variable process write
+                                                 : ... Perhaps should initialize instead using a reset in this process
+  423 |     s_axis_tready_reg <= s_axis_tready_next;
+      |     ^~~~~~~~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_tx.v:146:44: Procedural assignment to declaration with initial value: 'm_axis_ptp_ts_reg'
+                                                  : ... note: In instance 'ethernet_core.tx'
+                                                  : ... Location of variable initialization
+  146 | reg [PTP_TS_WIDTH-1:0] m_axis_ptp_ts_reg = 0, m_axis_ptp_ts_next;
+      |                                            ^
+                      01_rtl/axis_gmii_tx.v:414:5: ... Location of variable process write
+                                                 : ... Perhaps should initialize instead using a reset in this process
+  414 |     m_axis_ptp_ts_reg <= m_axis_ptp_ts_next;
+      |     ^~~~~~~~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_tx.v:147:49: Procedural assignment to declaration with initial value: 'm_axis_ptp_ts_tag_reg'
+                                                  : ... note: In instance 'ethernet_core.tx'
+                                                  : ... Location of variable initialization
+  147 | reg [PTP_TAG_WIDTH-1:0] m_axis_ptp_ts_tag_reg = 0, m_axis_ptp_ts_tag_next;
+      |                                                 ^
+                      01_rtl/axis_gmii_tx.v:415:5: ... Location of variable process write
+                                                 : ... Perhaps should initialize instead using a reset in this process
+  415 |     m_axis_ptp_ts_tag_reg <= m_axis_ptp_ts_tag_next;
+      |     ^~~~~~~~~~~~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_tx.v:148:31: Procedural assignment to declaration with initial value: 'm_axis_ptp_ts_valid_reg'
+                                                  : ... note: In instance 'ethernet_core.tx'
+                                                  : ... Location of variable initialization
+  148 | reg m_axis_ptp_ts_valid_reg = 1'b0, m_axis_ptp_ts_valid_next;
+      |                               ^~~~
+                      01_rtl/axis_gmii_tx.v:416:5: ... Location of variable process write
+                                                 : ... Perhaps should initialize instead using a reset in this process
+  416 |     m_axis_ptp_ts_valid_reg <= m_axis_ptp_ts_valid_next;
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_tx.v:150:28: Procedural assignment to declaration with initial value: 'start_packet_int_reg'
+                                                  : ... note: In instance 'ethernet_core.tx'
+                                                  : ... Location of variable initialization
+  150 | reg start_packet_int_reg = 1'b0, start_packet_int_next;
+      |                            ^~~~
+                      01_rtl/axis_gmii_tx.v:435:5: ... Location of variable process write
+                                                 : ... Perhaps should initialize instead using a reset in this process
+  435 |     start_packet_int_reg <= start_packet_int_next;
+      |     ^~~~~~~~~~~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_tx.v:151:24: Procedural assignment to declaration with initial value: 'start_packet_reg'
+                                                  : ... note: In instance 'ethernet_core.tx'
+                                                  : ... Location of variable initialization
+  151 | reg start_packet_reg = 1'b0, start_packet_next;
+      |                        ^~~~
+                      01_rtl/axis_gmii_tx.v:436:5: ... Location of variable process write
+                                                 : ... Perhaps should initialize instead using a reset in this process
+  436 |     start_packet_reg <= start_packet_next;
+      |     ^~~~~~~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_tx.v:152:27: Procedural assignment to declaration with initial value: 'error_underflow_reg'
+                                                  : ... note: In instance 'ethernet_core.tx'
+                                                  : ... Location of variable initialization
+  152 | reg error_underflow_reg = 1'b0, error_underflow_next;
+      |                           ^~~~
+                      01_rtl/axis_gmii_tx.v:437:5: ... Location of variable process write
+                                                 : ... Perhaps should initialize instead using a reset in this process
+  437 |     error_underflow_reg <= error_underflow_next;
+      |     ^~~~~~~~~~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/axis_gmii_tx.v:154:24: Procedural assignment to declaration with initial value: 'crc_state'
+                                                  : ... note: In instance 'ethernet_core.tx'
+                                                  : ... Location of variable initialization
+  154 | reg [31:0] crc_state = 32'hFFFFFFFF;
+      |                        ^~~~~~~~~~~~
+                      01_rtl/axis_gmii_tx.v:430:9: ... Location of variable process write
+                                                 : ... Perhaps should initialize instead using a reset in this process
+  430 |         crc_state <= 32'hFFFFFFFF;
+      |         ^~~~~~~~~
+%Warning-CASEINCOMPLETE: 01_rtl/axis_gmii_tx.v:368:17: Case values incompletely covered (example pattern 0x4)
+  368 |                 case (frame_ptr_reg)
+      |                 ^~~~
+                         ... For warning description see https://verilator.org/warn/CASEINCOMPLETE?v=5.047
+                         ... Use "/* verilator lint_off CASEINCOMPLETE */" and lint_on around source to disable this message.
+%Warning-CASEINCOMPLETE: 01_rtl/axis_gmii_tx.v:242:9: Case values incompletely covered (example pattern 0x7)
+  242 |         case (state_reg)
+      |         ^~~~
+%Warning-CASEINCOMPLETE: 01_rtl/axis_gmii_rx.v:190:9: Case values incompletely covered (example pattern 0x3)
+  190 |         case (state_reg)
+      |         ^~~~
+- V e r i l a t i o n   R e p o r t: Verilator 5.047 devel rev v5.046-219-g56ed47ee7 (mod)
+- Verilator: Built from 0.176 MB sources in 5 modules, into 0.116 MB in 3 C++ files needing 0.000 MB
+- Verilator: Walltime 0.052 s (elab=0.003, cvt=0.013, bld=0.000); cpu 0.026 s on 1 threads; allocated 22.348 MB

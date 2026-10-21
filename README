@@ -1,68 +1,140 @@
+<!--
+===============================================================================
+Ignytion IO - CRUCIBLE CORE
+Copyright (c) 2026 Ignytion IO. All rights reserved.
+Author      : IGNYTION_TECH
+File        : README
+Created     : 2026-10-03
+Description : Current student reference builds and competition boundaries.
+===============================================================================
+-->
 # crucible-asic-starter
 
-A reproducible starter for open-source ASIC design, powered by Crucible.
+A student reference workspace for serial protocols and open-source ASIC flows.
 
-Fork it, and go from RTL to GDS without fighting your environment - toolchain, PDK, and verification stack resolved and pinned for you.
+I2C, SPI, UART, low-speed USB and 10 Mbit Ethernet now have pinned upstream RTL, self-checking simulations with
+deliberate failure controls, SG13G2 mapped synthesis, routed DEF/SPEF, typical
+and slow extracted timing, and independently decoded GDS. These are fixed-function
+reference blocks, **not a Tiny Tapeout submission** and not a general-purpose
+reprogrammable protocol emulator.
 
-Built as a community starter for the **Jane Street protocol-emulator ASIC competition**. Targets the Tiny Tapeout IHP 130nm (CMOS5L) flow.
+Jane Street requires a programmable emulator on its IHP CMOS5L template.
+The standalone SG13G2 builds do not establish competition compliance.
+See the [official requirements](https://blog.janestreet.com/protocol-emulator-asic-competition/).
 
-## Quickstart
+## Run a reference block in WSL
+
+In an interactive login Bash shell, from this repository:
 
 ```sh
-igny env create janestreet
-igny workspace create --path . --env janestreet
-igny tool install iverilog
-igny tool install verilator
-igny tool install yosys
-igny tool install cocotb
-igny tool install gtkwave
-igny workspace lock
-
-make -C hw/protocols/uart lint sim
+igny init
+unset CRUCIBLE_ENV
+cd hw/protocols/i2c
+make lint sim
+make flow
+node verify_build.mjs all
 ```
 
-No Conda fights, no PDK hunt, no version drift. The one-command `igny init` /
-`igny build` flow is the target shape for this repo, not yet the current one -
-see [Status](#status).
+Repeat in the existing SPI, UART, stretch/usb_ls and stretch/ethernet directories.
+USB uses a 12 MHz reference core clock; Ethernet uses external 2.5 MHz MII clocks.
+On another machine, use
+igny workspace sync from each unit and supply the matching PDK through
+IHP_PDK_ROOT. Source revisions, versions, commands and coverage are in:
 
-## Repository layout
+- [I2C reference build](hw/protocols/i2c/README.md)
+- [SPI reference build](hw/protocols/spi/README.md)
+- [UART reference build](hw/protocols/uart/README.md)
+- [Low-speed USB reference build](hw/protocols/stretch/usb_ls/README.md)
+- [10 Mbit Ethernet reference build](hw/protocols/stretch/ethernet/README.md)
 
-```
-crucible-asic-starter/
-├── Specs/                   reference protocol specifications (PDF)
-├── docs/                    prerequisites.md: what a team needs to know before starting
-├── hw/
-│   ├── protocols/           each protocol built and verified on its own
-│   │   ├── uart/
-│   │   ├── spi/
-│   │   ├── i2c/
-│   │   └── stretch/         usb_ls/, ethernet/
-│   └── core/                full chip: all protocols integrated (what we tape out)
-└── tapeout/                 Tiny Tapeout IHP submission files
-```
+## Student decks
 
-Every unit in `hw/` (each protocol, and `core/`) is a self-contained flow with the same
-12 numbered stages and a `Makefile` orchestrating them (`make -C hw/<unit> flow`):
+Each current deck has 44 slides with worked waveform decodes, numerical examples,
+actual RTL walkthroughs, guided labs and answers, sourced lecture notes, measured
+results and explicit verification limits, using the supplied APB video identity.
+The links below are the current revision. Superseded versions have been moved to
+the recoverable cleanup archive; v2 was rejected by the human as too basic and
+is not the current lesson.
 
-```
-00_lint → 01_rtl → 02_sim → 03_verification → 04_synthesis → 05_dft →
-06_floorplanning → 07_placement → 08_sta → 09_place_and_route → 10_gds → 11_physical_verification
-```
+- [I2C lesson](docs/student_decks/I2C_Protocol_Students_Ignytion_VIDEO.pptx)
+- [SPI lesson](docs/student_decks/SPI_Protocol_Students_Ignytion_VIDEO.pptx)
+- [UART lesson](docs/student_decks/UART_Protocol_Students_Ignytion_VIDEO.pptx)
 
-See `hw/README.md` for what each stage takes in and the artifact it produces.
+These three stable lesson files are the verified 44-slide v11 packages. Their
+current validation receipts, curriculum manifests and reviewed renders remain
+in docs/.deck_build. Duplicate version-named files are no longer student entry points.
 
-## Status
+## Protocol whitepapers
 
-Work in progress - first public release coming soon.
+Each current paper has 24 A4 pages adapted to the supplied APB primer, covering
+protocol rules, worked calculations, actual RTL boundaries, directed verification,
+the implementation stages, measured SG13G2 results, reproduction and glossaries.
+PPTX text/tables and the first three measured-waveform charts remain editable;
+the PDFs are searchable. Package/content and live-evidence checks passed.
+The revised papers' complete final-page visual acceptance remains unfinished.
 
-- [x] Protocol reference specs (`Specs/`)
-- [x] 12-stage RTL-to-GDS flow scaffolded per protocol and for the integrated core (`hw/`)
-- [ ] Pin map and architecture (ISA vs. state machine) frozen - see `Specs/README.md`
-- [ ] RTL for any protocol
-- [ ] IHP SG13G2 PDK wired into Crucible (`PDK_ROOT`) - see `tapeout/README.md`
-- [ ] Tiny Tapeout submission files (`tapeout/info.yaml`, pinout)
-- [ ] `igny init` / `igny build` one-command flow
+| Protocol | Editable A4 source | Searchable PDF |
+| --- | --- | --- |
+| I2C | [PPTX](docs/I2C_Protocol_RTL_to_GDS_Ignytion_A4.pptx) | [PDF](docs/I2C_Protocol_RTL_to_GDS_Ignytion_A4.pdf) |
+| SPI | [PPTX](docs/SPI_Protocol_RTL_to_GDS_Ignytion_A4.pptx) | [PDF](docs/SPI_Protocol_RTL_to_GDS_Ignytion_A4.pdf) |
+| UART | [PPTX](docs/UART_Protocol_RTL_to_GDS_Ignytion_A4.pptx) | [PDF](docs/UART_Protocol_RTL_to_GDS_Ignytion_A4.pdf) |
+| Low-speed USB | [PPTX](docs/USB_LS_Protocol_RTL_to_GDS_Ignytion_A4.pptx) | [PDF](docs/USB_LS_Protocol_RTL_to_GDS_Ignytion_A4.pdf) |
+| 10 Mbit Ethernet | [PPTX](docs/Ethernet_10M_Protocol_RTL_to_GDS_Ignytion_A4.pptx) | [PDF](docs/Ethernet_10M_Protocol_RTL_to_GDS_Ignytion_A4.pdf) |
 
----
+Authoring scripts, acceptance ledgers and preview evidence are in the private
+recovery archive described below, not the deliverables folder. USB and Ethernet
+papers use labelled ideal
+examples, not invented measured VCD plots. Ethernet's current SDC does not group
+the MII clocks asynchronously; its reported slacks are reference timing results,
+not arbitrary external-PHY clock-domain or reset signoff.
 
-_Not affiliated with or endorsed by Jane Street. "Jane Street" is a trademark of Jane Street Group, LLC._
+## Layout and remaining scope
+
+- specs/: supplied PDFs; the Ethernet PDF is a PHY datasheet, not IEEE 802.3.
+- hw/protocols/i2c, spi, uart: implemented reference blocks and numbered stages.
+- hw/protocols/stretch/usb_ls, ethernet: confirmed low-speed USB and 10 Mbit
+  Ethernet reference builds with passing directed tests and decoded routed GDS.
+  USB is a restricted HID-host engine with unchecked receive CRC and incomplete
+  PID validation; full enumeration and USB compliance are not proven. Ethernet
+  is a full-duplex digital MAC requiring an external analog PHY, not a transceiver.
+- hw/core and tapeout/: integrated emulator and submission scaffold, not
+  implemented or release-qualified by these standalone builds.
+- .context.md: append-only progress and actual Claude collaboration.
+- hw/protocols/i2c/GATES.md: combined reference-build and lesson acceptance ledger.
+
+All five reference-unit stage recipes are implemented. DFT and foundry physical
+verification deliberately fail instead of reporting placeholder success.
+Foundry DRC/LVS, antenna and full-chip signoff have **not been performed**.
+Empty router DRC reports and GDS/DEF agreement are limited implementation/export
+checks, not manufacturability proof.
+
+Generated binary and standard-format outputs retain native formats. Source
+files retain integration headers and original upstream notices; adjacent
+README and validation receipts record generated-artifact provenance. Upstream
+ownership is not replaced by the Ignytion integration header.
+
+Not affiliated with or endorsed by Jane Street. Jane Street is a trademark of
+Jane Street Group, LLC.
+
+## Cleanup and recovery
+
+The visible docs folder contains only the five current PPTX/PDF pairs, challenge
+requirements and the three canonical student decks. Authoring/inspection/export
+scripts, agent gate files, .deck_build, chart scratch and hidden agent state are
+removed from the visible workspace. Compiled simulation executables and non-final
+floorplan/placement/CTS databases are also removed. RTL, testbenches, licences,
+Makefiles, source VCDs, decisive logs, mapped netlists, final routed DEF/ODB/SPEF,
+GDS and timing reports remain in their project locations.
+
+Everything removed is recoverable outside Janes_street at:
+`C:\Users\ignyt\AppData\Local\Ignytion\CleanupArchives\janes-street-20261005`.
+Its `manifest.json` records original workspace-relative paths and SHA256 hashes;
+archived data lives beneath `workspace/`. The earlier cleanup archives now live
+under `workspace/.unlazy/` there, not in the current workspace.
+
+To restore, use the recorded original relative path only when the destination
+is absent; never overwrite newer work. Restore the required authoring inputs and
+their original evidence paths before rerunning archived document tooling.
+No final document, RTL or GDS bytes were changed by cleanup. No permanent deletion
+or external publication occurred. The archive's GATES.md and cleanup.ps1 hold
+the cleanup verification receipt and read-only recovery/preservation checks.

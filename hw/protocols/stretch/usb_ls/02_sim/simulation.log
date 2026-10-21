@@ -1,0 +1,2 @@
+PASS USB LS regression: 12MHz/8-clocks-per-bit, NRZI TX/RX, bit stuffing, EOP, payload and reset
+02_sim/test.v:105: $finish called at 122334312 (1ps)

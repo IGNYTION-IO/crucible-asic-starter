@@ -1,0 +1,12 @@
+%Warning-SYNCASYNCNET: 01_rtl/spi_core.v:22:40: Signal flopped as both synchronous and async: 'spi_core.reset_release'
+                       01_rtl/spi_core.v:22:40: ... Location of async usage
+   22 |     (* async_reg = "true" *) reg [1:0] reset_release;
+      |                                        ^~~~~~~~~~~~~
+                       01_rtl/spi_core.v:25:32: ... Location of sync usage
+   25 |         else reset_release <= {reset_release[0], 1'b1};
+      |                                ^~~~~~~~~~~~~
+                       ... For warning description see https://verilator.org/warn/SYNCASYNCNET?v=5.047
+                       ... Use "/* verilator lint_off SYNCASYNCNET */" and lint_on around source to disable this message.
+- V e r i l a t i o n   R e p o r t: Verilator 5.047 devel rev v5.046-219-g56ed47ee7 (mod)
+- Verilator: Built from 0.060 MB sources in 3 modules, into 0.024 MB in 3 C++ files needing 0.000 MB
+- Verilator: Walltime 0.024 s (elab=0.001, cvt=0.003, bld=0.000); cpu 0.009 s on 1 threads; allocated 21.078 MB

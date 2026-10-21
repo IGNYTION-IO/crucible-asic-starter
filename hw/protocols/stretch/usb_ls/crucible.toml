@@ -1,0 +1,10 @@
+[workspace]
+name = "usb_ls"
+id = "usb_ls-7212542d"
+environment = "janestreet-usb-ls"
+environments = [ "janestreet-usb-ls",]
+
+[workspace.metadata]
+managed = false
+created_at = "2026-10-03T00:16:38.345031+00:00"
+created_by = "crucible-core"

@@ -1,19 +1,16 @@
 # ===============================================================================
 # Ignytion IO - CRUCIBLE CORE
 # Copyright (c) 2026 Ignytion IO. All rights reserved.
+# Author      : IGNYTION_TECH
 # File        : hw/protocols/stretch/usb_ls/00_lint/Makefile
-# Created     : 2026-09-21
-# Description : Make entrypoint for USB low-speed (stretch) Verilator lint. Output: lint_report.txt
+# Created     : 2026-10-03
+# Description : WSL Igny USB_LS reference build entrypoint.
 # ===============================================================================
 
+SHELL := /bin/bash
+.SHELLFLAGS := -eu -o pipefail -c
 PROJECT_ROOT := $(abspath ..)
-
-.PHONY: all lint clean
-
+.PHONY: all lint
 all: lint
-
 lint:
-	cd "$(PROJECT_ROOT)" && igny run verilator --lint-only -Wall -Wno-fatal -I01_rtl 01_rtl/usb_ls_core.v | tee 00_lint/lint_report.txt
-
-clean:
-	cd "$(PROJECT_ROOT)" && rm -f 00_lint/lint_report.txt
+	cd "$(PROJECT_ROOT)" && bash run_flow.sh lint

@@ -1,0 +1,28 @@
+OpenROAD 26Q3-771-g7cfb2105c9 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 4 thread(s).
+[INFO ODB-0227] LEF file: /home/hasan/.ciel/ciel/ihp-sg13g2/versions/22f43352dd8219f9007eb659e422e0d5fe28c5fb/ihp-sg13g2/libs.ref/sg13g2_stdcell/lef/sg13g2_tech.lef, created 19 layers, 70 vias
+[INFO ODB-0227] LEF file: /home/hasan/.ciel/ciel/ihp-sg13g2/versions/22f43352dd8219f9007eb659e422e0d5fe28c5fb/ihp-sg13g2/libs.ref/sg13g2_stdcell/lef/sg13g2_stdcell.lef, created 84 library cells
+[WARNING IFP-0028] Core area lower left (20.000, 20.000) snapped to (20.160, 22.680).
+[INFO IFP-0001] Added 120 rows of 958 site CoreSite.
+[INFO IFP-0100] Die BBox:  (  0.000  0.000 ) ( 500.000 500.000 ) um
+[INFO IFP-0101] Core BBox: ( 20.160 22.680 ) ( 480.000 476.280 ) um
+[INFO IFP-0102] Core area:                       208583.424 um^2
+[INFO IFP-0103] Total instances area:             16906.579 um^2
+[INFO IFP-0104] Effective utilization:                0.081
+[INFO IFP-0105] Number of instances:                   1042
+Found 0 macro blocks.
+Using 2 tracks default min distance between IO pins.
+[INFO PPL-0001] Number of available slots 2216
+[INFO PPL-0002] Number of I/O             41
+[INFO PPL-0003] Number of I/O w/sink      41
+[INFO PPL-0004] Number of I/O w/o sink    0
+[INFO PPL-0005] Slots per section         200
+[INFO PPL-0008] Successfully assigned pins to sections.
+[INFO PPL-0012] I/O nets HPWL: 10602.90 um.
+[INFO PDN-0001] Inserting grid: Core
+[INFO PDN-0500] Runtime: 0.02s
+IHP floorplan complete: /mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/stretch/ethernet/06_floorplanning/floorplan.odb
+PASS openroad_floorplan.tcl

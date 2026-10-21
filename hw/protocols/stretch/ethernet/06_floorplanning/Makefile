@@ -1,24 +1,16 @@
 # ===============================================================================
 # Ignytion IO - CRUCIBLE CORE
 # Copyright (c) 2026 Ignytion IO. All rights reserved.
+# Author      : IGNYTION_TECH
 # File        : hw/protocols/stretch/ethernet/06_floorplanning/Makefile
-# Created     : 2026-09-21
-# Description : Make entrypoint for 10BASE-T Ethernet (stretch) OpenROAD floorplanning.
+# Created     : 2026-10-03
+# Description : WSL Igny ETHERNET reference build entrypoint.
 # ===============================================================================
 
+SHELL := /bin/bash
+.SHELLFLAGS := -eu -o pipefail -c
 PROJECT_ROOT := $(abspath ..)
-
-# TODO: point PDK_ROOT at the Crucible-installed IHP SG13G2 PDK once the
-# install path is confirmed (see tapeout/README.md).
-PDK_ROOT ?=
-export PDK_ROOT
-
-.PHONY: all floorplan clean
-
+.PHONY: all floorplan
 all: floorplan
-
 floorplan:
-	cd "$(PROJECT_ROOT)" && igny run openroad -exit 06_floorplanning/openroad_floorplan.tcl
-
-clean:
-	cd "$(PROJECT_ROOT)" && rm -f 06_floorplanning/floorplan.def 06_floorplanning/floorplan.odb
+	cd "$(PROJECT_ROOT)" && bash run_flow.sh floorplan

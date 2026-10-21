@@ -1,28 +1,16 @@
 # ===============================================================================
 # Ignytion IO - CRUCIBLE CORE
 # Copyright (c) 2026 Ignytion IO. All rights reserved.
+# Author      : IGNYTION_TECH
 # File        : hw/protocols/uart/09_place_and_route/Makefile
-# Created     : 2026-09-21
-# Description : Make entrypoint for UART OpenROAD CTS and routing.
+# Created     : 2026-10-03
+# Description : WSL Igny UART reference build entrypoint.
 # ===============================================================================
 
+SHELL := /bin/bash
+.SHELLFLAGS := -eu -o pipefail -c
 PROJECT_ROOT := $(abspath ..)
-
-PDK_ROOT ?=
-export PDK_ROOT
-
-.PHONY: all cts route clean
-
-all: route
-
-cts:
-	cd "$(PROJECT_ROOT)" && if [ ! -f 07_placement/placement.odb ]; then $(MAKE) -C 07_placement; fi
-	cd "$(PROJECT_ROOT)" && igny run openroad -exit 09_place_and_route/openroad_cts.tcl
-
-route: cts
-	cd "$(PROJECT_ROOT)" && igny run openroad -exit 09_place_and_route/openroad_route.tcl
-
-clean:
-	cd "$(PROJECT_ROOT)" && rm -f 09_place_and_route/cts.def 09_place_and_route/cts.odb \
-		09_place_and_route/route.def 09_place_and_route/route.odb 09_place_and_route/route.spef \
-		09_place_and_route/route_output.v 09_place_and_route/route.guide 09_place_and_route/route_drc.rpt
+.PHONY: all cts route
+all: cts route
+cts route:
+	cd "$(PROJECT_ROOT)" && bash run_flow.sh $@

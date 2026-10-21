@@ -1,0 +1,988 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.63+188 (git sha1 cede13a74, clang++ 18.1.8 -fPIC -O3)
+
+1. Executing Verilog-2005 frontend: /mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/spi_core.v
+Parsing Verilog input from `/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/spi_core.v' to AST representation.
+Generating RTLIL representation for module `\spi_core'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: /mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v
+Parsing Verilog input from `/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v' to AST representation.
+Generating RTLIL representation for module `\SPI_Master'.
+Successfully finished Verilog frontend.
+
+3. Executing HIERARCHY pass (managing design hierarchy).
+
+3.1. Analyzing design hierarchy..
+Top module:  \spi_core
+Used module:     \SPI_Master
+Parameter \SPI_MODE = 0
+Parameter \CLKS_PER_HALF_BIT = 2
+
+3.2. Executing AST frontend in derive mode using pre-parsed AST for module `\SPI_Master'.
+Parameter \SPI_MODE = 0
+Parameter \CLKS_PER_HALF_BIT = 2
+Generating RTLIL representation for module `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master'.
+
+3.3. Analyzing design hierarchy..
+Top module:  \spi_core
+Used module:     $paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master
+
+3.4. Analyzing design hierarchy..
+Top module:  \spi_core
+Used module:     $paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master
+Removing unused module `\SPI_Master'.
+Removed 1 unused modules.
+
+4. Executing SYNTH pass.
+
+4.1. Executing HIERARCHY pass (managing design hierarchy).
+
+4.1.1. Analyzing design hierarchy..
+Top module:  \spi_core
+Used module:     $paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master
+
+4.1.2. Analyzing design hierarchy..
+Top module:  \spi_core
+Used module:     $paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master
+Removed 0 unused modules.
+
+4.2. Executing PROC pass (convert processes to netlists).
+
+4.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+4.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:226$105 in module $paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.
+Marked 3 switch rules as full_case in process $proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:194$82 in module $paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.
+Marked 3 switch rules as full_case in process $proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:164$71 in module $paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.
+Marked 1 switch rules as full_case in process $proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:144$69 in module $paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.
+Marked 5 switch rules as full_case in process $proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:86$58 in module $paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.
+Marked 1 switch rules as full_case in process $proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/spi_core.v:14$1 in module spi_core.
+Removed a total of 0 dead cases.
+
+4.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 7 redundant assignments.
+Promoted 3 assignments to connections.
+
+4.2.4. Executing PROC_INIT pass (extract init attributes).
+
+4.2.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \i_Rst_L in `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:226$105'.
+Found async reset \i_Rst_L in `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:194$82'.
+Found async reset \i_Rst_L in `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:164$71'.
+Found async reset \i_Rst_L in `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:144$69'.
+Found async reset \i_Rst_L in `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:86$58'.
+Found async reset \rst_n in `\spi_core.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/spi_core.v:14$1'.
+
+4.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~11 debug messages>
+
+4.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:226$105'.
+     1/1: $0\o_SPI_Clk[0:0]
+Creating decoders for process `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:194$82'.
+     1/8: $3$lookahead\o_RX_Byte$81[7:0]$95
+     2/8: $3$bitselwrite$pos$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:214$57[2:0]$94
+     3/8: $2$lookahead\o_RX_Byte$81[7:0]$89
+     4/8: $2$bitselwrite$pos$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:214$57[2:0]$88
+     5/8: $1$lookahead\o_RX_Byte$81[7:0]$87
+     6/8: $1$bitselwrite$pos$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:214$57[2:0]$86
+     7/8: $0\o_RX_DV[0:0]
+     8/8: $0\r_RX_Bit_Count[2:0]
+Creating decoders for process `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:164$71'.
+     1/2: $0\r_TX_Bit_Count[2:0]
+     2/2: $0\o_SPI_MOSI[0:0]
+Creating decoders for process `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:144$69'.
+     1/2: $0\r_TX_DV[0:0]
+     2/2: $0\r_TX_Byte[7:0]
+Creating decoders for process `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:86$58'.
+     1/6: $0\o_TX_Ready[0:0]
+     2/6: $0\r_Trailing_Edge[0:0]
+     3/6: $0\r_Leading_Edge[0:0]
+     4/6: $0\r_SPI_Clk_Edges[4:0]
+     5/6: $0\r_SPI_Clk[0:0]
+     6/6: $0\r_SPI_Clk_Count[1:0]
+Creating decoders for process `\spi_core.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/spi_core.v:14$1'.
+     1/1: $0\reset_release[1:0]
+
+4.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+4.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.\o_SPI_Clk' using process `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:226$105'.
+  created $adff cell `$procdff$224' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.\o_RX_DV' using process `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:194$82'.
+  created $adff cell `$procdff$229' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.\o_RX_Byte' using process `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:194$82'.
+  created $adff cell `$procdff$234' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.\r_RX_Bit_Count' using process `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:194$82'.
+  created $adff cell `$procdff$239' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.\o_SPI_MOSI' using process `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:164$71'.
+  created $adff cell `$procdff$244' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.\r_TX_Bit_Count' using process `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:164$71'.
+  created $adff cell `$procdff$249' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.\r_TX_DV' using process `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:144$69'.
+  created $adff cell `$procdff$254' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.\r_TX_Byte' using process `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:144$69'.
+  created $adff cell `$procdff$259' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.\o_TX_Ready' using process `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:86$58'.
+  created $adff cell `$procdff$264' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.\r_SPI_Clk_Count' using process `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:86$58'.
+  created $adff cell `$procdff$269' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.\r_SPI_Clk' using process `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:86$58'.
+  created $adff cell `$procdff$274' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.\r_SPI_Clk_Edges' using process `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:86$58'.
+  created $adff cell `$procdff$279' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.\r_Leading_Edge' using process `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:86$58'.
+  created $adff cell `$procdff$284' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.\r_Trailing_Edge' using process `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:86$58'.
+  created $adff cell `$procdff$289' with positive edge clock and positive level reset.
+Creating register for signal `\spi_core.\reset_release' using process `\spi_core.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/spi_core.v:14$1'.
+  created $adff cell `$procdff$294' with positive edge clock and positive level reset.
+
+4.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+4.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:226$105'.
+Found and cleaned up 3 empty switches in `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:194$82'.
+Removing empty process `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:194$82'.
+Found and cleaned up 3 empty switches in `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:164$71'.
+Removing empty process `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:164$71'.
+Found and cleaned up 1 empty switch in `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:144$69'.
+Removing empty process `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:144$69'.
+Found and cleaned up 4 empty switches in `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:86$58'.
+Removing empty process `$paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:86$58'.
+Removing empty process `spi_core.$proc$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/spi_core.v:14$1'.
+Cleaned up 11 empty switches.
+
+4.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.
+<suppressed ~39 debug messages>
+Optimizing module spi_core.
+<suppressed ~2 debug messages>
+
+4.3. Executing FLATTEN pass (flatten design).
+Deleting now unused module $paramod$ad0d81030c59ef8c4fe5a92b1da563ba2a9c1100\SPI_Master.
+<suppressed ~1 debug messages>
+
+4.4. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_core.
+
+4.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \spi_core..
+Removed 24 unused cells and 114 unused wires.
+<suppressed ~25 debug messages>
+
+4.6. Executing CHECK pass (checking for obvious problems).
+Checking module spi_core...
+Found and reported 0 problems.
+
+4.7. Executing OPT pass (performing simple optimizations).
+
+4.7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_core.
+
+4.7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\spi_core'.
+Computing hashes of 76 cells of `\spi_core'.
+Finding duplicate cells in `\spi_core'.
+Computing hashes of 72 cells of `\spi_core'.
+Finding duplicate cells in `\spi_core'.
+<suppressed ~12 debug messages>
+Removed a total of 4 cells.
+
+4.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \spi_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $flatten\master.$procmux$111.
+Removed 1 multiplexer ports.
+<suppressed ~48 debug messages>
+
+4.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \spi_core.
+  Optimizing cells in module \spi_core.
+Performed a total of 1 changes.
+
+4.7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\spi_core'.
+Computing hashes of 70 cells of `\spi_core'.
+Finding duplicate cells in `\spi_core'.
+Removed a total of 0 cells.
+
+4.7.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \spi_core..
+Removed 0 unused cells and 6 unused wires.
+<suppressed ~1 debug messages>
+
+4.7.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_core.
+
+4.7.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.7.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \spi_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~46 debug messages>
+
+4.7.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \spi_core.
+Performed a total of 0 changes.
+
+4.7.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\spi_core'.
+Computing hashes of 70 cells of `\spi_core'.
+Finding duplicate cells in `\spi_core'.
+Removed a total of 0 cells.
+
+4.7.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.7.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \spi_core..
+
+4.7.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_core.
+
+4.7.16. Finished fast OPT passes. (There is nothing left to do.)
+
+4.8. Executing FSM pass (extract and optimize FSM).
+
+4.8.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+4.8.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+4.8.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+4.8.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \spi_core..
+
+4.8.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+4.8.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+4.8.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+4.8.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+4.9. Executing OPT pass (performing simple optimizations).
+
+4.9.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_core.
+
+4.9.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\spi_core'.
+Computing hashes of 70 cells of `\spi_core'.
+Finding duplicate cells in `\spi_core'.
+Removed a total of 0 cells.
+
+4.9.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \spi_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~46 debug messages>
+
+4.9.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \spi_core.
+Performed a total of 0 changes.
+
+4.9.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\spi_core'.
+Computing hashes of 70 cells of `\spi_core'.
+Finding duplicate cells in `\spi_core'.
+Removed a total of 0 cells.
+
+4.9.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $flatten\master.$procdff$249 ($adff) from module spi_core (D = $flatten\master.$0\r_TX_Bit_Count[2:0], Q = \master.r_TX_Bit_Count).
+Adding EN signal on $flatten\master.$procdff$244 ($adff) from module spi_core (D = $flatten\master.$procmux$150_Y, Q = \master.o_SPI_MOSI).
+Adding EN signal on $flatten\master.$procdff$274 ($adff) from module spi_core (D = $flatten\master.$procmux$201_Y, Q = \master.r_SPI_Clk).
+Adding EN signal on $flatten\master.$procdff$239 ($adff) from module spi_core (D = $flatten\master.$0\r_RX_Bit_Count[2:0], Q = \master.r_RX_Bit_Count).
+Adding EN signal on $flatten\master.$procdff$234 ($adff) from module spi_core (D = $flatten\master.$or$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:214$102_Y, Q = \master.o_RX_Byte).
+Adding EN signal on $flatten\master.$procdff$269 ($adff) from module spi_core (D = $flatten\master.$procmux$213_Y, Q = \master.r_SPI_Clk_Count).
+Adding EN signal on $flatten\master.$procdff$259 ($adff) from module spi_core (D = \tx_byte, Q = \master.r_TX_Byte).
+Adding EN signal on $flatten\master.$procdff$279 ($adff) from module spi_core (D = $flatten\master.$0\r_SPI_Clk_Edges[4:0], Q = \master.r_SPI_Clk_Edges).
+
+4.9.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \spi_core..
+Removed 8 unused cells and 8 unused wires.
+<suppressed ~9 debug messages>
+
+4.9.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_core.
+<suppressed ~6 debug messages>
+
+4.9.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.9.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \spi_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~36 debug messages>
+
+4.9.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \spi_core.
+Performed a total of 0 changes.
+
+4.9.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\spi_core'.
+Computing hashes of 77 cells of `\spi_core'.
+Finding duplicate cells in `\spi_core'.
+Computing hashes of 75 cells of `\spi_core'.
+Finding duplicate cells in `\spi_core'.
+<suppressed ~6 debug messages>
+Removed a total of 2 cells.
+
+4.9.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.9.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \spi_core..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+4.9.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_core.
+
+4.9.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.9.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \spi_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~36 debug messages>
+
+4.9.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \spi_core.
+Performed a total of 0 changes.
+
+4.9.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\spi_core'.
+Computing hashes of 75 cells of `\spi_core'.
+Finding duplicate cells in `\spi_core'.
+Removed a total of 0 cells.
+
+4.9.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.9.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \spi_core..
+
+4.9.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_core.
+
+4.9.23. Finished fast OPT passes. (There is nothing left to do.)
+
+4.10. Executing WREDUCE pass (reducing word size of cells).
+Converting cell spi_core.$flatten\master.$neg$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:214$96 ($neg) from signed to unsigned.
+Removed top 1 bits (of 4) from port A of cell spi_core.$flatten\master.$neg$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:214$96 ($neg).
+Removed top 1 bits (of 2) from port B of cell spi_core.$flatten\master.$eq$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:120$64 ($eq).
+Removed top 31 bits (of 32) from port B of cell spi_core.$flatten\master.$gt$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:109$60 ($gt).
+
+4.11. Executing PEEPOPT pass (run peephole optimizers).
+
+4.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \spi_core..
+
+4.13. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module spi_core:
+  creating $macc model for $flatten\master.$sub$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:215$103 ($sub).
+  creating $macc model for $flatten\master.$add$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:129$68 ($add).
+  creating $macc model for $flatten\master.$neg$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:214$96 ($neg).
+  creating $macc model for $flatten\master.$sub$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:122$65 ($sub).
+  creating $macc model for $flatten\master.$sub$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:186$79 ($sub).
+  creating $alu model for $macc $flatten\master.$sub$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:186$79.
+  creating $alu model for $macc $flatten\master.$sub$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:122$65.
+  creating $alu model for $macc $flatten\master.$neg$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:214$96.
+  creating $alu model for $macc $flatten\master.$add$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:129$68.
+  creating $alu model for $macc $flatten\master.$sub$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:215$103.
+  creating $alu model for $flatten\master.$gt$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:109$60 ($gt): new $alu
+  creating $alu cell for $flatten\master.$gt$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:109$60: $auto$alumacc.cc:512:replace_alu$335
+  creating $alu cell for $flatten\master.$sub$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:215$103: $auto$alumacc.cc:512:replace_alu$346
+  creating $alu cell for $flatten\master.$add$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:129$68: $auto$alumacc.cc:512:replace_alu$349
+  creating $alu cell for $flatten\master.$neg$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:214$96: $auto$alumacc.cc:512:replace_alu$352
+  creating $alu cell for $flatten\master.$sub$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:122$65: $auto$alumacc.cc:512:replace_alu$355
+  creating $alu cell for $flatten\master.$sub$/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/spi/01_rtl/SPI_Master.v:186$79: $auto$alumacc.cc:512:replace_alu$358
+  created 6 $alu and 0 $macc cells.
+
+4.14. Executing SHARE pass (SAT-based resource sharing).
+
+4.15. Executing OPT pass (performing simple optimizations).
+
+4.15.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_core.
+<suppressed ~7 debug messages>
+
+4.15.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\spi_core'.
+Computing hashes of 78 cells of `\spi_core'.
+Finding duplicate cells in `\spi_core'.
+Removed a total of 0 cells.
+
+4.15.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \spi_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~36 debug messages>
+
+4.15.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \spi_core.
+Performed a total of 0 changes.
+
+4.15.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\spi_core'.
+Computing hashes of 78 cells of `\spi_core'.
+Finding duplicate cells in `\spi_core'.
+Removed a total of 0 cells.
+
+4.15.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.15.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \spi_core..
+Removed 0 unused cells and 6 unused wires.
+<suppressed ~2 debug messages>
+
+4.15.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_core.
+
+4.15.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.15.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \spi_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~36 debug messages>
+
+4.15.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \spi_core.
+Performed a total of 0 changes.
+
+4.15.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\spi_core'.
+Computing hashes of 77 cells of `\spi_core'.
+Finding duplicate cells in `\spi_core'.
+Removed a total of 0 cells.
+
+4.15.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.15.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \spi_core..
+
+4.15.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_core.
+
+4.15.16. Finished fast OPT passes. (There is nothing left to do.)
+
+4.16. Executing MEMORY pass.
+
+4.16.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+4.16.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+4.16.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+4.16.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+4.16.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+4.16.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \spi_core..
+
+4.16.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+4.16.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+4.16.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \spi_core..
+
+4.16.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+4.17. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \spi_core..
+
+4.18. Executing OPT pass (performing simple optimizations).
+
+4.18.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_core.
+<suppressed ~13 debug messages>
+
+4.18.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\spi_core'.
+Computing hashes of 65 cells of `\spi_core'.
+Finding duplicate cells in `\spi_core'.
+Removed a total of 0 cells.
+
+4.18.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.18.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \spi_core..
+Removed 0 unused cells and 12 unused wires.
+<suppressed ~1 debug messages>
+
+4.18.5. Finished fast OPT passes.
+
+4.19. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+4.20. Executing OPT pass (performing simple optimizations).
+
+4.20.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_core.
+
+4.20.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\spi_core'.
+Computing hashes of 65 cells of `\spi_core'.
+Finding duplicate cells in `\spi_core'.
+Removed a total of 0 cells.
+
+4.20.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \spi_core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~22 debug messages>
+
+4.20.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \spi_core.
+Performed a total of 0 changes.
+
+4.20.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\spi_core'.
+Computing hashes of 65 cells of `\spi_core'.
+Finding duplicate cells in `\spi_core'.
+Removed a total of 0 cells.
+
+4.20.6. Executing OPT_SHARE pass.
+
+4.20.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.20.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \spi_core..
+
+4.20.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_core.
+
+4.20.10. Finished fast OPT passes. (There is nothing left to do.)
+
+4.21. Executing TECHMAP pass (map to technology primitives).
+
+4.21.1. Executing Verilog-2005 frontend: /home/hasan/Crucible/tools/yosys/0.63.0/yosys/libexec/../share/yosys/techmap.v
+Parsing Verilog input from `/home/hasan/Crucible/tools/yosys/0.63.0/yosys/libexec/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+4.21.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $not.
+Using template $paramod$b8c0a997bce700f23568a5ada79cc6781d1f5ca0\_90_alu for cells of type $alu.
+Using template $paramod$dc04b7d98e503a7bab16fce2df70e6e2c5ca34d6\_90_alu for cells of type $alu.
+Using template $paramod$025d767fc934a3e7d59a671de523743ebaa07759\_90_alu for cells of type $alu.
+Using template $paramod$175e67c02b86e96b1288b9dc100122520d7240d8\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $reduce_bool.
+Using extmapper simplemap for cells of type $adffe.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $logic_or.
+Using extmapper simplemap for cells of type $adff.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $or.
+Using template $paramod$constmap:ed202111594f0a1b622ac8dc4bd7c990ea27025c$paramod$40ccfd5a7f1418017a9af25543d0c43a198b5946\_90_shift_shiftx for cells of type $shift.
+Analyzing pattern of constant bits for this cell:
+  Constant input on bit 0 of port A: 1'1
+Creating constmapped module `$paramod$constmap:aaa79bdfe7451deca7ae697c0784fd1c184bd8f2$paramod$40ccfd5a7f1418017a9af25543d0c43a198b5946\_90_shift_shiftx'.
+
+4.21.16. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$constmap:aaa79bdfe7451deca7ae697c0784fd1c184bd8f2$paramod$40ccfd5a7f1418017a9af25543d0c43a198b5946\_90_shift_shiftx..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $procmux$575.
+    dead port 2/2 on $mux $procmux$581.
+    dead port 2/2 on $mux $procmux$587.
+Removed 3 multiplexer ports.
+<suppressed ~418 debug messages>
+
+4.21.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$constmap:aaa79bdfe7451deca7ae697c0784fd1c184bd8f2$paramod$40ccfd5a7f1418017a9af25543d0c43a198b5946\_90_shift_shiftx.
+<suppressed ~2 debug messages>
+Removed 0 unused cells and 9 unused wires.
+Using template $paramod$constmap:aaa79bdfe7451deca7ae697c0784fd1c184bd8f2$paramod$40ccfd5a7f1418017a9af25543d0c43a198b5946\_90_shift_shiftx for cells of type $shift.
+Using template $paramod$constmap:8876c1e1fa289f4793438d4e34d232728e6a9746$paramod$92adee9538f2381d8e5006822c900eb986d754e8\_90_shift_shiftx for cells of type $shiftx.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000011 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000011 for cells of type $lcu.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000010 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000010 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000100 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000100 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000101 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000101 for cells of type $lcu.
+No more expansions possible.
+<suppressed ~772 debug messages>
+
+4.22. Executing OPT pass (performing simple optimizations).
+
+4.22.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_core.
+<suppressed ~245 debug messages>
+
+4.22.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\spi_core'.
+Computing hashes of 242 cells of `\spi_core'.
+Finding duplicate cells in `\spi_core'.
+Computing hashes of 226 cells of `\spi_core'.
+Finding duplicate cells in `\spi_core'.
+Computing hashes of 225 cells of `\spi_core'.
+Finding duplicate cells in `\spi_core'.
+<suppressed ~51 debug messages>
+Removed a total of 17 cells.
+
+4.22.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.22.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \spi_core..
+Removed 26 unused cells and 269 unused wires.
+<suppressed ~27 debug messages>
+
+4.22.5. Finished fast OPT passes.
+
+4.23. Executing ABC pass (technology mapping using ABC).
+
+4.23.1. Extracting gate netlist of module `\spi_core' to `<abc-temp-dir>/input.blif'..
+
+4.23.1.1. Executed ABC.
+Extracted 159 gates and 198 wires to a netlist network with 37 inputs and 35 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Apr  1 2026 04:06:44)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+4.23.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        9
+ABC RESULTS:            ANDNOT cells:       13
+ABC RESULTS:               MUX cells:       10
+ABC RESULTS:              NAND cells:       16
+ABC RESULTS:               NOR cells:       14
+ABC RESULTS:               NOT cells:        2
+ABC RESULTS:                OR cells:        7
+ABC RESULTS:             ORNOT cells:        8
+ABC RESULTS:              XNOR cells:        4
+ABC RESULTS:               XOR cells:        3
+ABC RESULTS:        internal signals:      126
+ABC RESULTS:           input signals:       37
+ABC RESULTS:          output signals:       35
+Removing temp directory.
+Removing global temp directory.
+
+4.24. Executing OPT pass (performing simple optimizations).
+
+4.24.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_core.
+
+4.24.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\spi_core'.
+Computing hashes of 126 cells of `\spi_core'.
+Finding duplicate cells in `\spi_core'.
+Removed a total of 0 cells.
+
+4.24.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.24.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \spi_core..
+Removed 0 unused cells and 114 unused wires.
+<suppressed ~1 debug messages>
+
+4.24.5. Finished fast OPT passes.
+
+4.25. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `spi_core'. Setting top module to spi_core.
+
+4.25.1. Analyzing design hierarchy..
+Top module:  \spi_core
+
+4.25.2. Analyzing design hierarchy..
+Top module:  \spi_core
+Removed 0 unused modules.
+
+4.26. Printing statistics.
+
+=== spi_core ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      118 wires
+      163 wire bits
+       33 public wires
+       78 public wire bits
+       11 ports
+       25 port bits
+      126 cells
+       13   $_ANDNOT_
+        9   $_AND_
+       25   $_DFFE_PN0P_
+        6   $_DFFE_PN1P_
+        8   $_DFF_PN0_
+       10   $_MUX_
+       16   $_NAND_
+       14   $_NOR_
+        2   $_NOT_
+        8   $_ORNOT_
+        7   $_OR_
+        4   $_XNOR_
+        3   $_XOR_
+        1   $scopeinfo
+
+4.27. Executing CHECK pass (checking for obvious problems).
+Checking module spi_core...
+Found and reported 0 problems.
+
+5. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell sg13g2_dfrbpq_1 (noninv, pins=4, area=48.99) is a direct match for cell type $_DFF_PN0_.
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    unmapped dff cell: $_DFF_P_
+    unmapped dff cell: $_DFF_NN0_
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \sg13g2_dfrbpq_1 _DFF_PN0_ (.CLK( C), .D( D), .Q( Q), .RESET_B( R));
+    unmapped dff cell: $_DFF_PN1_
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    unmapped dff cell: $_DFFE_NN_
+    unmapped dff cell: $_DFFE_NP_
+    unmapped dff cell: $_DFFE_PN_
+    unmapped dff cell: $_DFFE_PP_
+    unmapped dff cell: $_DFFSR_NNN_
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    unmapped dff cell: $_DFFSR_PNN_
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+5.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+<suppressed ~4 debug messages>
+Mapping DFF cells in module `\spi_core':
+  mapped 39 $_DFF_PN0_ cells to \sg13g2_dfrbpq_1 cells.
+
+6. Executing ABC pass (technology mapping using ABC).
+
+6.1. Extracting gate netlist of module `\spi_core' to `<abc-temp-dir>/input.blif'..
+
+6.1.1. Executed ABC.
+Extracted 129 gates and 175 wires to a netlist network with 46 inputs and 36 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled Apr  1 2026 04:06:44)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lib -w /home/hasan/.ciel/ciel/ihp-sg13g2/versions/22f43352dd8219f9007eb659e422e0d5fe28c5fb/ihp-sg13g2/libs.ref/sg13g2_stdcell/lib/sg13g2_stdcell_slow_1p08V_125C.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.01 sec
+ABC: Scl_LibertyReadGenlib() skipped cell "sg13g2_antennanp" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "sg13g2_decap_4" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "sg13g2_decap_8" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sg13g2_dfrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sg13g2_dfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sg13g2_dfrbpq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sg13g2_dfrbpq_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sg13g2_dlhq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sg13g2_dlhr_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sg13g2_dlhrq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sg13g2_dllr_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sg13g2_dllrq_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sg13g2_ebufn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sg13g2_ebufn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sg13g2_ebufn_8".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sg13g2_einvn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sg13g2_einvn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sg13g2_einvn_8".
+ABC: Scl_LibertyReadGenlib() skipped cell "sg13g2_fill_1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "sg13g2_fill_2" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "sg13g2_fill_4" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "sg13g2_fill_8" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "sg13g2_lgcp_1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sg13g2_sdfbbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sg13g2_sdfrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sg13g2_sdfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sg13g2_sdfrbpq_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sg13g2_sdfrbpq_2".
+ABC: Scl_LibertyReadGenlib() skipped cell "sg13g2_sighold" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "sg13g2_slgcp_1" due to dont_use attribute.
+ABC: Library "sg13g2_stdcell_slow_1p08V_125C" from "/home/hasan/.ciel/ciel/ihp-sg13g2/versions/22f43352dd8219f9007eb659e422e0d5fe28c5fb/ihp-sg13g2/libs.ref/sg13g2_stdcell/lib/sg13g2_stdcell_slow_1p08V_125C.lib" has 54 cells (30 skipped: 14 seq; 6 tri-state; 0 no func; 10 dont_use; 0 with 2 outputs; 0 with 3+ outputs).  Time =     0.01 sec
+ABC: Memory =    2.86 MB. Time =     0.01 sec
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + retime -o -D 20000 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf -D 20000 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+6.1.2. Re-integrating ABC results.
+ABC RESULTS:     sg13g2_a21o_1 cells:        3
+ABC RESULTS:    sg13g2_a21oi_1 cells:       10
+ABC RESULTS:   sg13g2_a221oi_1 cells:        1
+ABC RESULTS:     sg13g2_and2_1 cells:        2
+ABC RESULTS:     sg13g2_and3_1 cells:        1
+ABC RESULTS:      sg13g2_inv_1 cells:        5
+ABC RESULTS:     sg13g2_mux2_1 cells:       11
+ABC RESULTS:     sg13g2_mux4_1 cells:        2
+ABC RESULTS:    sg13g2_nand2_1 cells:        8
+ABC RESULTS:   sg13g2_nand2b_1 cells:        5
+ABC RESULTS:    sg13g2_nand4_1 cells:        1
+ABC RESULTS:     sg13g2_nor2_1 cells:       13
+ABC RESULTS:    sg13g2_nor2b_1 cells:        3
+ABC RESULTS:     sg13g2_nor3_1 cells:        6
+ABC RESULTS:     sg13g2_nor4_1 cells:        2
+ABC RESULTS:    sg13g2_o21ai_1 cells:        7
+ABC RESULTS:      sg13g2_or2_1 cells:        1
+ABC RESULTS:      sg13g2_or4_1 cells:        1
+ABC RESULTS:    sg13g2_xnor2_1 cells:        6
+ABC RESULTS:     sg13g2_xor2_1 cells:        3
+ABC RESULTS:        internal signals:       93
+ABC RESULTS:           input signals:       46
+ABC RESULTS:          output signals:       36
+Removing temp directory.
+Removing global temp directory.
+
+7. Executing HILOMAP pass (mapping to constant drivers).
+Removed 2 unused cells and 175 unused wires.
+
+8. Executing Liberty frontend: /home/hasan/.ciel/ciel/ihp-sg13g2/versions/22f43352dd8219f9007eb659e422e0d5fe28c5fb/ihp-sg13g2/libs.ref/sg13g2_stdcell/lib/sg13g2_stdcell_typ_1p20V_25C.lib
+Imported 84 cell types from liberty file.
+
+9. Executing CHECK pass (checking for obvious problems).
+Checking module spi_core...
+Found and reported 0 problems.
+
+10. Printing statistics.
+
+=== spi_core ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+      126        - wires
+      167        - wire bits
+       29        - public wires
+       70        - public wire bits
+       11        - ports
+       25        - port bits
+      132 2.92E+03 cells
+        1        -   $scopeinfo
+        3   38.102   sg13g2_a21o_1
+       10    90.72   sg13g2_a21oi_1
+        1   14.515   sg13g2_a221oi_1
+        2   18.144   sg13g2_and2_1
+        1   12.701   sg13g2_and3_1
+       39 1.91E+03   sg13g2_dfrbpq_1
+        5   27.216   sg13g2_inv_1
+       11  199.584   sg13g2_mux2_1
+        2   76.205   sg13g2_mux4_1
+        8   58.061   sg13g2_nand2_1
+        5    45.36   sg13g2_nand2b_1
+        1   10.886   sg13g2_nand4_1
+       13   94.349   sg13g2_nor2_1
+        3   27.216   sg13g2_nor2b_1
+        6   54.432   sg13g2_nor3_1
+        2   21.773   sg13g2_nor4_1
+        7   63.504   sg13g2_o21ai_1
+        1    9.072   sg13g2_or2_1
+        1   14.515   sg13g2_or4_1
+        1    7.258   sg13g2_tiehi
+        6   87.091   sg13g2_xnor2_1
+        3   43.546   sg13g2_xor2_1
+
+   Area for cell type $scopeinfo is unknown!
+
+   Chip area for module '\spi_core': 2924.812800
+     of which used for sequential elements: 1910.563200 (65.32%)
+
+11. Executing JSON backend.
+
+12. Executing Verilog backend.
+PASS SG13G2 synthesis
+Dumping module `\spi_core'.
+
+End of script. Logfile hash: dc1e567915, time: 0.31s, user: 0.09s, system: 0.08s, MEM: 50.85 MB peak
+Yosys 0.63+188 (git sha1 cede13a74, clang++ 18.1.8 -fPIC -O3)
+Time spent: 49% 2x abc (0 sec), 6% 1x techmap (0 sec), ...

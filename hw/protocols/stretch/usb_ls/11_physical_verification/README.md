@@ -1,5 +1,23 @@
-# USB low-speed (stretch) - 11 Physical Verification
+<!--
+===============================================================================
+Ignytion IO - CRUCIBLE CORE
+Copyright (c) 2026 Ignytion IO. All rights reserved.
+Author      : IGNYTION_TECH
+File        : hw/protocols/stretch/usb_ls/11_physical_verification/README.md
+Created     : 2026-10-03
+Description : Actual usb_ls reference stage entrypoint and claim boundary.
+===============================================================================
+-->
+# usb_ls: 11_physical_verification
 
-Magic DRC and Netgen LVS against `10_gds/UsbLsCore.gds`.
+This stage is not implemented. Its Makefile deliberately exits nonzero.
+Do not report placeholder or missing-tool execution as acceptance.
 
-**Output artifacts:** `results/physical_verification_status.txt`, DRC/LVS logs
+The unit README.md owns interfaces, pin, coverage and reproduction commands.
+GATES.md and repository .context.md own current acceptance and progress.
+Generated netlist/DEF/SPEF and binary GDS retain native formats; adjacent source
+headers and validation receipts record provenance. Execution is not acceptance.
+
+
+
+Foundry DRC/LVS, antenna and full-chip signoff are not performed.

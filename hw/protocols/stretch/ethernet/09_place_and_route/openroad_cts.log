@@ -1,0 +1,185 @@
+OpenROAD 26Q3-771-g7cfb2105c9 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 4 thread(s).
+[INFO CTS-0050] Root buffer is sg13g2_buf_16.
+[INFO CTS-0051] Sink buffer is sg13g2_buf_8.
+[INFO CTS-0052] The following clock buffers will be used for CTS:
+                    sg13g2_buf_2
+                    sg13g2_buf_4
+                    sg13g2_buf_8
+[INFO CTS-0049] Characterization buffer is sg13g2_buf_8.
+[INFO CTS-0007] Net "mii_tx_clk" found for clock "tx_clk".
+[INFO CTS-0010]  Clock net "mii_tx_clk" has 72 sinks.
+[INFO CTS-0007] Net "mii_rx_clk" found for clock "rx_clk".
+[INFO CTS-0010]  Clock net "mii_rx_clk" has 99 sinks.
+[INFO CTS-0008] TritonCTS found 2 clock nets.
+[INFO CTS-0097] Characterization used 3 buffer(s) types.
+[INFO CTS-0201] 0 blockages from hard placement blockages and placed macros will be used.
+[INFO CTS-0027] Generating H-Tree topology for net mii_tx_clk.
+[INFO CTS-0028]  Total number of sinks: 72.
+[INFO CTS-0060]  Register sinks will be clustered in groups of up to 8 and based on buffer max cap.
+[INFO CTS-0030]  Number of static layers: 0.
+[INFO CTS-0020]  Wire segment unit: 18900  dbu (18 um).
+[INFO CTS-0021]  Distance between buffers: 1 units (40 um).
+[INFO CTS-0022]  Branch length for Vertex Buffer: 0 units (20 um).
+[INFO CTS-0023]  Original sink region: [(336960, 228480), (473760, 364560)].
+[INFO CTS-0024]  Normalized sink region: [(17.8286, 12.0889), (25.0667, 19.2889)].
+[INFO CTS-0025]     Width:  7.2381.
+[INFO CTS-0026]     Height: 7.2000.
+ Level 1
+    Direction: Horizontal
+    Sinks per sub-region: 36
+    Sub-region size: 3.6190 X 7.2000
+[INFO CTS-0034]     Segment length (rounded): 2.
+ Level 2
+    Direction: Vertical
+    Sinks per sub-region: 18
+    Sub-region size: 3.6190 X 3.6000
+[INFO CTS-0034]     Segment length (rounded): 2.
+ Level 3
+    Direction: Horizontal
+    Sinks per sub-region: 9
+    Sub-region size: 1.8095 X 3.6000
+[INFO CTS-0034]     Segment length (rounded): 1.
+ Level 4
+    Direction: Vertical
+    Sinks per sub-region: 5
+    Sub-region size: 1.8095 X 1.8000
+[INFO CTS-0034]     Segment length (rounded): 1.
+[INFO CTS-0038]  Stop criterion found. Sink region hpwl is smaller than max wirelength (3194.316 um) and max number of sinks is 8.
+[INFO CTS-0035]  Number of sinks covered: 72.
+[INFO CTS-0201] 0 blockages from hard placement blockages and placed macros will be used.
+[INFO CTS-0027] Generating H-Tree topology for net mii_rx_clk.
+[INFO CTS-0028]  Total number of sinks: 99.
+[INFO CTS-0060]  Register sinks will be clustered in groups of up to 8 and based on buffer max cap.
+[INFO CTS-0030]  Number of static layers: 0.
+[INFO CTS-0020]  Wire segment unit: 18900  dbu (18 um).
+[INFO CTS-0021]  Distance between buffers: 1 units (40 um).
+[INFO CTS-0022]  Branch length for Vertex Buffer: 0 units (20 um).
+[INFO CTS-0023]  Original sink region: [(356640, 89040), (473760, 262920)].
+[INFO CTS-0024]  Normalized sink region: [(18.8698, 4.71111), (25.0667, 13.9111)].
+[INFO CTS-0025]     Width:  6.1968.
+[INFO CTS-0026]     Height: 9.2000.
+ Level 1
+    Direction: Vertical
+    Sinks per sub-region: 50
+    Sub-region size: 6.1968 X 4.6000
+[INFO CTS-0034]     Segment length (rounded): 2.
+ Level 2
+    Direction: Horizontal
+    Sinks per sub-region: 25
+    Sub-region size: 3.0984 X 4.6000
+[INFO CTS-0034]     Segment length (rounded): 1.
+ Level 3
+    Direction: Vertical
+    Sinks per sub-region: 13
+    Sub-region size: 3.0984 X 2.3000
+[INFO CTS-0034]     Segment length (rounded): 1.
+ Level 4
+    Direction: Horizontal
+    Sinks per sub-region: 7
+    Sub-region size: 1.5492 X 2.3000
+[INFO CTS-0034]     Segment length (rounded): 1.
+[INFO CTS-0038]  Stop criterion found. Sink region hpwl is smaller than max wirelength (3194.316 um) and max number of sinks is 8.
+[INFO CTS-0035]  Number of sinks covered: 99.
+[INFO CTS-0018]     Created 31 clock buffers.
+[INFO CTS-0012]     Minimum number of buffers in the clock path: 5.
+[INFO CTS-0013]     Maximum number of buffers in the clock path: 5.
+[INFO CTS-0015]     Created 31 clock nets.
+[INFO CTS-0016]     Fanout distribution for the current clock = 4:8, 5:8..
+[INFO CTS-0017]     Max level of the clock tree: 4.
+[INFO CTS-0018]     Created 31 clock buffers.
+[INFO CTS-0012]     Minimum number of buffers in the clock path: 5.
+[INFO CTS-0013]     Maximum number of buffers in the clock path: 5.
+[INFO CTS-0015]     Created 31 clock nets.
+[INFO CTS-0016]     Fanout distribution for the current clock = 6:13, 7:3..
+[INFO CTS-0017]     Max level of the clock tree: 4.
+[INFO CTS-0098] Clock net "mii_tx_clk"
+[INFO CTS-0099]  Sinks 80
+[INFO CTS-0100]  Leaf buffers 0
+[INFO CTS-0101]  Average sink wire length 258.20 um
+[INFO CTS-0102]  Path depth 5 - 5
+[INFO CTS-0207]  Dummy loads inserted 8
+[INFO CTS-0098] Clock net "mii_rx_clk"
+[INFO CTS-0099]  Sinks 102
+[INFO CTS-0100]  Leaf buffers 0
+[INFO CTS-0101]  Average sink wire length 239.53 um
+[INFO CTS-0102]  Path depth 5 - 5
+[INFO CTS-0207]  Dummy loads inserted 3
+[INFO CTS-0500] Runtime: 3.17s
+[INFO DPL-0006] Core area: 208583.42 um^2
+[INFO DPL-0007] Movable instances area: 18893.35 um^2
+[INFO DPL-0008] Fixed instances area within core: 0.00 um^2
+[INFO DPL-0009] Utilization: 9.1%
+[INFO DPL-0005] Diamond search max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+[INFO DPL-1102] Legalizing using negotiation legalizer.
+[INFO DPL-1103] Negotiation base search window: +/-20 sites horizontally, +/-5 rows vertically 
+	Automatic search window extension enabled.
+	Search window extendable up to the max displacement cap of +/-500 sites, +/-100 rows near walls.
+[INFO DPL-1104] NegotiationLegalizer DRC penalty: 5.
+[INFO DPL-0392] Negotiation cell height distribution (1 unique row-count(s)):
+[INFO DPL-0393]   height 1 row(s): 1173 cells
+          |      Total |  Illegal |  Illegal
+Iteration | Violations |    Cells |    Sites
+---------------------------------------------
+        0 |         12 |         2 |        10
+        1 |          0 |         0 |         0
+Negotiation phase 1 converged at iteration 1.
+[INFO DPL-0500] Runtime: 0.01s
+Placement Analysis
+---------------------------------
+total displacement        617.9 u
+average displacement        0.5 u
+max displacement           21.9 u
+original HPWL           29209.0 u
+legalized HPWL          29578.5 u
+delta HPWL                    1 %
+
+[INFO RSZ-0046] Found 37 endpoints with hold violations.
+Iteration | Resized | Buffers | Cloned Gates |   Area   |   WNS   |   TNS   | Endpoint
+--------------------------------------------------------------------------------------
+        0 |       0 |       0 |            0 |    +0.0% |  -0.193 |  -5.039 | _1735_/D
+    final |       0 |      19 |            0 |    +1.6% |   0.154 |   0.000 | _1729_/D
+--------------------------------------------------------------------------------------
+[INFO RSZ-0032] Inserted 19 hold buffers.
+[INFO RSZ-0506] Runtime: 0.07s
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |      1212
+    final |     +0.1% |       0 |       3 |             1 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0035] Found 1 fanout violations.
+[INFO RSZ-0038] Inserted 3 buffers in 1 nets.
+[INFO RSZ-0504] Runtime: 0.05s
+[INFO DPL-0006] Core area: 208583.42 um^2
+[INFO DPL-0007] Movable instances area: 19225.38 um^2
+[INFO DPL-0008] Fixed instances area within core: 0.00 um^2
+[INFO DPL-0009] Utilization: 9.2%
+[INFO DPL-0005] Diamond search max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+[INFO DPL-1102] Legalizing using negotiation legalizer.
+[INFO DPL-1103] Negotiation base search window: +/-20 sites horizontally, +/-5 rows vertically 
+	Automatic search window extension enabled.
+	Search window extendable up to the max displacement cap of +/-500 sites, +/-100 rows near walls.
+[INFO DPL-1104] NegotiationLegalizer DRC penalty: 5.
+[INFO DPL-0392] Negotiation cell height distribution (1 unique row-count(s)):
+[INFO DPL-0393]   height 1 row(s): 1195 cells
+          |      Total |  Illegal |  Illegal
+Iteration | Violations |    Cells |    Sites
+---------------------------------------------
+        0 |         40 |         6 |        34
+        1 |          0 |         0 |         0
+Negotiation phase 1 converged at iteration 1.
+[INFO DPL-0500] Runtime: 0.01s
+Placement Analysis
+---------------------------------
+total displacement        232.3 u
+average displacement        0.2 u
+max displacement           20.4 u
+original HPWL           29792.4 u
+legalized HPWL          29866.7 u
+delta HPWL                    0 %
+
+IHP CTS complete: /mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/stretch/ethernet/09_place_and_route/cts.odb
+PASS openroad_cts.tcl

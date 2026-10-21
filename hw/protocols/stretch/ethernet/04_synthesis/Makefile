@@ -1,22 +1,16 @@
 # ===============================================================================
 # Ignytion IO - CRUCIBLE CORE
 # Copyright (c) 2026 Ignytion IO. All rights reserved.
+# Author      : IGNYTION_TECH
 # File        : hw/protocols/stretch/ethernet/04_synthesis/Makefile
-# Created     : 2026-09-21
-# Description : Make entrypoint for 10BASE-T Ethernet (stretch) Yosys synthesis and SDC generation.
+# Created     : 2026-10-03
+# Description : WSL Igny ETHERNET reference build entrypoint.
 # ===============================================================================
 
+SHELL := /bin/bash
+.SHELLFLAGS := -eu -o pipefail -c
 PROJECT_ROOT := $(abspath ..)
-
-.PHONY: all synth sdc clean
-
-all: synth sdc
-
+.PHONY: all synth
+all: synth
 synth:
-	cd "$(PROJECT_ROOT)" && igny run yosys -s 04_synthesis/synth.tcl
-
-sdc:
-	cd "$(PROJECT_ROOT)" && igny run yosys -c 04_synthesis/gen_sdc.tcl
-
-clean:
-	cd "$(PROJECT_ROOT)" && rm -f 04_synthesis/synth_output.v 04_synthesis/constraints.sdc
+	cd "$(PROJECT_ROOT)" && bash run_flow.sh synth

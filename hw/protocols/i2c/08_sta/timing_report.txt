@@ -1,0 +1,152 @@
+OpenROAD 26Q3-771-g7cfb2105c9 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+Startpoint: arst_i (input port clocked by core_clk)
+Endpoint: _1769_ (removal check against rising-edge clock core_clk)
+Path Group: asynchronous
+Path Type: min
+
+     Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------
+                     0.000    0.000   clock core_clk (rise edge)
+                     0.000    0.000   clock network delay (propagated)
+                     0.200    0.200 ^ input external delay
+   0.005    0.000    0.000    0.200 ^ arst_i (in)
+            0.000    0.000    0.200 ^ hold82/A (sg13g2_dlygate4sd3_1)
+   0.011    0.063    0.369    0.569 ^ hold82/X (sg13g2_dlygate4sd3_1)
+            0.063    0.001    0.570 ^ _1769_/RESET_B (sg13g2_dfrbpq_1)
+                              0.570   data arrival time
+
+                     0.000    0.000   clock core_clk (rise edge)
+                     0.240    0.240   clock network delay (propagated)
+                     0.100    0.340   clock uncertainty
+                     0.000    0.340   clock reconvergence pessimism
+                              0.340 ^ _1769_/CLK (sg13g2_dfrbpq_1)
+                    -0.112    0.228   library removal time
+                              0.228   data required time
+---------------------------------------------------------------------------
+                              0.228   data required time
+                             -0.570   data arrival time
+---------------------------------------------------------------------------
+                              0.341   slack (MET)
+
+
+Startpoint: wb_rst_i (input port clocked by core_clk)
+Endpoint: _1744_ (rising edge-triggered flip-flop clocked by core_clk)
+Path Group: core_clk
+Path Type: min
+
+     Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------
+                     0.000    0.000   clock core_clk (rise edge)
+                     0.000    0.000   clock network delay (propagated)
+                     0.200    0.200 ^ input external delay
+   0.050    0.000    0.000    0.200 ^ wb_rst_i (in)
+            0.009    0.004    0.204 ^ _1318_/A (sg13g2_nor4_1)
+   0.003    0.025    0.029    0.233 v _1318_/Y (sg13g2_nor4_1)
+            0.025    0.000    0.233 v _1319_/B (sg13g2_or2_1)
+   0.019    0.076    0.140    0.373 v _1319_/X (sg13g2_or2_1)
+            0.076    0.001    0.375 v _1326_/B (sg13g2_nand2_1)
+   0.004    0.039    0.054    0.429 ^ _1326_/Y (sg13g2_nand2_1)
+            0.039    0.000    0.429 ^ _1328_/B1 (sg13g2_o21ai_1)
+   0.003    0.035    0.047    0.476 v _1328_/Y (sg13g2_o21ai_1)
+            0.035    0.000    0.476 v _1744_/D (sg13g2_dfrbpq_1)
+                              0.476   data arrival time
+
+                     0.000    0.000   clock core_clk (rise edge)
+                     0.247    0.247   clock network delay (propagated)
+                     0.100    0.347   clock uncertainty
+                     0.000    0.347   clock reconvergence pessimism
+                              0.347 ^ _1744_/CLK (sg13g2_dfrbpq_1)
+                    -0.037    0.310   library hold time
+                              0.310   data required time
+---------------------------------------------------------------------------
+                              0.310   data required time
+                             -0.476   data arrival time
+---------------------------------------------------------------------------
+                              0.166   slack (MET)
+
+
+Startpoint: arst_i (input port clocked by core_clk)
+Endpoint: _1770_ (recovery check against rising-edge clock core_clk)
+Path Group: asynchronous
+Path Type: max
+
+     Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------
+                     0.000    0.000   clock core_clk (rise edge)
+                     0.000    0.000   clock network delay (propagated)
+                     2.000    2.000 ^ input external delay
+   0.005    0.000    0.000    2.000 ^ arst_i (in)
+            0.000    0.000    2.000 ^ hold82/A (sg13g2_dlygate4sd3_1)
+   0.014    0.075    0.379    2.379 ^ hold82/X (sg13g2_dlygate4sd3_1)
+            0.075    0.001    2.381 ^ _1770_/RESET_B (sg13g2_dfrbpq_1)
+                              2.381   data arrival time
+
+                    20.000   20.000   clock core_clk (rise edge)
+                     0.229   20.229   clock network delay (propagated)
+                    -0.100   20.129   clock uncertainty
+                     0.000   20.129   clock reconvergence pessimism
+                             20.129 ^ _1770_/CLK (sg13g2_dfrbpq_1)
+                    -0.136   19.994   library recovery time
+                             19.994   data required time
+---------------------------------------------------------------------------
+                             19.994   data required time
+                             -2.381   data arrival time
+---------------------------------------------------------------------------
+                             17.613   slack (MET)
+
+
+Startpoint: wb_rst_i (input port clocked by core_clk)
+Endpoint: _1628_ (rising edge-triggered flip-flop clocked by core_clk)
+Path Group: core_clk
+Path Type: max
+
+     Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------
+                     0.000    0.000   clock core_clk (rise edge)
+                     0.000    0.000   clock network delay (propagated)
+                     2.000    2.000 v input external delay
+   0.052    0.000    0.000    2.000 v wb_rst_i (in)
+            0.001    0.001    2.001 v hold77/A (sg13g2_dlygate4sd3_1)
+   0.023    0.098    0.425    2.426 v hold77/X (sg13g2_dlygate4sd3_1)
+            0.098    0.003    2.428 v fanout105/A (sg13g2_buf_1)
+   0.044    0.142    0.187    2.615 v fanout105/X (sg13g2_buf_1)
+            0.142    0.003    2.618 v fanout103/A (sg13g2_buf_1)
+   0.047    0.150    0.205    2.824 v fanout103/X (sg13g2_buf_1)
+            0.151    0.004    2.828 v _0921_/A (sg13g2_nor2_1)
+   0.031    0.270    0.266    3.094 ^ _0921_/Y (sg13g2_nor2_1)
+            0.270    0.002    3.096 ^ _1249_/C (sg13g2_nand3b_1)
+   0.004    0.078    0.137    3.233 v _1249_/Y (sg13g2_nand3b_1)
+            0.078    0.000    3.233 v _1250_/D (sg13g2_or4_1)
+   0.009    0.059    0.190    3.423 v _1250_/X (sg13g2_or4_1)
+            0.059    0.000    3.423 v _1264_/A2 (sg13g2_o21ai_1)
+   0.025    0.275    0.247    3.670 ^ _1264_/Y (sg13g2_o21ai_1)
+            0.275    0.001    3.671 ^ fanout1/A (sg13g2_buf_1)
+   0.051    0.213    0.264    3.935 ^ fanout1/X (sg13g2_buf_1)
+            0.213    0.002    3.937 ^ _1265_/C (sg13g2_or3_1)
+   0.025    0.109    0.196    4.133 ^ _1265_/X (sg13g2_or3_1)
+            0.109    0.002    4.135 ^ _1303_/A2 (sg13g2_o21ai_1)
+   0.003    0.040    0.075    4.209 v _1303_/Y (sg13g2_o21ai_1)
+            0.040    0.000    4.210 v _1628_/D (sg13g2_dfrbpq_1)
+                              4.210   data arrival time
+
+                    20.000   20.000   clock core_clk (rise edge)
+                     0.235   20.235   clock network delay (propagated)
+                    -0.100   20.135   clock uncertainty
+                     0.000   20.135   clock reconvergence pessimism
+                             20.135 ^ _1628_/CLK (sg13g2_dfrbpq_1)
+                    -0.117   20.019   library setup time
+                             20.019   data required time
+---------------------------------------------------------------------------
+                             20.019   data required time
+                             -4.210   data arrival time
+---------------------------------------------------------------------------
+                             15.809   slack (MET)
+
+
+worst slack max 15.81
+worst slack min 0.17
+tns max 0.00
+PASS openroad_sta.tcl

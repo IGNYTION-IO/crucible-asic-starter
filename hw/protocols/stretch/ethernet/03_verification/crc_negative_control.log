@@ -1,0 +1,4 @@
+FATAL: 03_verification/crc_equivalence.v:33: CRC state equivalence mismatch at vector 3
+       Time: 4000  Scope: crc_equivalence.check_vector
+Run failed: Process exited with a non-zero status (1).
+Full output: /home/hasan/.ignytion/.crucible/workspaces/ethernet-610b7285/runs/20261003-004126-16413f/stdout.log

@@ -1,5 +1,25 @@
-# 10BASE-T Ethernet (stretch) - 10 GDS
+<!--
+===============================================================================
+Ignytion IO - CRUCIBLE CORE
+Copyright (c) 2026 Ignytion IO. All rights reserved.
+Author      : IGNYTION_TECH
+File        : hw/protocols/stretch/ethernet/10_gds/README.md
+Created     : 2026-10-03
+Description : Actual ethernet reference stage entrypoint and claim boundary.
+===============================================================================
+-->
+# ethernet: 10_gds
 
-Final layout streamout from `09_place_and_route/route.def`.
+From the unit root, run make gds in WSL Igny, or bash run_flow.sh gds.
+Earlier stage artifacts are required for physical stages. make flow runs
+simulation, synthesis, physical stages and GDS export sequentially.
+Run make lint separately, or use root make all.
 
-**Output artifact:** `EthernetCore.gds`
+The unit README.md owns interfaces, pin, coverage and reproduction commands.
+GATES.md and repository .context.md own current acceptance and progress.
+Generated netlist/DEF/SPEF and binary GDS retain native formats; adjacent source
+headers and validation receipts record provenance. Execution is not acceptance.
+
+
+validate_gds.py independently decodes cells/placements against DEF and exercises a failure control under Python optimization. This is structural/export validation only.
+Foundry DRC/LVS, antenna and full-chip signoff are not performed.

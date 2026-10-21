@@ -1,0 +1,142 @@
+OpenROAD 26Q3-771-g7cfb2105c9 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 4 thread(s).
+[INFO GPL-0001] ---- Initialize GPL Main Data Structures
+[INFO GPL-0002] DBU: 1000
+[INFO GPL-0003] SiteSize: (  0.480  3.780 ) um
+[INFO GPL-0004] CoreBBox: ( 20.160 22.680 ) ( 480.000 476.280 ) um
+[INFO GPL-0016] Core area:                  208583.424 um^2
+[INFO GPL-0036] Movable instances area:      16906.579 um^2
+[INFO GPL-0037] Total instances area:        16906.579 um^2
+[INFO GPL-0035] Pin density area adjust:      1198.687 um^2
+[INFO GPL-0032] ---- Initialize Region: Top-level
+[INFO GPL-0006] Number of instances:              1042
+[INFO GPL-0007] Movable instances:                1042
+[INFO GPL-0008] Fixed instances:                     0
+[INFO GPL-0009] Dummy instances:                     0
+[INFO GPL-0010] Number of nets:                   1136
+[INFO GPL-0011] Number of pins:                   3331
+[INFO GPL-0012] Die BBox:       (  0.000  0.000 ) ( 500.000 500.000 ) um
+[INFO GPL-0013] Placement BBox: ( 20.160 22.680 ) ( 480.000 476.280 ) um
+[INFO GPL-0014] Region name: top-level.
+[INFO GPL-0015] Region area:                208583.424 um^2
+[INFO GPL-0017] Fixed instances area:            0.000 um^2
+[INFO GPL-0018] Movable instances area:      18105.266 um^2
+[INFO GPL-0019] Utilization:                     8.680 %
+[INFO GPL-0020] Standard cells area:         18105.266 um^2
+[INFO GPL-0021] Large instances area:            0.000 um^2
+[INFO GPL-0005] ---- Execute Conjugate Gradient Initial Placement.
+[INFO GPL-0051] Source of initial instance position counters:
+	Odb location = 0	Core center = 1042	Region center = 0
+[InitialPlace]  Iter: 1 conjugate gradient residual: 0.00050530 HPWL: 42542820
+[InitialPlace]  Iter: 2 conjugate gradient residual: 0.00000011 HPWL: 13693024
+[InitialPlace]  Iter: 3 conjugate gradient residual: 0.00000011 HPWL: 13688899
+[InitialPlace]  Iter: 4 conjugate gradient residual: 0.00000011 HPWL: 13695348
+[InitialPlace]  Iter: 5 conjugate gradient residual: 0.00000011 HPWL: 13694389
+[INFO GPL-0033] ---- Initialize Nesterov Region: Top-level
+[INFO GPL-0023] Placement target density:       0.5500
+[INFO GPL-0024] Movable insts average area:     17.375 um^2
+[INFO GPL-0025] Ideal bin area:                 31.592 um^2
+[INFO GPL-0026] Ideal bin count:                  6602
+[INFO GPL-0027] Total bin area:             208583.424 um^2
+[INFO GPL-0028] Bin count (X, Y):          64 ,     64
+[INFO GPL-0029] Bin size (W * H):       7.185 *  7.088 um
+[INFO GPL-0030] Number of bins:                   4096
+[INFO GPL-0084] ---- Execute Nesterov Global Placement.
+[INFO GPL-0031] HPWL: Half-Perimeter Wirelength
+Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
+---------------------------------------------------------------
+        0 |   0.9885 |  4.713131e+03 |   +0.00% |  7.51e-16 |      
+       10 |   0.9825 |  4.428866e+03 |   -6.03% |  1.22e-15 |      
+       20 |   0.9826 |  4.425615e+03 |   -0.07% |  1.99e-15 |      
+       30 |   0.9825 |  4.419141e+03 |   -0.15% |  3.25e-15 |      
+       40 |   0.9825 |  4.417601e+03 |   -0.03% |  5.29e-15 |      
+       50 |   0.9825 |  4.416090e+03 |   -0.03% |  8.62e-15 |      
+       60 |   0.9825 |  4.415620e+03 |   -0.01% |  1.40e-14 |      
+       70 |   0.9824 |  4.416944e+03 |   +0.03% |  2.29e-14 |      
+       80 |   0.9824 |  4.421554e+03 |   +0.10% |  3.72e-14 |      
+       90 |   0.9824 |  4.430243e+03 |   +0.20% |  6.07e-14 |      
+      100 |   0.9823 |  4.447078e+03 |   +0.38% |  9.88e-14 |      
+      110 |   0.9822 |  4.477302e+03 |   +0.68% |  1.61e-13 |      
+      120 |   0.9821 |  4.528391e+03 |   +1.14% |  2.62e-13 |      
+      130 |   0.9817 |  4.618289e+03 |   +1.99% |  4.27e-13 |      
+      140 |   0.9797 |  4.767705e+03 |   +3.24% |  6.96e-13 |      
+      150 |   0.9771 |  5.005011e+03 |   +4.98% |  1.13e-12 |      
+      160 |   0.9722 |  5.378326e+03 |   +7.46% |  1.85e-12 |      
+      170 |   0.9644 |  5.909131e+03 |   +9.87% |  3.01e-12 |      
+      180 |   0.9477 |  6.645440e+03 |  +12.46% |  4.90e-12 |      
+      190 |   0.9311 |  7.362363e+03 |  +10.79% |  7.97e-12 |      
+      200 |   0.9182 |  8.059987e+03 |   +9.48% |  1.30e-11 |      
+      210 |   0.8933 |  8.603656e+03 |   +6.75% |  2.12e-11 |      
+      220 |   0.8635 |  9.768159e+03 |  +13.53% |  3.45e-11 |      
+      230 |   0.8341 |  1.086121e+04 |  +11.19% |  5.61e-11 |      
+      240 |   0.8017 |  1.122477e+04 |   +3.35% |  9.14e-11 |      
+      250 |   0.7672 |  1.252140e+04 |  +11.55% |  1.49e-10 |      
+      260 |   0.7295 |  1.315878e+04 |   +5.09% |  2.42e-10 |      
+      270 |   0.6914 |  1.422392e+04 |   +8.09% |  3.95e-10 |      
+      280 |   0.6429 |  1.496153e+04 |   +5.19% |  6.43e-10 |      
+      290 |   0.5977 |  1.571039e+04 |   +5.01% |  1.05e-09 |      
+      300 |   0.5506 |  1.644738e+04 |   +4.69% |  1.71e-09 |      
+      310 |   0.5017 |  1.722522e+04 |   +4.73% |  2.78e-09 |      
+      320 |   0.4487 |  1.789487e+04 |   +3.89% |  4.53e-09 |      
+      330 |   0.3917 |  1.836607e+04 |   +2.63% |  7.37e-09 |      
+      340 |   0.3339 |  1.875013e+04 |   +2.09% |  1.19e-08 |      
+      350 |   0.2911 |  1.894776e+04 |   +1.05% |  1.75e-08 |      
+      360 |   0.2554 |  1.924297e+04 |   +1.56% |  2.58e-08 |      
+      370 |   0.2199 |  1.949916e+04 |   +1.33% |  3.80e-08 |      
+      380 |   0.1867 |  1.974510e+04 |   +1.26% |  5.60e-08 |      
+      390 |   0.1608 |  1.995082e+04 |   +1.04% |  8.25e-08 |      
+      400 |   0.1398 |  2.011865e+04 |   +0.84% |  1.22e-07 |      
+      410 |   0.1188 |  2.023656e+04 |   +0.59% |  1.79e-07 |      
+      420 |   0.1015 |  2.036272e+04 |   +0.62% |  2.64e-07 |      
+      421 |   0.0993 |  2.035514e+04 |          |  2.85e-07 |      
+---------------------------------------------------------------
+[INFO GPL-1001] Global placement finished at iteration 421
+[INFO GPL-1002] Placed Cell Area            18105.2662
+[INFO GPL-1003] Available Free Area         208583.4240
+[INFO GPL-1004] Minimum Feasible Density        0.0900 (cell_area / free_area)
+[INFO GPL-1006]   Suggested Target Densities:
+[INFO GPL-1007]     - For 90% usage of free space: 0.0964
+[INFO GPL-1008]     - For 80% usage of free space: 0.1085
+[INFO GPL-1009]     - For 50% usage of free space: 0.1736
+[INFO GPL-1014] Final placement area: 18105.27 (+0.00%)
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |      1062
+    final |     +2.5% |       0 |      58 |            18 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0035] Found 18 fanout violations.
+[INFO RSZ-0038] Inserted 58 buffers in 18 nets.
+[INFO RSZ-0504] Runtime: 0.07s
+[INFO DPL-0006] Core area: 208583.42 um^2
+[INFO DPL-0007] Movable instances area: 17327.52 um^2
+[INFO DPL-0008] Fixed instances area within core: 0.00 um^2
+[INFO DPL-0009] Utilization: 8.3%
+[INFO DPL-0005] Diamond search max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+[INFO DPL-1102] Legalizing using negotiation legalizer.
+[INFO DPL-1103] Negotiation base search window: +/-20 sites horizontally, +/-5 rows vertically 
+	Automatic search window extension enabled.
+	Search window extendable up to the max displacement cap of +/-500 sites, +/-100 rows near walls.
+[INFO DPL-1104] NegotiationLegalizer DRC penalty: 5.
+[INFO DPL-0392] Negotiation cell height distribution (1 unique row-count(s)):
+[INFO DPL-0393]   height 1 row(s): 1100 cells
+          |      Total |  Illegal |  Illegal
+Iteration | Violations |    Cells |    Sites
+---------------------------------------------
+        0 |         10 |         2 |         8
+        1 |          0 |         0 |         0
+Negotiation phase 1 converged at iteration 1.
+[INFO DPL-0500] Runtime: 0.01s
+Placement Analysis
+---------------------------------
+total displacement       4225.8 u
+average displacement        3.8 u
+max displacement           22.5 u
+original HPWL           23145.5 u
+legalized HPWL          26669.1 u
+delta HPWL                   15 %
+
+IHP placement complete: /mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/stretch/ethernet/07_placement/placement.odb
+PASS openroad_placement.tcl

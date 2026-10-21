@@ -1,0 +1,2 @@
+PASS ETHERNET regression: independent 10M MII clocks, preamble/SFD, padding, payload, CRC32 TX/RX, corrupt FCS and reset
+02_sim/test.v:151: $finish called at 729200000 (1ps)

@@ -1,0 +1,168 @@
+%Warning-DECLFILENAME: 01_rtl/usb_hid_host.v:348:8: Filename 'usb_hid_host' does not match MODULE name: 'ukp'
+  348 | module ukp #(
+      |        ^~~
+                       ... For warning description see https://verilator.org/warn/DECLFILENAME?v=5.047
+                       ... Use "/* verilator lint_off DECLFILENAME */" and lint_on around source to disable this message.
+%Warning-PINMISSING: 01_rtl/usb_ls_core.v:28:36: Instance has missing pin: 'key_modifiers'
+   28 |     usb_hid_host #(.FULL_SPEED(0)) controller (
+      |                                    ^~~~~~~~~~
+                     01_rtl/usb_hid_host.v:51:20: ... Location of port declaration
+   51 |   output reg [7:0] key_modifiers,
+      |                    ^~~~~~~~~~~~~
+                     ... For warning description see https://verilator.org/warn/PINMISSING?v=5.047
+                     ... Use "/* verilator lint_off PINMISSING */" and lint_on around source to disable this message.
+%Warning-PINMISSING: 01_rtl/usb_ls_core.v:28:36: Instance has missing pin: 'key_0'
+   28 |     usb_hid_host #(.FULL_SPEED(0)) controller (
+      |                                    ^~~~~~~~~~
+                     01_rtl/usb_hid_host.v:52:20: ... Location of port declaration
+   52 |   output reg [7:0] key_0, key_1, key_2, key_3, key_4, key_5,
+      |                    ^~~~~
+%Warning-PINMISSING: 01_rtl/usb_ls_core.v:28:36: Instance has missing pin: 'key_1'
+   28 |     usb_hid_host #(.FULL_SPEED(0)) controller (
+      |                                    ^~~~~~~~~~
+                     01_rtl/usb_hid_host.v:52:27: ... Location of port declaration
+   52 |   output reg [7:0] key_0, key_1, key_2, key_3, key_4, key_5,
+      |                           ^~~~~
+%Warning-PINMISSING: 01_rtl/usb_ls_core.v:28:36: Instance has missing pin: 'key_2'
+   28 |     usb_hid_host #(.FULL_SPEED(0)) controller (
+      |                                    ^~~~~~~~~~
+                     01_rtl/usb_hid_host.v:52:34: ... Location of port declaration
+   52 |   output reg [7:0] key_0, key_1, key_2, key_3, key_4, key_5,
+      |                                  ^~~~~
+%Warning-PINMISSING: 01_rtl/usb_ls_core.v:28:36: Instance has missing pin: 'key_3'
+   28 |     usb_hid_host #(.FULL_SPEED(0)) controller (
+      |                                    ^~~~~~~~~~
+                     01_rtl/usb_hid_host.v:52:41: ... Location of port declaration
+   52 |   output reg [7:0] key_0, key_1, key_2, key_3, key_4, key_5,
+      |                                         ^~~~~
+%Warning-PINMISSING: 01_rtl/usb_ls_core.v:28:36: Instance has missing pin: 'key_4'
+   28 |     usb_hid_host #(.FULL_SPEED(0)) controller (
+      |                                    ^~~~~~~~~~
+                     01_rtl/usb_hid_host.v:52:48: ... Location of port declaration
+   52 |   output reg [7:0] key_0, key_1, key_2, key_3, key_4, key_5,
+      |                                                ^~~~~
+%Warning-PINMISSING: 01_rtl/usb_ls_core.v:28:36: Instance has missing pin: 'key_5'
+   28 |     usb_hid_host #(.FULL_SPEED(0)) controller (
+      |                                    ^~~~~~~~~~
+                     01_rtl/usb_hid_host.v:52:55: ... Location of port declaration
+   52 |   output reg [7:0] key_0, key_1, key_2, key_3, key_4, key_5,
+      |                                                       ^~~~~
+%Warning-PINMISSING: 01_rtl/usb_ls_core.v:28:36: Instance has missing pin: 'mouse_btn'
+   28 |     usb_hid_host #(.FULL_SPEED(0)) controller (
+      |                                    ^~~~~~~~~~
+                     01_rtl/usb_hid_host.v:55:20: ... Location of port declaration
+   55 |   output reg [2:0] mouse_btn,         
+      |                    ^~~~~~~~~
+%Warning-PINMISSING: 01_rtl/usb_ls_core.v:28:36: Instance has missing pin: 'mouse_dx'
+   28 |     usb_hid_host #(.FULL_SPEED(0)) controller (
+      |                                    ^~~~~~~~~~
+                     01_rtl/usb_hid_host.v:56:27: ... Location of port declaration
+   56 |   output reg signed [7:0] mouse_dx,   
+      |                           ^~~~~~~~
+%Warning-PINMISSING: 01_rtl/usb_ls_core.v:28:36: Instance has missing pin: 'mouse_dy'
+   28 |     usb_hid_host #(.FULL_SPEED(0)) controller (
+      |                                    ^~~~~~~~~~
+                     01_rtl/usb_hid_host.v:57:27: ... Location of port declaration
+   57 |   output reg signed [7:0] mouse_dy,   
+      |                           ^~~~~~~~
+%Warning-PINMISSING: 01_rtl/usb_ls_core.v:28:36: Instance has missing pin: 'game_l'
+   28 |     usb_hid_host #(.FULL_SPEED(0)) controller (
+      |                                    ^~~~~~~~~~
+                     01_rtl/usb_hid_host.v:60:20: ... Location of port declaration
+   60 |   output reg       game_l, game_r, game_u, game_d,                       
+      |                    ^~~~~~
+%Warning-PINMISSING: 01_rtl/usb_ls_core.v:28:36: Instance has missing pin: 'game_r'
+   28 |     usb_hid_host #(.FULL_SPEED(0)) controller (
+      |                                    ^~~~~~~~~~
+                     01_rtl/usb_hid_host.v:60:28: ... Location of port declaration
+   60 |   output reg       game_l, game_r, game_u, game_d,                       
+      |                            ^~~~~~
+%Warning-PINMISSING: 01_rtl/usb_ls_core.v:28:36: Instance has missing pin: 'game_u'
+   28 |     usb_hid_host #(.FULL_SPEED(0)) controller (
+      |                                    ^~~~~~~~~~
+                     01_rtl/usb_hid_host.v:60:36: ... Location of port declaration
+   60 |   output reg       game_l, game_r, game_u, game_d,                       
+      |                                    ^~~~~~
+%Warning-PINMISSING: 01_rtl/usb_ls_core.v:28:36: Instance has missing pin: 'game_d'
+   28 |     usb_hid_host #(.FULL_SPEED(0)) controller (
+      |                                    ^~~~~~~~~~
+                     01_rtl/usb_hid_host.v:60:44: ... Location of port declaration
+   60 |   output reg       game_l, game_r, game_u, game_d,                       
+      |                                            ^~~~~~
+%Warning-PINMISSING: 01_rtl/usb_ls_core.v:28:36: Instance has missing pin: 'game_a'
+   28 |     usb_hid_host #(.FULL_SPEED(0)) controller (
+      |                                    ^~~~~~~~~~
+                     01_rtl/usb_hid_host.v:61:20: ... Location of port declaration
+   61 |   output reg       game_a, game_b, game_x, game_y, game_sel, game_sta,   
+      |                    ^~~~~~
+%Warning-PINMISSING: 01_rtl/usb_ls_core.v:28:36: Instance has missing pin: 'game_b'
+   28 |     usb_hid_host #(.FULL_SPEED(0)) controller (
+      |                                    ^~~~~~~~~~
+                     01_rtl/usb_hid_host.v:61:28: ... Location of port declaration
+   61 |   output reg       game_a, game_b, game_x, game_y, game_sel, game_sta,   
+      |                            ^~~~~~
+%Warning-PINMISSING: 01_rtl/usb_ls_core.v:28:36: Instance has missing pin: 'game_x'
+   28 |     usb_hid_host #(.FULL_SPEED(0)) controller (
+      |                                    ^~~~~~~~~~
+                     01_rtl/usb_hid_host.v:61:36: ... Location of port declaration
+   61 |   output reg       game_a, game_b, game_x, game_y, game_sel, game_sta,   
+      |                                    ^~~~~~
+%Warning-PINMISSING: 01_rtl/usb_ls_core.v:28:36: Instance has missing pin: 'game_y'
+   28 |     usb_hid_host #(.FULL_SPEED(0)) controller (
+      |                                    ^~~~~~~~~~
+                     01_rtl/usb_hid_host.v:61:44: ... Location of port declaration
+   61 |   output reg       game_a, game_b, game_x, game_y, game_sel, game_sta,   
+      |                                            ^~~~~~
+%Warning-PINMISSING: 01_rtl/usb_ls_core.v:28:36: Instance has missing pin: 'game_sel'
+   28 |     usb_hid_host #(.FULL_SPEED(0)) controller (
+      |                                    ^~~~~~~~~~
+                     01_rtl/usb_hid_host.v:61:52: ... Location of port declaration
+   61 |   output reg       game_a, game_b, game_x, game_y, game_sel, game_sta,   
+      |                                                    ^~~~~~~~
+%Warning-PINMISSING: 01_rtl/usb_ls_core.v:28:36: Instance has missing pin: 'game_sta'
+   28 |     usb_hid_host #(.FULL_SPEED(0)) controller (
+      |                                    ^~~~~~~~~~
+                     01_rtl/usb_hid_host.v:61:62: ... Location of port declaration
+   61 |   output reg       game_a, game_b, game_x, game_y, game_sel, game_sta,   
+      |                                                              ^~~~~~~~
+%Warning-PINMISSING: 01_rtl/usb_ls_core.v:28:36: Instance has missing pin: 'game_extra'
+   28 |     usb_hid_host #(.FULL_SPEED(0)) controller (
+      |                                    ^~~~~~~~~~
+                     01_rtl/usb_hid_host.v:62:20: ... Location of port declaration
+   62 |   output reg [3:0] game_extra,                                           
+      |                    ^~~~~~~~~~
+%Warning-UNUSEDSIGNAL: 01_rtl/usb_hid_host.v:79:12: Bits of signal are not used: 'addrb'[3]
+                                                  : ... note: In instance 'usb_ls_core.controller'
+   79 | wire [3:0] addrb;
+      |            ^~~~~
+                       ... For warning description see https://verilator.org/warn/UNUSEDSIGNAL?v=5.047
+                       ... Use "/* verilator lint_off UNUSEDSIGNAL */" and lint_on around source to disable this message.
+%Warning-PROCASSINIT: 01_rtl/usb_hid_host.v:405:23: Procedural assignment to declaration with initial value: 'interval'
+                                                  : ... note: In instance 'usb_ls_core.controller.ukp'
+                                                  : ... Location of variable initialization
+  405 | reg [15:0] interval = 1;   
+      |                       ^
+                      01_rtl/usb_hid_host.v:660:5: ... Location of variable process write
+                                                 : ... Perhaps should initialize instead using a reset in this process
+  660 |     interval <= 1;
+      |     ^~~~~~~~
+                      ... For warning description see https://verilator.org/warn/PROCASSINIT?v=5.047
+                      ... Use "/* verilator lint_off PROCASSINIT */" and lint_on around source to disable this message.
+%Warning-PROCASSINIT: 01_rtl/usb_hid_host.v:406:23: Procedural assignment to declaration with initial value: 'delay'
+                                                  : ... note: In instance 'usb_ls_core.controller.ukp'
+                                                  : ... Location of variable initialization
+  406 | reg  [7:0] delay    = 1;   
+      |                       ^
+                      01_rtl/usb_hid_host.v:661:5: ... Location of variable process write
+                                                 : ... Perhaps should initialize instead using a reset in this process
+  661 |     delay <= 1;
+      |     ^~~~~
+%Warning-UNUSEDPARAM: 01_rtl/usb_hid_host.v:470:12: Parameter is not used: 'S_B2'
+                                                  : ... note: In instance 'usb_ls_core.controller.ukp'
+  470 | localparam S_B2     = 8;
+      |            ^~~~
+                      ... For warning description see https://verilator.org/warn/UNUSEDPARAM?v=5.047
+                      ... Use "/* verilator lint_off UNUSEDPARAM */" and lint_on around source to disable this message.
+- V e r i l a t i o n   R e p o r t: Verilator 5.047 devel rev v5.046-219-g56ed47ee7 (mod)
+- Verilator: Built from 0.096 MB sources in 4 modules, into 0.147 MB in 3 C++ files needing 0.000 MB
+- Verilator: Walltime 0.051 s (elab=0.004, cvt=0.017, bld=0.000); cpu 0.033 s on 1 threads; allocated 24.367 MB

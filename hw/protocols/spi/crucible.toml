@@ -1,0 +1,10 @@
+[workspace]
+name = "spi"
+id = "spi-8b930456"
+environment = "janestreet-spi"
+environments = [ "janestreet-spi",]
+
+[workspace.metadata]
+managed = false
+created_at = "2026-10-02T22:15:29.265799+00:00"
+created_by = "crucible-core"

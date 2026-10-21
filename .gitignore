@@ -20,3 +20,14 @@ runs/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Generated agent / presentation scratch (not authoring JSON inputs)
+.unlazy/
+.chart-data-*/
+docs/.chart-data-*/
+docs/.deck_build/*-render/
+docs/.deck_build/*-final-pdf/
+docs/.deck_build/*-candidate.pptx*
+docs/.deck_build/*-primer[0-9].pptx
+docs/.deck_build/*-inspect.ndjson
+*.out

@@ -1,0 +1,69 @@
+#!/usr/bin/env bash
+# ===============================================================================
+# Ignytion IO - CRUCIBLE CORE
+# Copyright (c) 2026 Ignytion IO. All rights reserved.
+# Author      : IGNYTION_TECH
+# File        : hw/protocols/i2c/run_flow.sh
+# Created     : 2026-10-03
+# Description : Stage-aware WSL Igny reference RTL-to-GDS execution.
+# ===============================================================================
+set -euo pipefail
+cd "$(dirname "${BASH_SOURCE[0]}")"
+export CRUCIBLE_ENV=janestreet-i2c
+export IHP_PDK_ROOT="${IHP_PDK_ROOT:-${HOME}/.ciel/ciel/ihp-sg13g2/versions/22f43352dd8219f9007eb659e422e0d5fe28c5fb/ihp-sg13g2}"
+stage="${1:-flow}"
+run_sim() {
+    igny run iverilog -g2012 -I01_rtl -s tst_bench_top -o 02_sim/i2c_core_sim.out 02_sim/timescale.v 01_rtl/*.v 02_sim/test.v 02_sim/wb_master_model.v 02_sim/i2c_slave_model.v
+    igny run vvp 02_sim/i2c_core_sim.out | tee 02_sim/simulation.log
+    grep -q '^PASS I2C regression:' 02_sim/simulation.log
+    if igny run vvp 02_sim/i2c_core_sim.out +inject_a5 >02_sim/negative_control.log 2>&1; then
+        echo 'Failure-injection test unexpectedly passed' >&2
+        return 1
+    fi
+    grep -q 'Expected a5' 02_sim/negative_control.log
+    if igny run vvp 02_sim/i2c_core_sim.out +inject_5a >02_sim/negative_control_5a.log 2>&1; then
+        echo '5A failure-injection test unexpectedly passed' >&2
+        return 1
+    fi
+    grep -q 'Expected 5a' 02_sim/negative_control_5a.log
+    echo 'PASS I2C negative control'
+}
+run_lint() {
+    igny run verilator --lint-only -Wall -Wno-fatal -I01_rtl --top-module i2c_core 01_rtl/*.v |& tee 00_lint/lint_report.txt
+    echo 'PASS I2C lint execution (warnings retained for review)'
+}
+run_stage() { igny run openroad -exit "$1" | tee "${1%.tcl}.log"; }
+run_sta() {
+    igny run openroad -exit 08_sta/openroad_sta.tcl | tee 08_sta/timing_report.txt
+    STA_CORNER=slow igny run openroad -exit 08_sta/openroad_sta.tcl | tee 08_sta/timing_slow.txt
+}
+run_synth() { igny run yosys -c 04_synthesis/synth.tcl | tee 04_synthesis/synthesis.log; }
+run_physical() {
+    for entry in 06_floorplanning/openroad_floorplan.tcl 07_placement/openroad_placement.tcl 09_place_and_route/openroad_cts.tcl 09_place_and_route/openroad_route.tcl; do
+        igny run openroad -exit "$entry" | tee "${entry%.tcl}.log"
+    done
+    run_sta
+}
+run_gds() {
+    igny run script 10_gds/streamout.sh
+    igny run script 10_gds/validate_gds.py
+if PYTHONOPTIMIZE=1 igny run script 10_gds/validate_gds.py -- --inject_failure >10_gds/negative_control.log 2>&1; then
+        echo 'Injected GDS mismatch incorrectly passed' >&2; return 1
+    fi
+    grep -q 'DEF/GDS placement mismatch' 10_gds/negative_control.log
+    echo 'PASS GDS mismatch negative control with Python optimization'
+}
+case "$stage" in
+    lint) run_lint ;;
+    floorplan) run_stage 06_floorplanning/openroad_floorplan.tcl ;;
+    place) run_stage 07_placement/openroad_placement.tcl ;;
+    cts) run_stage 09_place_and_route/openroad_cts.tcl ;;
+    route) run_stage 09_place_and_route/openroad_route.tcl ;;
+    sta) run_sta ;;
+    sim|verify) run_sim ;;
+    synth) run_synth ;;
+    physical) run_physical ;;
+    gds) run_gds ;;
+    flow) run_sim; run_synth; run_physical; run_gds ;;
+    *) echo "Unknown stage: $stage" >&2; exit 2 ;;
+esac
