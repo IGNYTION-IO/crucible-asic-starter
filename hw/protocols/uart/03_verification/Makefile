@@ -7,8 +7,16 @@
 # Description : WSL Igny UART reference build entrypoint.
 # ===============================================================================
 
+ifeq ($(OS),Windows_NT)
+SHELL := cmd.exe
+.SHELLFLAGS := /c
+PYTHON ?= python
+else
 SHELL := /bin/bash
 .SHELLFLAGS := -eu -o pipefail -c
+PYTHON ?= python3
+endif
+export PYTHON
 PROJECT_ROOT := $(abspath ..)
 .PHONY: all sim clean
 all: sim

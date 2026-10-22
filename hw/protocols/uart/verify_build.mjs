@@ -70,6 +70,17 @@ function docs(){
  const lock=read('crucible.lock');assert(lock.includes('verilator')&&lock.includes('klayout-stream'));
  console.log('PASS reproduction and limitations recorded');
 }
-const checks={lint,sim,synth,physical,gds,docs};
+function signoff(){
+ const result=JSON.parse(read('11_physical_verification/results/physical_verification.json'));
+ assert(result.status==='PASS'&&result.drc.markers===0&&result.lvs.unique===1);
+ assert(result.lvs.power_pins_removed===0&&result.lvs.ignored_top_ports===false);
+ assert(result.lvs.implicit_nets.length===0&&result.lvs.ports===46);
+ for(const [name,file] of [['gds','10_gds/'+top+'.gds'],['database','09_place_and_route/route.odb']]){
+  assert(result.inputs[name].sha256===crypto.createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex'), 'Stale physical verification receipt');
+ }
+ assert(result.not_covered.includes('foundry release signoff'));
+ console.log('PASS current IHP main-deck DRC and strict power-aware LVS evidence');
+}
+const checks={lint,sim,synth,physical,gds,docs,signoff};
 assert(mode==='all'||Object.hasOwn(checks,mode));
 if(mode==='all')for(const check of Object.values(checks))check();else checks[mode]();

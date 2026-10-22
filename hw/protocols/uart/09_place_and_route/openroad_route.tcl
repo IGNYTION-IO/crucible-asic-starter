@@ -37,6 +37,10 @@ detailed_route \
 # Fill all legal row gaps with PDK-provided spacer cells before stream-out.
 filler_placement {sg13g2_fill_1 sg13g2_fill_2}
 
+# CTS/hold repair and filler insertion add cells after the initial PDN setup.
+source [file join $script_dir power_ports.tcl]
+connect_uart_supplies
+
 if {[file exists $ihp_rcx_rules]} {
     define_process_corner -ext_model_index 0 $ihp_rcx_rules
     extract_parasitics -ext_model_file $ihp_rcx_rules

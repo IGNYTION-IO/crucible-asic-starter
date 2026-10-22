@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "inputs": {
+    "gds": {
+      "path": "/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/uart/10_gds/uart_core.gds",
+      "sha256": "981adf196c87ebdfbc6ec4f4b6904bd44c1da20af9b0a74a4dd7bd9c317a27fe"
+    },
+    "database": {
+      "path": "/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/uart/09_place_and_route/route.odb",
+      "sha256": "0ec48263800e00e21e03608ba6abaa9d0975f7b7427e6762f06aa6acfb0eb37f"
+    },
+    "cdl": {
+      "path": "/home/hasan/.ciel/ciel/ihp-sg13g2/versions/22f43352dd8219f9007eb659e422e0d5fe28c5fb/ihp-sg13g2/libs.ref/sg13g2_stdcell/cdl/sg13g2_stdcell.cdl",
+      "sha256": "6f629dc6b0d21df83fba7deb462a11217dd4b0737e99cd18a0a05ab876667c9a"
+    },
+    "netgen_setup": {
+      "path": "/home/hasan/.ciel/ciel/ihp-sg13g2/versions/22f43352dd8219f9007eb659e422e0d5fe28c5fb/ihp-sg13g2/libs.tech/netgen/ihp-sg13g2_setup.tcl",
+      "sha256": "9981101e0bbe9d8f6af656f03475d0d00fb7507559645e85e4d9d5f704b3878e"
+    }
+  },
+  "drc_markers": 2,
+  "lvs": {
+    "passed": false,
+    "returncode": 3,
+    "unique": 0
+  }
+}

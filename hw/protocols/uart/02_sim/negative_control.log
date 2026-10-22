@@ -1,0 +1,5 @@
+VCD info: dumpfile 02_sim/uart_core.vcd opened for output.
+FATAL: 02_sim/test.v:43: UART RX mismatch expected fe actual ff
+       Time: 6351000  Scope: tst_bench_top.check_rx
+Run failed: Process exited with a non-zero status (1).
+Full output: /home/hasan/.ignytion/.crucible/workspaces/uart-2d86cae6/runs/20261022-125750-ea0004/stdout.log

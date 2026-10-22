@@ -1,0 +1,643 @@
+Netgen 1.5.323 compiled on Fri Aug 28 10:06:04 UTC 2026
+Warning: netgen command 'format' use fully-qualified name '::netgen::format'
+Warning: netgen command 'global' use fully-qualified name '::netgen::global'
+Reading netlist file /mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/uart/11_physical_verification/results/layout.spice for {/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/uart/11_physical_verification/results/layout.spice} uart_core
+Call to undefined subcircuit sg13g2_dfrbpq_1
+Creating placeholder cell definition.
+Call to undefined subcircuit sg13g2_tiehi
+Creating placeholder cell definition.
+Call to undefined subcircuit sg13g2_xnor2_1
+Creating placeholder cell definition.
+Call to undefined subcircuit sg13g2_and2_1
+Creating placeholder cell definition.
+Call to undefined subcircuit sg13g2_inv_1
+Creating placeholder cell definition.
+Call to undefined subcircuit sg13g2_xor2_1
+Creating placeholder cell definition.
+Call to undefined subcircuit sg13g2_nor3_1
+Creating placeholder cell definition.
+Call to undefined subcircuit sg13g2_nand4_1
+Creating placeholder cell definition.
+Call to undefined subcircuit sg13g2_nand2b_1
+Creating placeholder cell definition.
+Call to undefined subcircuit sg13g2_a221oi_1
+Creating placeholder cell definition.
+Call to undefined subcircuit sg13g2_nand2_1
+Creating placeholder cell definition.
+Call to undefined subcircuit sg13g2_or2_1
+Creating placeholder cell definition.
+Call to undefined subcircuit sg13g2_nor4_1
+Creating placeholder cell definition.
+Call to undefined subcircuit sg13g2_buf_1
+Creating placeholder cell definition.
+Call to undefined subcircuit sg13g2_nor2b_1
+Creating placeholder cell definition.
+Call to undefined subcircuit sg13g2_a21oi_1
+Creating placeholder cell definition.
+Call to undefined subcircuit sg13g2_o21ai_1
+Creating placeholder cell definition.
+Call to undefined subcircuit sg13g2_nor2_1
+Creating placeholder cell definition.
+Call to undefined subcircuit sg13g2_a22oi_1
+Creating placeholder cell definition.
+Call to undefined subcircuit sg13g2_buf_8
+Creating placeholder cell definition.
+Call to undefined subcircuit sg13g2_nand3b_1
+Creating placeholder cell definition.
+Call to undefined subcircuit sg13g2_a21o_1
+Creating placeholder cell definition.
+Call to undefined subcircuit sg13g2_or3_1
+Creating placeholder cell definition.
+Call to undefined subcircuit sg13g2_mux2_1
+Creating placeholder cell definition.
+Call to undefined subcircuit sg13g2_nand3_1
+Creating placeholder cell definition.
+Call to undefined subcircuit sg13g2_buf_16
+Creating placeholder cell definition.
+Call to undefined subcircuit sg13g2_dlygate4sd3_1
+Creating placeholder cell definition.
+Call to undefined subcircuit sg13g2_and4_1
+Creating placeholder cell definition.
+Call to undefined subcircuit sg13g2_or4_1
+Creating placeholder cell definition.
+Reading netlist file /mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/uart/11_physical_verification/results/negative_reference.spice for {/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/uart/11_physical_verification/results/negative_reference.spice} uart_core
+
+Reading setup file /home/hasan/.ciel/ciel/ihp-sg13g2/versions/22f43352dd8219f9007eb659e422e0d5fe28c5fb/ihp-sg13g2/libs.tech/netgen/ihp-sg13g2_setup.tcl
+
+No property as found for device sg13_lv_pmos
+No property ad found for device sg13_lv_pmos
+No property ps found for device sg13_lv_pmos
+No property pd found for device sg13_lv_pmos
+No property as found for device sg13_lv_nmos
+No property ad found for device sg13_lv_nmos
+No property ps found for device sg13_lv_nmos
+No property pd found for device sg13_lv_nmos
+No such pin 1 in model sg13_lv_nmos
+Unable to permute model sg13_lv_nmos pins 1, 3.
+No property ng found for device sg13_lv_nmos
+No property as found for device sg13_lv_nmos
+No property ad found for device sg13_lv_nmos
+No property pd found for device sg13_lv_nmos
+No property ps found for device sg13_lv_nmos
+No property trise found for device sg13_lv_nmos
+No property z1 found for device sg13_lv_nmos
+No property z2 found for device sg13_lv_nmos
+No property wmin found for device sg13_lv_nmos
+No property pre_layout found for device sg13_lv_nmos
+No such pin 1 in model sg13_lv_nmos
+Unable to permute model sg13_lv_nmos pins 1, 3.
+No property as found for device sg13_lv_nmos
+No property ad found for device sg13_lv_nmos
+No property pd found for device sg13_lv_nmos
+No property ps found for device sg13_lv_nmos
+No property trise found for device sg13_lv_nmos
+No property z1 found for device sg13_lv_nmos
+No property z2 found for device sg13_lv_nmos
+No property wmin found for device sg13_lv_nmos
+No property rfmode found for device sg13_lv_nmos
+No property pre_layout found for device sg13_lv_nmos
+No such pin 1 in model sg13_lv_pmos
+Unable to permute model sg13_lv_pmos pins 1, 3.
+No property ng found for device sg13_lv_pmos
+No property as found for device sg13_lv_pmos
+No property ad found for device sg13_lv_pmos
+No property pd found for device sg13_lv_pmos
+No property ps found for device sg13_lv_pmos
+No property trise found for device sg13_lv_pmos
+No property z1 found for device sg13_lv_pmos
+No property z2 found for device sg13_lv_pmos
+No property wmin found for device sg13_lv_pmos
+No property pre_layout found for device sg13_lv_pmos
+No such pin 1 in model sg13_lv_pmos
+Unable to permute model sg13_lv_pmos pins 1, 3.
+No property as found for device sg13_lv_pmos
+No property ad found for device sg13_lv_pmos
+No property pd found for device sg13_lv_pmos
+No property ps found for device sg13_lv_pmos
+No property trise found for device sg13_lv_pmos
+No property z1 found for device sg13_lv_pmos
+No property z2 found for device sg13_lv_pmos
+No property wmin found for device sg13_lv_pmos
+No property rfmode found for device sg13_lv_pmos
+No property pre_layout found for device sg13_lv_pmos
+No property DEV_A found for device dantenna
+No property DEV_P found for device dantenna
+No property DEV_C found for device dantenna
+No property DEV_A found for device dpantenna
+No property DEV_P found for device dpantenna
+No property DEV_C found for device dpantenna
+Comparison output logged to file /mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/uart/11_physical_verification/results/negative_lvs.log
+Logging to file "/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/uart/11_physical_verification/results/negative_lvs.log" enabled
+
+Contents of circuit 1:  Circuit: 'sg13g2_dfrbpq_1'
+Circuit sg13g2_dfrbpq_1 contains 32 device instances.
+  Class: sg13_lv_pmos          instances:  16
+  Class: sg13_lv_nmos          instances:  16
+Circuit contains 21 nets.
+Contents of circuit 2:  Circuit: 'sg13g2_dfrbpq_1'
+Circuit sg13g2_dfrbpq_1 contains 32 device instances.
+  Class: sg13_lv_pmos          instances:  16
+  Class: sg13_lv_nmos          instances:  16
+Circuit contains 21 nets.
+
+Circuit 1 contains 32 devices, Circuit 2 contains 32 devices.
+Circuit 1 contains 21 nets,    Circuit 2 contains 21 nets.
+
+
+Contents of circuit 1:  Circuit: 'sg13g2_tiehi'
+Circuit sg13g2_tiehi contains 4 device instances.
+  Class: sg13_lv_pmos          instances:   2
+  Class: sg13_lv_nmos          instances:   2
+Circuit contains 6 nets.
+Contents of circuit 2:  Circuit: 'sg13g2_tiehi'
+Circuit sg13g2_tiehi contains 4 device instances.
+  Class: sg13_lv_pmos          instances:   2
+  Class: sg13_lv_nmos          instances:   2
+Circuit contains 6 nets.
+
+Circuit 1 contains 4 devices, Circuit 2 contains 4 devices.
+Circuit 1 contains 6 nets,    Circuit 2 contains 6 nets.
+
+
+Contents of circuit 1:  Circuit: 'sg13g2_xnor2_1'
+Circuit sg13g2_xnor2_1 contains 10 device instances.
+  Class: sg13_lv_pmos          instances:   5
+  Class: sg13_lv_nmos          instances:   5
+Circuit contains 9 nets.
+Contents of circuit 2:  Circuit: 'sg13g2_xnor2_1'
+Circuit sg13g2_xnor2_1 contains 10 device instances.
+  Class: sg13_lv_pmos          instances:   5
+  Class: sg13_lv_nmos          instances:   5
+Circuit contains 9 nets.
+
+Circuit 1 contains 10 devices, Circuit 2 contains 10 devices.
+Circuit 1 contains 9 nets,    Circuit 2 contains 9 nets.
+
+
+Contents of circuit 1:  Circuit: 'sg13g2_and2_1'
+Circuit sg13g2_and2_1 contains 6 device instances.
+  Class: sg13_lv_pmos          instances:   3
+  Class: sg13_lv_nmos          instances:   3
+Circuit contains 7 nets.
+Contents of circuit 2:  Circuit: 'sg13g2_and2_1'
+Circuit sg13g2_and2_1 contains 6 device instances.
+  Class: sg13_lv_pmos          instances:   3
+  Class: sg13_lv_nmos          instances:   3
+Circuit contains 7 nets.
+
+Circuit 1 contains 6 devices, Circuit 2 contains 6 devices.
+Circuit 1 contains 7 nets,    Circuit 2 contains 7 nets.
+
+
+Contents of circuit 1:  Circuit: 'sg13g2_inv_1'
+Circuit sg13g2_inv_1 contains 2 device instances.
+  Class: sg13_lv_pmos          instances:   1
+  Class: sg13_lv_nmos          instances:   1
+Circuit contains 4 nets.
+Contents of circuit 2:  Circuit: 'sg13g2_inv_1'
+Circuit sg13g2_inv_1 contains 2 device instances.
+  Class: sg13_lv_pmos          instances:   1
+  Class: sg13_lv_nmos          instances:   1
+Circuit contains 4 nets.
+
+Circuit 1 contains 2 devices, Circuit 2 contains 2 devices.
+Circuit 1 contains 4 nets,    Circuit 2 contains 4 nets.
+
+
+Contents of circuit 1:  Circuit: 'sg13g2_xor2_1'
+Circuit sg13g2_xor2_1 contains 10 device instances.
+  Class: sg13_lv_pmos          instances:   5
+  Class: sg13_lv_nmos          instances:   5
+Circuit contains 9 nets.
+Contents of circuit 2:  Circuit: 'sg13g2_xor2_1'
+Circuit sg13g2_xor2_1 contains 10 device instances.
+  Class: sg13_lv_pmos          instances:   5
+  Class: sg13_lv_nmos          instances:   5
+Circuit contains 9 nets.
+
+Circuit 1 contains 10 devices, Circuit 2 contains 10 devices.
+Circuit 1 contains 9 nets,    Circuit 2 contains 9 nets.
+
+
+Contents of circuit 1:  Circuit: 'sg13g2_nor3_1'
+Circuit sg13g2_nor3_1 contains 6 device instances.
+  Class: sg13_lv_pmos          instances:   3
+  Class: sg13_lv_nmos          instances:   3
+Circuit contains 8 nets.
+Contents of circuit 2:  Circuit: 'sg13g2_nor3_1'
+Circuit sg13g2_nor3_1 contains 6 device instances.
+  Class: sg13_lv_pmos          instances:   3
+  Class: sg13_lv_nmos          instances:   3
+Circuit contains 8 nets.
+
+Circuit 1 contains 6 devices, Circuit 2 contains 6 devices.
+Circuit 1 contains 8 nets,    Circuit 2 contains 8 nets.
+
+
+Contents of circuit 1:  Circuit: 'sg13g2_nand4_1'
+Circuit sg13g2_nand4_1 contains 8 device instances.
+  Class: sg13_lv_pmos          instances:   4
+  Class: sg13_lv_nmos          instances:   4
+Circuit contains 10 nets.
+Contents of circuit 2:  Circuit: 'sg13g2_nand4_1'
+Circuit sg13g2_nand4_1 contains 8 device instances.
+  Class: sg13_lv_pmos          instances:   4
+  Class: sg13_lv_nmos          instances:   4
+Circuit contains 10 nets.
+
+Circuit 1 contains 8 devices, Circuit 2 contains 8 devices.
+Circuit 1 contains 10 nets,    Circuit 2 contains 10 nets.
+
+
+Contents of circuit 1:  Circuit: 'sg13g2_nand2b_1'
+Circuit sg13g2_nand2b_1 contains 6 device instances.
+  Class: sg13_lv_pmos          instances:   3
+  Class: sg13_lv_nmos          instances:   3
+Circuit contains 7 nets.
+Contents of circuit 2:  Circuit: 'sg13g2_nand2b_1'
+Circuit sg13g2_nand2b_1 contains 6 device instances.
+  Class: sg13_lv_pmos          instances:   3
+  Class: sg13_lv_nmos          instances:   3
+Circuit contains 7 nets.
+
+Circuit 1 contains 6 devices, Circuit 2 contains 6 devices.
+Circuit 1 contains 7 nets,    Circuit 2 contains 7 nets.
+
+
+Contents of circuit 1:  Circuit: 'sg13g2_a221oi_1'
+Circuit sg13g2_a221oi_1 contains 10 device instances.
+  Class: sg13_lv_pmos          instances:   5
+  Class: sg13_lv_nmos          instances:   5
+Circuit contains 12 nets.
+Contents of circuit 2:  Circuit: 'sg13g2_a221oi_1'
+Circuit sg13g2_a221oi_1 contains 10 device instances.
+  Class: sg13_lv_pmos          instances:   5
+  Class: sg13_lv_nmos          instances:   5
+Circuit contains 12 nets.
+
+Circuit 1 contains 10 devices, Circuit 2 contains 10 devices.
+Circuit 1 contains 12 nets,    Circuit 2 contains 12 nets.
+
+
+Contents of circuit 1:  Circuit: 'sg13g2_nand2_1'
+Circuit sg13g2_nand2_1 contains 4 device instances.
+  Class: sg13_lv_pmos          instances:   2
+  Class: sg13_lv_nmos          instances:   2
+Circuit contains 6 nets.
+Contents of circuit 2:  Circuit: 'sg13g2_nand2_1'
+Circuit sg13g2_nand2_1 contains 4 device instances.
+  Class: sg13_lv_pmos          instances:   2
+  Class: sg13_lv_nmos          instances:   2
+Circuit contains 6 nets.
+
+Circuit 1 contains 4 devices, Circuit 2 contains 4 devices.
+Circuit 1 contains 6 nets,    Circuit 2 contains 6 nets.
+
+
+Contents of circuit 1:  Circuit: 'sg13g2_or2_1'
+Circuit sg13g2_or2_1 contains 6 device instances.
+  Class: sg13_lv_pmos          instances:   3
+  Class: sg13_lv_nmos          instances:   3
+Circuit contains 7 nets.
+Contents of circuit 2:  Circuit: 'sg13g2_or2_1'
+Circuit sg13g2_or2_1 contains 6 device instances.
+  Class: sg13_lv_pmos          instances:   3
+  Class: sg13_lv_nmos          instances:   3
+Circuit contains 7 nets.
+
+Circuit 1 contains 6 devices, Circuit 2 contains 6 devices.
+Circuit 1 contains 7 nets,    Circuit 2 contains 7 nets.
+
+
+Contents of circuit 1:  Circuit: 'sg13g2_nor4_1'
+Circuit sg13g2_nor4_1 contains 8 device instances.
+  Class: sg13_lv_pmos          instances:   4
+  Class: sg13_lv_nmos          instances:   4
+Circuit contains 10 nets.
+Contents of circuit 2:  Circuit: 'sg13g2_nor4_1'
+Circuit sg13g2_nor4_1 contains 8 device instances.
+  Class: sg13_lv_pmos          instances:   4
+  Class: sg13_lv_nmos          instances:   4
+Circuit contains 10 nets.
+
+Circuit 1 contains 8 devices, Circuit 2 contains 8 devices.
+Circuit 1 contains 10 nets,    Circuit 2 contains 10 nets.
+
+
+Contents of circuit 1:  Circuit: 'sg13g2_buf_1'
+Circuit sg13g2_buf_1 contains 4 device instances.
+  Class: sg13_lv_pmos          instances:   2
+  Class: sg13_lv_nmos          instances:   2
+Circuit contains 5 nets.
+Contents of circuit 2:  Circuit: 'sg13g2_buf_1'
+Circuit sg13g2_buf_1 contains 4 device instances.
+  Class: sg13_lv_pmos          instances:   2
+  Class: sg13_lv_nmos          instances:   2
+Circuit contains 5 nets.
+
+Circuit 1 contains 4 devices, Circuit 2 contains 4 devices.
+Circuit 1 contains 5 nets,    Circuit 2 contains 5 nets.
+
+
+Contents of circuit 1:  Circuit: 'sg13g2_nor2b_1'
+Circuit sg13g2_nor2b_1 contains 6 device instances.
+  Class: sg13_lv_pmos          instances:   3
+  Class: sg13_lv_nmos          instances:   3
+Circuit contains 7 nets.
+Contents of circuit 2:  Circuit: 'sg13g2_nor2b_1'
+Circuit sg13g2_nor2b_1 contains 6 device instances.
+  Class: sg13_lv_pmos          instances:   3
+  Class: sg13_lv_nmos          instances:   3
+Circuit contains 7 nets.
+
+Circuit 1 contains 6 devices, Circuit 2 contains 6 devices.
+Circuit 1 contains 7 nets,    Circuit 2 contains 7 nets.
+
+
+Contents of circuit 1:  Circuit: 'sg13g2_a21oi_1'
+Circuit sg13g2_a21oi_1 contains 6 device instances.
+  Class: sg13_lv_pmos          instances:   3
+  Class: sg13_lv_nmos          instances:   3
+Circuit contains 8 nets.
+Contents of circuit 2:  Circuit: 'sg13g2_a21oi_1'
+Circuit sg13g2_a21oi_1 contains 6 device instances.
+  Class: sg13_lv_pmos          instances:   3
+  Class: sg13_lv_nmos          instances:   3
+Circuit contains 8 nets.
+
+Circuit 1 contains 6 devices, Circuit 2 contains 6 devices.
+Circuit 1 contains 8 nets,    Circuit 2 contains 8 nets.
+
+
+Contents of circuit 1:  Circuit: 'sg13g2_o21ai_1'
+Circuit sg13g2_o21ai_1 contains 6 device instances.
+  Class: sg13_lv_pmos          instances:   3
+  Class: sg13_lv_nmos          instances:   3
+Circuit contains 8 nets.
+Contents of circuit 2:  Circuit: 'sg13g2_o21ai_1'
+Circuit sg13g2_o21ai_1 contains 6 device instances.
+  Class: sg13_lv_pmos          instances:   3
+  Class: sg13_lv_nmos          instances:   3
+Circuit contains 8 nets.
+
+Circuit 1 contains 6 devices, Circuit 2 contains 6 devices.
+Circuit 1 contains 8 nets,    Circuit 2 contains 8 nets.
+
+
+Contents of circuit 1:  Circuit: 'sg13g2_nor2_1'
+Circuit sg13g2_nor2_1 contains 4 device instances.
+  Class: sg13_lv_pmos          instances:   2
+  Class: sg13_lv_nmos          instances:   2
+Circuit contains 6 nets.
+Contents of circuit 2:  Circuit: 'sg13g2_nor2_1'
+Circuit sg13g2_nor2_1 contains 4 device instances.
+  Class: sg13_lv_pmos          instances:   2
+  Class: sg13_lv_nmos          instances:   2
+Circuit contains 6 nets.
+
+Circuit 1 contains 4 devices, Circuit 2 contains 4 devices.
+Circuit 1 contains 6 nets,    Circuit 2 contains 6 nets.
+
+
+Contents of circuit 1:  Circuit: 'sg13g2_a22oi_1'
+Circuit sg13g2_a22oi_1 contains 8 device instances.
+  Class: sg13_lv_pmos          instances:   4
+  Class: sg13_lv_nmos          instances:   4
+Circuit contains 10 nets.
+Contents of circuit 2:  Circuit: 'sg13g2_a22oi_1'
+Circuit sg13g2_a22oi_1 contains 8 device instances.
+  Class: sg13_lv_pmos          instances:   4
+  Class: sg13_lv_nmos          instances:   4
+Circuit contains 10 nets.
+
+Circuit 1 contains 8 devices, Circuit 2 contains 8 devices.
+Circuit 1 contains 10 nets,    Circuit 2 contains 10 nets.
+
+
+Contents of circuit 1:  Circuit: 'sg13g2_buf_8'
+Circuit sg13g2_buf_8 contains 4 device instances.
+  Class: sg13_lv_pmos          instances:   2
+  Class: sg13_lv_nmos          instances:   2
+Circuit contains 5 nets.
+Contents of circuit 2:  Circuit: 'sg13g2_buf_8'
+Circuit sg13g2_buf_8 contains 4 device instances.
+  Class: sg13_lv_pmos          instances:   2
+  Class: sg13_lv_nmos          instances:   2
+Circuit contains 5 nets.
+
+Circuit 1 contains 4 devices, Circuit 2 contains 4 devices.
+Circuit 1 contains 5 nets,    Circuit 2 contains 5 nets.
+
+
+Contents of circuit 1:  Circuit: 'sg13g2_nand3b_1'
+Circuit sg13g2_nand3b_1 contains 8 device instances.
+  Class: sg13_lv_pmos          instances:   4
+  Class: sg13_lv_nmos          instances:   4
+Circuit contains 9 nets.
+Contents of circuit 2:  Circuit: 'sg13g2_nand3b_1'
+Circuit sg13g2_nand3b_1 contains 8 device instances.
+  Class: sg13_lv_pmos          instances:   4
+  Class: sg13_lv_nmos          instances:   4
+Circuit contains 9 nets.
+
+Circuit 1 contains 8 devices, Circuit 2 contains 8 devices.
+Circuit 1 contains 9 nets,    Circuit 2 contains 9 nets.
+
+
+Contents of circuit 1:  Circuit: 'sg13g2_a21o_1'
+Circuit sg13g2_a21o_1 contains 8 device instances.
+  Class: sg13_lv_pmos          instances:   4
+  Class: sg13_lv_nmos          instances:   4
+Circuit contains 9 nets.
+Contents of circuit 2:  Circuit: 'sg13g2_a21o_1'
+Circuit sg13g2_a21o_1 contains 8 device instances.
+  Class: sg13_lv_pmos          instances:   4
+  Class: sg13_lv_nmos          instances:   4
+Circuit contains 9 nets.
+
+Circuit 1 contains 8 devices, Circuit 2 contains 8 devices.
+Circuit 1 contains 9 nets,    Circuit 2 contains 9 nets.
+
+
+Contents of circuit 1:  Circuit: 'sg13g2_or3_1'
+Circuit sg13g2_or3_1 contains 8 device instances.
+  Class: sg13_lv_pmos          instances:   4
+  Class: sg13_lv_nmos          instances:   4
+Circuit contains 9 nets.
+Contents of circuit 2:  Circuit: 'sg13g2_or3_1'
+Circuit sg13g2_or3_1 contains 8 device instances.
+  Class: sg13_lv_pmos          instances:   4
+  Class: sg13_lv_nmos          instances:   4
+Circuit contains 9 nets.
+
+Circuit 1 contains 8 devices, Circuit 2 contains 8 devices.
+Circuit 1 contains 9 nets,    Circuit 2 contains 9 nets.
+
+
+Contents of circuit 1:  Circuit: 'sg13g2_mux2_1'
+Circuit sg13g2_mux2_1 contains 12 device instances.
+  Class: sg13_lv_pmos          instances:   6
+  Class: sg13_lv_nmos          instances:   6
+Circuit contains 12 nets.
+Contents of circuit 2:  Circuit: 'sg13g2_mux2_1'
+Circuit sg13g2_mux2_1 contains 12 device instances.
+  Class: sg13_lv_pmos          instances:   6
+  Class: sg13_lv_nmos          instances:   6
+Circuit contains 12 nets.
+
+Circuit 1 contains 12 devices, Circuit 2 contains 12 devices.
+Circuit 1 contains 12 nets,    Circuit 2 contains 12 nets.
+
+
+Contents of circuit 1:  Circuit: 'sg13g2_nand3_1'
+Circuit sg13g2_nand3_1 contains 6 device instances.
+  Class: sg13_lv_pmos          instances:   3
+  Class: sg13_lv_nmos          instances:   3
+Circuit contains 8 nets.
+Contents of circuit 2:  Circuit: 'sg13g2_nand3_1'
+Circuit sg13g2_nand3_1 contains 6 device instances.
+  Class: sg13_lv_pmos          instances:   3
+  Class: sg13_lv_nmos          instances:   3
+Circuit contains 8 nets.
+
+Circuit 1 contains 6 devices, Circuit 2 contains 6 devices.
+Circuit 1 contains 8 nets,    Circuit 2 contains 8 nets.
+
+
+Contents of circuit 1:  Circuit: 'sg13g2_buf_16'
+Circuit sg13g2_buf_16 contains 4 device instances.
+  Class: sg13_lv_pmos          instances:   2
+  Class: sg13_lv_nmos          instances:   2
+Circuit contains 5 nets.
+Contents of circuit 2:  Circuit: 'sg13g2_buf_16'
+Circuit sg13g2_buf_16 contains 4 device instances.
+  Class: sg13_lv_pmos          instances:   2
+  Class: sg13_lv_nmos          instances:   2
+Circuit contains 5 nets.
+
+Circuit 1 contains 4 devices, Circuit 2 contains 4 devices.
+Circuit 1 contains 5 nets,    Circuit 2 contains 5 nets.
+
+
+Contents of circuit 1:  Circuit: 'sg13g2_dlygate4sd3_1'
+Circuit sg13g2_dlygate4sd3_1 contains 8 device instances.
+  Class: sg13_lv_pmos          instances:   4
+  Class: sg13_lv_nmos          instances:   4
+Circuit contains 7 nets.
+Contents of circuit 2:  Circuit: 'sg13g2_dlygate4sd3_1'
+Circuit sg13g2_dlygate4sd3_1 contains 8 device instances.
+  Class: sg13_lv_pmos          instances:   4
+  Class: sg13_lv_nmos          instances:   4
+Circuit contains 7 nets.
+
+Circuit 1 contains 8 devices, Circuit 2 contains 8 devices.
+Circuit 1 contains 7 nets,    Circuit 2 contains 7 nets.
+
+
+Contents of circuit 1:  Circuit: 'sg13g2_and4_1'
+Circuit sg13g2_and4_1 contains 10 device instances.
+  Class: sg13_lv_pmos          instances:   5
+  Class: sg13_lv_nmos          instances:   5
+Circuit contains 11 nets.
+Contents of circuit 2:  Circuit: 'sg13g2_and4_1'
+Circuit sg13g2_and4_1 contains 10 device instances.
+  Class: sg13_lv_pmos          instances:   5
+  Class: sg13_lv_nmos          instances:   5
+Circuit contains 11 nets.
+
+Circuit 1 contains 10 devices, Circuit 2 contains 10 devices.
+Circuit 1 contains 11 nets,    Circuit 2 contains 11 nets.
+
+
+Contents of circuit 1:  Circuit: 'sg13g2_or4_1'
+Circuit sg13g2_or4_1 contains 10 device instances.
+  Class: sg13_lv_pmos          instances:   5
+  Class: sg13_lv_nmos          instances:   5
+Circuit contains 11 nets.
+Contents of circuit 2:  Circuit: 'sg13g2_or4_1'
+Circuit sg13g2_or4_1 contains 10 device instances.
+  Class: sg13_lv_pmos          instances:   5
+  Class: sg13_lv_nmos          instances:   5
+Circuit contains 11 nets.
+
+Circuit 1 contains 10 devices, Circuit 2 contains 10 devices.
+Circuit 1 contains 11 nets,    Circuit 2 contains 11 nets.
+
+
+Contents of circuit 1:  Circuit: 'uart_core'
+Circuit uart_core contains 644 device instances.
+  Class: sg13g2_or3_1          instances:   2
+  Class: sg13g2_inv_1          instances:  37
+  Class: sg13g2_or4_1          instances:   4
+  Class: sg13g2_nand3b_1       instances:   1
+  Class: sg13g2_a221oi_1       instances:  21
+  Class: sg13g2_buf_8          instances:  30
+  Class: sg13g2_dlygate4sd3_1  instances:  31
+  Class: sg13g2_and4_1         instances:   1
+  Class: sg13g2_and2_1         instances:   9
+  Class: sg13g2_nand2_1        instances:  34
+  Class: sg13g2_xor2_1         instances:   7
+  Class: sg13g2_a21oi_1        instances:  40
+  Class: sg13g2_tiehi          instances:  81
+  Class: sg13g2_nor2b_1        instances:  16
+  Class: sg13g2_nand2b_1       instances:  18
+  Class: sg13g2_dfrbpq_1       instances:  81
+  Class: sg13g2_nor3_1         instances:  27
+  Class: sg13g2_a21o_1         instances:   5
+  Class: sg13g2_or2_1          instances:  12
+  Class: sg13g2_nor4_1         instances:  10
+  Class: sg13g2_xnor2_1        instances:  23
+  Class: sg13g2_buf_1          instances:  38
+  Class: sg13g2_a22oi_1        instances:   8
+  Class: sg13g2_o21ai_1        instances:  54
+  Class: sg13g2_nand3_1        instances:  12
+  Class: sg13g2_mux2_1         instances:   5
+  Class: sg13g2_nand4_1        instances:   4
+  Class: sg13g2_nor2_1         instances:  32
+  Class: sg13g2_buf_16         instances:   1
+Circuit contains 675 nets.
+Contents of circuit 2:  Circuit: 'uart_core'
+Circuit uart_core contains 644 device instances.
+  Class: sg13g2_or3_1          instances:   2
+  Class: sg13g2_inv_1          instances:  37
+  Class: sg13g2_or4_1          instances:   4
+  Class: sg13g2_nand3b_1       instances:   1
+  Class: sg13g2_a221oi_1       instances:  21
+  Class: sg13g2_buf_8          instances:  30
+  Class: sg13g2_dlygate4sd3_1  instances:  31
+  Class: sg13g2_and4_1         instances:   1
+  Class: sg13g2_and2_1         instances:   9
+  Class: sg13g2_nand2_1        instances:  34
+  Class: sg13g2_xor2_1         instances:   7
+  Class: sg13g2_a21oi_1        instances:  40
+  Class: sg13g2_tiehi          instances:  81
+  Class: sg13g2_nor2b_1        instances:  16
+  Class: sg13g2_nand2b_1       instances:  18
+  Class: sg13g2_dfrbpq_1       instances:  81
+  Class: sg13g2_nor3_1         instances:  27
+  Class: sg13g2_a21o_1         instances:   5
+  Class: sg13g2_or2_1          instances:  12
+  Class: sg13g2_nor4_1         instances:  10
+  Class: sg13g2_xnor2_1        instances:  23
+  Class: sg13g2_buf_1          instances:  38
+  Class: sg13g2_a22oi_1        instances:   8
+  Class: sg13g2_o21ai_1        instances:  54
+  Class: sg13g2_nand3_1        instances:  12
+  Class: sg13g2_mux2_1         instances:   5
+  Class: sg13g2_nand4_1        instances:   4
+  Class: sg13g2_nor2_1         instances:  32
+  Class: sg13g2_buf_16         instances:   1
+Circuit contains 675 nets.
+
+Circuit 1 contains 644 devices, Circuit 2 contains 644 devices.
+Circuit 1 contains 675 nets,    Circuit 2 contains 675 nets.
+
+
+Final result: 
+Netlists do not match.
+Port matching may fail to disambiguate symmetries.
+Logging to file "/mnt/c/Users/ignyt/Desktop/crucible/Products-and-Dev/dev/Janes_street/crucible-asic-starter/hw/protocols/uart/11_physical_verification/results/negative_lvs.log" disabled
+LVS Done.
+NETGEN_UNIQUE=0
+Run failed: Process exited with a non-zero status (3).
+Full output: /home/hasan/.ignytion/.crucible/workspaces/uart-2d86cae6/runs/20261022-130825-0a7cd3/stdout.log

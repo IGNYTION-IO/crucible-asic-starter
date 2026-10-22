@@ -7,9 +7,18 @@
 # Description : WSL Igny I2C reference build entrypoint.
 # ===============================================================================
 
+ifeq ($(OS),Windows_NT)
+SHELL := cmd.exe
+.SHELLFLAGS := /c
+PYTHON ?= python
+else
 SHELL := /bin/bash
 .SHELLFLAGS := -eu -o pipefail -c
-.PHONY: all flow lint rtl sim verify synth floorplan place cts route sta physical gds evidence dft signoff
+PYTHON ?= python3
+endif
+export PYTHON
+PROJECT_ROOT := $(abspath .)
+.PHONY: all flow lint rtl sim verify synth floorplan place cts route sta physical gds evidence dft signoff clean
 all: flow
 flow:
 	bash run_flow.sh lint
@@ -43,3 +52,18 @@ dft:
 	$(MAKE) -C 05_dft
 signoff:
 	$(MAKE) -C 11_physical_verification
+
+# Remove generated stage outputs; keep sources, scripts and workspace configuration.
+clean:
+	$(MAKE) -C 00_lint clean
+	$(MAKE) -C 01_rtl clean
+	$(MAKE) -C 02_sim clean
+	$(MAKE) -C 03_verification clean
+	$(MAKE) -C 04_synthesis clean
+	$(MAKE) -C 05_dft clean
+	$(MAKE) -C 06_floorplanning clean
+	$(MAKE) -C 07_placement clean
+	$(MAKE) -C 08_sta clean
+	$(MAKE) -C 09_place_and_route clean
+	$(MAKE) -C 10_gds clean
+	$(MAKE) -C 11_physical_verification clean

@@ -7,8 +7,16 @@
 # Description : WSL Igny UART reference build entrypoint.
 # ===============================================================================
 
+ifeq ($(OS),Windows_NT)
+SHELL := cmd.exe
+.SHELLFLAGS := /c
+PYTHON ?= python
+else
 SHELL := /bin/bash
 .SHELLFLAGS := -eu -o pipefail -c
+PYTHON ?= python3
+endif
+export PYTHON
 PROJECT_ROOT := $(abspath ..)
 .PHONY: all sim clean
 all: sim
@@ -16,4 +24,4 @@ sim:
 	cd "$(PROJECT_ROOT)" && bash run_flow.sh sim
 
 clean:
-	rm -f -- uart_core_sim.out uart_core.vcd simulation.log negative_control.log
+	$(PYTHON) "$(PROJECT_ROOT)/run.py" clean_files "$(PROJECT_ROOT)" "02_sim/uart_core_sim.out" "02_sim/uart_core.vcd" "02_sim/simulation.log" "02_sim/negative_control.log"

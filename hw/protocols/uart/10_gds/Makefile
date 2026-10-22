@@ -7,8 +7,16 @@
 # Description : WSL Igny UART reference build entrypoint.
 # ===============================================================================
 
+ifeq ($(OS),Windows_NT)
+SHELL := cmd.exe
+.SHELLFLAGS := /c
+PYTHON ?= python
+else
 SHELL := /bin/bash
 .SHELLFLAGS := -eu -o pipefail -c
+PYTHON ?= python3
+endif
+export PYTHON
 PROJECT_ROOT := $(abspath ..)
 .PHONY: all gds clean
 all: gds
@@ -16,4 +24,4 @@ gds:
 	cd "$(PROJECT_ROOT)" && bash run_flow.sh gds
 
 clean:
-	rm -f -- uart_core.gds validation.json negative_control.log
+	$(PYTHON) "$(PROJECT_ROOT)/run.py" clean_files "$(PROJECT_ROOT)" "10_gds/uart_core.gds" "10_gds/validation.json" "10_gds/negative_control.log"

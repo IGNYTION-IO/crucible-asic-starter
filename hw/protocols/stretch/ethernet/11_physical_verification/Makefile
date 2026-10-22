@@ -7,10 +7,22 @@
 # Description : WSL Igny ETHERNET reference build entrypoint.
 # ===============================================================================
 
+ifeq ($(OS),Windows_NT)
+SHELL := cmd.exe
+.SHELLFLAGS := /c
+PYTHON ?= python
+else
 SHELL := /bin/bash
 .SHELLFLAGS := -eu -o pipefail -c
+PYTHON ?= python3
+endif
+export PYTHON
 PROJECT_ROOT := $(abspath ..)
-.PHONY: all
+.PHONY: all clean
 all:
 	@echo 'This reference flow has no implemented foundry DRC/LVS stage. Do not claim signoff.' >&2
 	@exit 2
+
+# This placeholder stage produces no files.
+clean:
+	$(PYTHON) "$(PROJECT_ROOT)/run.py" clean_files "$(PROJECT_ROOT)"

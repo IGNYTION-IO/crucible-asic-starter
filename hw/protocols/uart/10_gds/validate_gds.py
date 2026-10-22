@@ -112,7 +112,7 @@ tech_lef = (Path(os.environ["IHP_PDK_ROOT"]) / "libs.ref/sg13g2_stdcell/lef/sg13
 via_names.update(re.findall(r"^\s*VIA\s+(\S+)", tech_lef, re.M | re.I))
 non_std = Counter(name for name, xy, mirror, angle in cells[top]["refs"] if not name.startswith("sg13g2_"))
 require(set(non_std) <= via_names, f"Unexpected top references: {set(non_std) - via_names}")
-summary = {"top": top, "bytes": len(data), "sha256": hashlib.sha256(data).hexdigest(), "cells": len(cells), "placed_instances": sum(actual.values()), "top_shape_layers": dict(cells[top]["shapes"]), "raw_sha256_scope": "Run-specific byte fingerprint; GDS timestamps may change", "non_stdcell_references": dict(non_std), "status": "PASS structural export; DRC/LVS/signoff not performed"}
+summary = {"top": top, "bytes": len(data), "sha256": hashlib.sha256(data).hexdigest(), "cells": len(cells), "placed_instances": sum(actual.values()), "top_shape_layers": dict(cells[top]["shapes"]), "raw_sha256_scope": "Run-specific byte fingerprint; GDS timestamps may change", "non_stdcell_references": dict(non_std), "status": "PASS structural export; DRC/LVS evidence is recorded separately in 11_physical_verification/results/physical_verification.json"}
 (root / "10_gds/validation.json").write_text(json.dumps(summary, indent=2) + "\n")
 print(json.dumps(summary, indent=2))
 print("PASS independent GDS decode and DEF placement comparison")

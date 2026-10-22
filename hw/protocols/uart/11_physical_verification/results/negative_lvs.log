@@ -1,0 +1,816 @@
+
+Subcircuit summary:
+Circuit 1: sg13g2_dfrbpq_1                 |Circuit 2: sg13g2_dfrbpq_1                 
+-------------------------------------------|-------------------------------------------
+sg13_lv_nmos (16)                          |sg13_lv_nmos (16)                          
+sg13_lv_pmos (16)                          |sg13_lv_pmos (16)                          
+Number of devices: 32                      |Number of devices: 32                      
+Number of nets: 21                         |Number of nets: 21                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: sg13g2_dfrbpq_1                 |Circuit 2: sg13g2_dfrbpq_1                 
+-------------------------------------------|-------------------------------------------
+VDD                                        |VDD                                        
+D                                          |D                                          
+CLK                                        |CLK                                        
+Q                                          |Q                                          
+RESET_B                                    |RESET_B                                    
+VSS                                        |VSS                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sg13g2_dfrbpq_1 and sg13g2_dfrbpq_1 are equivalent.
+
+Subcircuit summary:
+Circuit 1: sg13g2_tiehi                    |Circuit 2: sg13g2_tiehi                    
+-------------------------------------------|-------------------------------------------
+sg13_lv_nmos (2)                           |sg13_lv_nmos (2)                           
+sg13_lv_pmos (2)                           |sg13_lv_pmos (2)                           
+Number of devices: 4                       |Number of devices: 4                       
+Number of nets: 6                          |Number of nets: 6                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: sg13g2_tiehi                    |Circuit 2: sg13g2_tiehi                    
+-------------------------------------------|-------------------------------------------
+L_HI                                       |L_HI                                       
+VSS                                        |VSS                                        
+VDD                                        |VDD                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sg13g2_tiehi and sg13g2_tiehi are equivalent.
+
+Subcircuit summary:
+Circuit 1: sg13g2_xnor2_1                  |Circuit 2: sg13g2_xnor2_1                  
+-------------------------------------------|-------------------------------------------
+sg13_lv_nmos (5)                           |sg13_lv_nmos (5)                           
+sg13_lv_pmos (5)                           |sg13_lv_pmos (5)                           
+Number of devices: 10                      |Number of devices: 10                      
+Number of nets: 9                          |Number of nets: 9                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: sg13g2_xnor2_1                  |Circuit 2: sg13g2_xnor2_1                  
+-------------------------------------------|-------------------------------------------
+VDD                                        |VDD                                        
+Y                                          |Y                                          
+B                                          |B                                          
+A                                          |A                                          
+VSS                                        |VSS                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sg13g2_xnor2_1 and sg13g2_xnor2_1 are equivalent.
+
+Subcircuit summary:
+Circuit 1: sg13g2_and2_1                   |Circuit 2: sg13g2_and2_1                   
+-------------------------------------------|-------------------------------------------
+sg13_lv_nmos (3)                           |sg13_lv_nmos (3)                           
+sg13_lv_pmos (3)                           |sg13_lv_pmos (3)                           
+Number of devices: 6                       |Number of devices: 6                       
+Number of nets: 7                          |Number of nets: 7                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: sg13g2_and2_1                   |Circuit 2: sg13g2_and2_1                   
+-------------------------------------------|-------------------------------------------
+VDD                                        |VDD                                        
+X                                          |X                                          
+B                                          |B                                          
+A                                          |A                                          
+VSS                                        |VSS                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sg13g2_and2_1 and sg13g2_and2_1 are equivalent.
+
+Subcircuit summary:
+Circuit 1: sg13g2_inv_1                    |Circuit 2: sg13g2_inv_1                    
+-------------------------------------------|-------------------------------------------
+sg13_lv_nmos (1)                           |sg13_lv_nmos (1)                           
+sg13_lv_pmos (1)                           |sg13_lv_pmos (1)                           
+Number of devices: 2                       |Number of devices: 2                       
+Number of nets: 4                          |Number of nets: 4                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: sg13g2_inv_1                    |Circuit 2: sg13g2_inv_1                    
+-------------------------------------------|-------------------------------------------
+Y                                          |Y                                          
+A                                          |A                                          
+VSS                                        |VSS                                        
+VDD                                        |VDD                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sg13g2_inv_1 and sg13g2_inv_1 are equivalent.
+
+Subcircuit summary:
+Circuit 1: sg13g2_xor2_1                   |Circuit 2: sg13g2_xor2_1                   
+-------------------------------------------|-------------------------------------------
+sg13_lv_nmos (5)                           |sg13_lv_nmos (5)                           
+sg13_lv_pmos (5)                           |sg13_lv_pmos (5)                           
+Number of devices: 10                      |Number of devices: 10                      
+Number of nets: 9                          |Number of nets: 9                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: sg13g2_xor2_1                   |Circuit 2: sg13g2_xor2_1                   
+-------------------------------------------|-------------------------------------------
+VDD                                        |VDD                                        
+X                                          |X                                          
+A                                          |A                                          
+B                                          |B                                          
+VSS                                        |VSS                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sg13g2_xor2_1 and sg13g2_xor2_1 are equivalent.
+
+Subcircuit summary:
+Circuit 1: sg13g2_nor3_1                   |Circuit 2: sg13g2_nor3_1                   
+-------------------------------------------|-------------------------------------------
+sg13_lv_nmos (3)                           |sg13_lv_nmos (3)                           
+sg13_lv_pmos (3)                           |sg13_lv_pmos (3)                           
+Number of devices: 6                       |Number of devices: 6                       
+Number of nets: 8                          |Number of nets: 8                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: sg13g2_nor3_1                   |Circuit 2: sg13g2_nor3_1                   
+-------------------------------------------|-------------------------------------------
+Y                                          |Y                                          
+VDD                                        |VDD                                        
+B                                          |B                                          
+C                                          |C                                          
+A                                          |A                                          
+VSS                                        |VSS                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sg13g2_nor3_1 and sg13g2_nor3_1 are equivalent.
+
+Subcircuit summary:
+Circuit 1: sg13g2_nand4_1                  |Circuit 2: sg13g2_nand4_1                  
+-------------------------------------------|-------------------------------------------
+sg13_lv_nmos (4)                           |sg13_lv_nmos (4)                           
+sg13_lv_pmos (4)                           |sg13_lv_pmos (4)                           
+Number of devices: 8                       |Number of devices: 8                       
+Number of nets: 10                         |Number of nets: 10                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: sg13g2_nand4_1                  |Circuit 2: sg13g2_nand4_1                  
+-------------------------------------------|-------------------------------------------
+VDD                                        |VDD                                        
+A                                          |A                                          
+D                                          |D                                          
+B                                          |B                                          
+C                                          |C                                          
+Y                                          |Y                                          
+VSS                                        |VSS                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sg13g2_nand4_1 and sg13g2_nand4_1 are equivalent.
+
+Subcircuit summary:
+Circuit 1: sg13g2_nand2b_1                 |Circuit 2: sg13g2_nand2b_1                 
+-------------------------------------------|-------------------------------------------
+sg13_lv_nmos (3)                           |sg13_lv_nmos (3)                           
+sg13_lv_pmos (3)                           |sg13_lv_pmos (3)                           
+Number of devices: 6                       |Number of devices: 6                       
+Number of nets: 7                          |Number of nets: 7                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: sg13g2_nand2b_1                 |Circuit 2: sg13g2_nand2b_1                 
+-------------------------------------------|-------------------------------------------
+VDD                                        |VDD                                        
+Y                                          |Y                                          
+A_N                                        |A_N                                        
+B                                          |B                                          
+VSS                                        |VSS                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sg13g2_nand2b_1 and sg13g2_nand2b_1 are equivalent.
+
+Subcircuit summary:
+Circuit 1: sg13g2_a221oi_1                 |Circuit 2: sg13g2_a221oi_1                 
+-------------------------------------------|-------------------------------------------
+sg13_lv_nmos (5)                           |sg13_lv_nmos (5)                           
+sg13_lv_pmos (5)                           |sg13_lv_pmos (5)                           
+Number of devices: 10                      |Number of devices: 10                      
+Number of nets: 12                         |Number of nets: 12                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: sg13g2_a221oi_1                 |Circuit 2: sg13g2_a221oi_1                 
+-------------------------------------------|-------------------------------------------
+VDD                                        |VDD                                        
+VSS                                        |VSS                                        
+C1                                         |C1                                         
+B2                                         |B2                                         
+B1                                         |B1                                         
+A2                                         |A2                                         
+A1                                         |A1                                         
+Y                                          |Y                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sg13g2_a221oi_1 and sg13g2_a221oi_1 are equivalent.
+
+Subcircuit summary:
+Circuit 1: sg13g2_nand2_1                  |Circuit 2: sg13g2_nand2_1                  
+-------------------------------------------|-------------------------------------------
+sg13_lv_nmos (2)                           |sg13_lv_nmos (2)                           
+sg13_lv_pmos (2)                           |sg13_lv_pmos (2)                           
+Number of devices: 4                       |Number of devices: 4                       
+Number of nets: 6                          |Number of nets: 6                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: sg13g2_nand2_1                  |Circuit 2: sg13g2_nand2_1                  
+-------------------------------------------|-------------------------------------------
+VDD                                        |VDD                                        
+A                                          |A                                          
+B                                          |B                                          
+Y                                          |Y                                          
+VSS                                        |VSS                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sg13g2_nand2_1 and sg13g2_nand2_1 are equivalent.
+
+Subcircuit summary:
+Circuit 1: sg13g2_or2_1                    |Circuit 2: sg13g2_or2_1                    
+-------------------------------------------|-------------------------------------------
+sg13_lv_nmos (3)                           |sg13_lv_nmos (3)                           
+sg13_lv_pmos (3)                           |sg13_lv_pmos (3)                           
+Number of devices: 6                       |Number of devices: 6                       
+Number of nets: 7                          |Number of nets: 7                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: sg13g2_or2_1                    |Circuit 2: sg13g2_or2_1                    
+-------------------------------------------|-------------------------------------------
+VDD                                        |VDD                                        
+A                                          |A                                          
+B                                          |B                                          
+X                                          |X                                          
+VSS                                        |VSS                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sg13g2_or2_1 and sg13g2_or2_1 are equivalent.
+
+Subcircuit summary:
+Circuit 1: sg13g2_nor4_1                   |Circuit 2: sg13g2_nor4_1                   
+-------------------------------------------|-------------------------------------------
+sg13_lv_nmos (4)                           |sg13_lv_nmos (4)                           
+sg13_lv_pmos (4)                           |sg13_lv_pmos (4)                           
+Number of devices: 8                       |Number of devices: 8                       
+Number of nets: 10                         |Number of nets: 10                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: sg13g2_nor4_1                   |Circuit 2: sg13g2_nor4_1                   
+-------------------------------------------|-------------------------------------------
+VDD                                        |VDD                                        
+Y                                          |Y                                          
+B                                          |B                                          
+C                                          |C                                          
+D                                          |D                                          
+A                                          |A                                          
+VSS                                        |VSS                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sg13g2_nor4_1 and sg13g2_nor4_1 are equivalent.
+
+Subcircuit summary:
+Circuit 1: sg13g2_buf_1                    |Circuit 2: sg13g2_buf_1                    
+-------------------------------------------|-------------------------------------------
+sg13_lv_nmos (2)                           |sg13_lv_nmos (2)                           
+sg13_lv_pmos (2)                           |sg13_lv_pmos (2)                           
+Number of devices: 4                       |Number of devices: 4                       
+Number of nets: 5                          |Number of nets: 5                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: sg13g2_buf_1                    |Circuit 2: sg13g2_buf_1                    
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+X                                          |X                                          
+VSS                                        |VSS                                        
+VDD                                        |VDD                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sg13g2_buf_1 and sg13g2_buf_1 are equivalent.
+
+Subcircuit summary:
+Circuit 1: sg13g2_nor2b_1                  |Circuit 2: sg13g2_nor2b_1                  
+-------------------------------------------|-------------------------------------------
+sg13_lv_nmos (3)                           |sg13_lv_nmos (3)                           
+sg13_lv_pmos (3)                           |sg13_lv_pmos (3)                           
+Number of devices: 6                       |Number of devices: 6                       
+Number of nets: 7                          |Number of nets: 7                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: sg13g2_nor2b_1                  |Circuit 2: sg13g2_nor2b_1                  
+-------------------------------------------|-------------------------------------------
+VDD                                        |VDD                                        
+Y                                          |Y                                          
+B_N                                        |B_N                                        
+A                                          |A                                          
+VSS                                        |VSS                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sg13g2_nor2b_1 and sg13g2_nor2b_1 are equivalent.
+
+Subcircuit summary:
+Circuit 1: sg13g2_a21oi_1                  |Circuit 2: sg13g2_a21oi_1                  
+-------------------------------------------|-------------------------------------------
+sg13_lv_nmos (3)                           |sg13_lv_nmos (3)                           
+sg13_lv_pmos (3)                           |sg13_lv_pmos (3)                           
+Number of devices: 6                       |Number of devices: 6                       
+Number of nets: 8                          |Number of nets: 8                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: sg13g2_a21oi_1                  |Circuit 2: sg13g2_a21oi_1                  
+-------------------------------------------|-------------------------------------------
+Y                                          |Y                                          
+B1                                         |B1                                         
+A2                                         |A2                                         
+A1                                         |A1                                         
+VSS                                        |VSS                                        
+VDD                                        |VDD                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sg13g2_a21oi_1 and sg13g2_a21oi_1 are equivalent.
+
+Subcircuit summary:
+Circuit 1: sg13g2_o21ai_1                  |Circuit 2: sg13g2_o21ai_1                  
+-------------------------------------------|-------------------------------------------
+sg13_lv_nmos (3)                           |sg13_lv_nmos (3)                           
+sg13_lv_pmos (3)                           |sg13_lv_pmos (3)                           
+Number of devices: 6                       |Number of devices: 6                       
+Number of nets: 8                          |Number of nets: 8                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: sg13g2_o21ai_1                  |Circuit 2: sg13g2_o21ai_1                  
+-------------------------------------------|-------------------------------------------
+VDD                                        |VDD                                        
+VSS                                        |VSS                                        
+A1                                         |A1                                         
+A2                                         |A2                                         
+B1                                         |B1                                         
+Y                                          |Y                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sg13g2_o21ai_1 and sg13g2_o21ai_1 are equivalent.
+
+Subcircuit summary:
+Circuit 1: sg13g2_nor2_1                   |Circuit 2: sg13g2_nor2_1                   
+-------------------------------------------|-------------------------------------------
+sg13_lv_nmos (2)                           |sg13_lv_nmos (2)                           
+sg13_lv_pmos (2)                           |sg13_lv_pmos (2)                           
+Number of devices: 4                       |Number of devices: 4                       
+Number of nets: 6                          |Number of nets: 6                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: sg13g2_nor2_1                   |Circuit 2: sg13g2_nor2_1                   
+-------------------------------------------|-------------------------------------------
+Y                                          |Y                                          
+VDD                                        |VDD                                        
+B                                          |B                                          
+A                                          |A                                          
+VSS                                        |VSS                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sg13g2_nor2_1 and sg13g2_nor2_1 are equivalent.
+
+Subcircuit summary:
+Circuit 1: sg13g2_a22oi_1                  |Circuit 2: sg13g2_a22oi_1                  
+-------------------------------------------|-------------------------------------------
+sg13_lv_nmos (4)                           |sg13_lv_nmos (4)                           
+sg13_lv_pmos (4)                           |sg13_lv_pmos (4)                           
+Number of devices: 8                       |Number of devices: 8                       
+Number of nets: 10                         |Number of nets: 10                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: sg13g2_a22oi_1                  |Circuit 2: sg13g2_a22oi_1                  
+-------------------------------------------|-------------------------------------------
+Y                                          |Y                                          
+B1                                         |B1                                         
+B2                                         |B2                                         
+A2                                         |A2                                         
+A1                                         |A1                                         
+VSS                                        |VSS                                        
+VDD                                        |VDD                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sg13g2_a22oi_1 and sg13g2_a22oi_1 are equivalent.
+
+Subcircuit summary:
+Circuit 1: sg13g2_buf_8                    |Circuit 2: sg13g2_buf_8                    
+-------------------------------------------|-------------------------------------------
+sg13_lv_nmos (2)                           |sg13_lv_nmos (2)                           
+sg13_lv_pmos (2)                           |sg13_lv_pmos (2)                           
+Number of devices: 4                       |Number of devices: 4                       
+Number of nets: 5                          |Number of nets: 5                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: sg13g2_buf_8                    |Circuit 2: sg13g2_buf_8                    
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+X                                          |X                                          
+VSS                                        |VSS                                        
+VDD                                        |VDD                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sg13g2_buf_8 and sg13g2_buf_8 are equivalent.
+
+Subcircuit summary:
+Circuit 1: sg13g2_nand3b_1                 |Circuit 2: sg13g2_nand3b_1                 
+-------------------------------------------|-------------------------------------------
+sg13_lv_nmos (4)                           |sg13_lv_nmos (4)                           
+sg13_lv_pmos (4)                           |sg13_lv_pmos (4)                           
+Number of devices: 8                       |Number of devices: 8                       
+Number of nets: 9                          |Number of nets: 9                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: sg13g2_nand3b_1                 |Circuit 2: sg13g2_nand3b_1                 
+-------------------------------------------|-------------------------------------------
+VDD                                        |VDD                                        
+Y                                          |Y                                          
+A_N                                        |A_N                                        
+B                                          |B                                          
+C                                          |C                                          
+VSS                                        |VSS                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sg13g2_nand3b_1 and sg13g2_nand3b_1 are equivalent.
+
+Subcircuit summary:
+Circuit 1: sg13g2_a21o_1                   |Circuit 2: sg13g2_a21o_1                   
+-------------------------------------------|-------------------------------------------
+sg13_lv_nmos (4)                           |sg13_lv_nmos (4)                           
+sg13_lv_pmos (4)                           |sg13_lv_pmos (4)                           
+Number of devices: 8                       |Number of devices: 8                       
+Number of nets: 9                          |Number of nets: 9                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: sg13g2_a21o_1                   |Circuit 2: sg13g2_a21o_1                   
+-------------------------------------------|-------------------------------------------
+VSS                                        |VSS                                        
+VDD                                        |VDD                                        
+A1                                         |A1                                         
+A2                                         |A2                                         
+B1                                         |B1                                         
+X                                          |X                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sg13g2_a21o_1 and sg13g2_a21o_1 are equivalent.
+
+Subcircuit summary:
+Circuit 1: sg13g2_or3_1                    |Circuit 2: sg13g2_or3_1                    
+-------------------------------------------|-------------------------------------------
+sg13_lv_nmos (4)                           |sg13_lv_nmos (4)                           
+sg13_lv_pmos (4)                           |sg13_lv_pmos (4)                           
+Number of devices: 8                       |Number of devices: 8                       
+Number of nets: 9                          |Number of nets: 9                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: sg13g2_or3_1                    |Circuit 2: sg13g2_or3_1                    
+-------------------------------------------|-------------------------------------------
+VSS                                        |VSS                                        
+X                                          |X                                          
+B                                          |B                                          
+A                                          |A                                          
+C                                          |C                                          
+VDD                                        |VDD                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sg13g2_or3_1 and sg13g2_or3_1 are equivalent.
+
+Subcircuit summary:
+Circuit 1: sg13g2_mux2_1                   |Circuit 2: sg13g2_mux2_1                   
+-------------------------------------------|-------------------------------------------
+sg13_lv_nmos (6)                           |sg13_lv_nmos (6)                           
+sg13_lv_pmos (6)                           |sg13_lv_pmos (6)                           
+Number of devices: 12                      |Number of devices: 12                      
+Number of nets: 12                         |Number of nets: 12                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: sg13g2_mux2_1                   |Circuit 2: sg13g2_mux2_1                   
+-------------------------------------------|-------------------------------------------
+X                                          |X                                          
+A1                                         |A1                                         
+A0                                         |A0                                         
+S                                          |S                                          
+VDD                                        |VDD                                        
+VSS                                        |VSS                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sg13g2_mux2_1 and sg13g2_mux2_1 are equivalent.
+
+Subcircuit summary:
+Circuit 1: sg13g2_nand3_1                  |Circuit 2: sg13g2_nand3_1                  
+-------------------------------------------|-------------------------------------------
+sg13_lv_nmos (3)                           |sg13_lv_nmos (3)                           
+sg13_lv_pmos (3)                           |sg13_lv_pmos (3)                           
+Number of devices: 6                       |Number of devices: 6                       
+Number of nets: 8                          |Number of nets: 8                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: sg13g2_nand3_1                  |Circuit 2: sg13g2_nand3_1                  
+-------------------------------------------|-------------------------------------------
+VDD                                        |VDD                                        
+B                                          |B                                          
+A                                          |A                                          
+C                                          |C                                          
+Y                                          |Y                                          
+VSS                                        |VSS                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sg13g2_nand3_1 and sg13g2_nand3_1 are equivalent.
+
+Subcircuit summary:
+Circuit 1: sg13g2_buf_16                   |Circuit 2: sg13g2_buf_16                   
+-------------------------------------------|-------------------------------------------
+sg13_lv_nmos (2)                           |sg13_lv_nmos (2)                           
+sg13_lv_pmos (2)                           |sg13_lv_pmos (2)                           
+Number of devices: 4                       |Number of devices: 4                       
+Number of nets: 5                          |Number of nets: 5                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: sg13g2_buf_16                   |Circuit 2: sg13g2_buf_16                   
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+X                                          |X                                          
+VSS                                        |VSS                                        
+VDD                                        |VDD                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sg13g2_buf_16 and sg13g2_buf_16 are equivalent.
+
+Subcircuit summary:
+Circuit 1: sg13g2_dlygate4sd3_1            |Circuit 2: sg13g2_dlygate4sd3_1            
+-------------------------------------------|-------------------------------------------
+sg13_lv_nmos (4)                           |sg13_lv_nmos (4)                           
+sg13_lv_pmos (4)                           |sg13_lv_pmos (4)                           
+Number of devices: 8                       |Number of devices: 8                       
+Number of nets: 7                          |Number of nets: 7                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: sg13g2_dlygate4sd3_1            |Circuit 2: sg13g2_dlygate4sd3_1            
+-------------------------------------------|-------------------------------------------
+X                                          |X                                          
+A                                          |A                                          
+VDD                                        |VDD                                        
+VSS                                        |VSS                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sg13g2_dlygate4sd3_1 and sg13g2_dlygate4sd3_1 are equivalent.
+
+Subcircuit summary:
+Circuit 1: sg13g2_and4_1                   |Circuit 2: sg13g2_and4_1                   
+-------------------------------------------|-------------------------------------------
+sg13_lv_nmos (5)                           |sg13_lv_nmos (5)                           
+sg13_lv_pmos (5)                           |sg13_lv_pmos (5)                           
+Number of devices: 10                      |Number of devices: 10                      
+Number of nets: 11                         |Number of nets: 11                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: sg13g2_and4_1                   |Circuit 2: sg13g2_and4_1                   
+-------------------------------------------|-------------------------------------------
+VDD                                        |VDD                                        
+C                                          |C                                          
+B                                          |B                                          
+D                                          |D                                          
+A                                          |A                                          
+X                                          |X                                          
+VSS                                        |VSS                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sg13g2_and4_1 and sg13g2_and4_1 are equivalent.
+
+Subcircuit summary:
+Circuit 1: sg13g2_or4_1                    |Circuit 2: sg13g2_or4_1                    
+-------------------------------------------|-------------------------------------------
+sg13_lv_nmos (5)                           |sg13_lv_nmos (5)                           
+sg13_lv_pmos (5)                           |sg13_lv_pmos (5)                           
+Number of devices: 10                      |Number of devices: 10                      
+Number of nets: 11                         |Number of nets: 11                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: sg13g2_or4_1                    |Circuit 2: sg13g2_or4_1                    
+-------------------------------------------|-------------------------------------------
+VDD                                        |VDD                                        
+X                                          |X                                          
+C                                          |C                                          
+B                                          |B                                          
+A                                          |A                                          
+D                                          |D                                          
+VSS                                        |VSS                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sg13g2_or4_1 and sg13g2_or4_1 are equivalent.
+Flattening unmatched subcell sg13g2_fill_2 in circuit uart_core (1)(15562 instances)
+Flattening unmatched subcell sg13g2_fill_1 in circuit uart_core (1)(306 instances)
+
+Subcircuit summary:
+Circuit 1: uart_core                       |Circuit 2: uart_core                       
+-------------------------------------------|-------------------------------------------
+sg13g2_dfrbpq_1 (81)                       |sg13g2_dfrbpq_1 (81)                       
+sg13g2_tiehi (81)                          |sg13g2_tiehi (81)                          
+sg13g2_xnor2_1 (23)                        |sg13g2_xnor2_1 (23)                        
+sg13g2_and2_1 (9)                          |sg13g2_and2_1 (9)                          
+sg13g2_inv_1 (37)                          |sg13g2_inv_1 (37)                          
+sg13g2_xor2_1 (7)                          |sg13g2_xor2_1 (7)                          
+sg13g2_nor3_1 (27)                         |sg13g2_nor3_1 (27)                         
+sg13g2_nand4_1 (4)                         |sg13g2_nand4_1 (4)                         
+sg13g2_nand2b_1 (18)                       |sg13g2_nand2b_1 (18)                       
+sg13g2_a221oi_1 (21)                       |sg13g2_a221oi_1 (21)                       
+sg13g2_nand2_1 (34)                        |sg13g2_nand2_1 (34)                        
+sg13g2_or2_1 (12)                          |sg13g2_or2_1 (12)                          
+sg13g2_nor4_1 (10)                         |sg13g2_nor4_1 (10)                         
+sg13g2_buf_1 (38)                          |sg13g2_buf_1 (38)                          
+sg13g2_nor2b_1 (16)                        |sg13g2_nor2b_1 (16)                        
+sg13g2_a21oi_1 (40)                        |sg13g2_a21oi_1 (40)                        
+sg13g2_o21ai_1 (54)                        |sg13g2_o21ai_1 (54)                        
+sg13g2_nor2_1 (32)                         |sg13g2_nor2_1 (32)                         
+sg13g2_a22oi_1 (8)                         |sg13g2_a22oi_1 (8)                         
+sg13g2_buf_8 (30)                          |sg13g2_buf_8 (30)                          
+sg13g2_nand3b_1 (1)                        |sg13g2_nand3b_1 (1)                        
+sg13g2_a21o_1 (5)                          |sg13g2_a21o_1 (5)                          
+sg13g2_or3_1 (2)                           |sg13g2_or3_1 (2)                           
+sg13g2_mux2_1 (5)                          |sg13g2_mux2_1 (5)                          
+sg13g2_nand3_1 (12)                        |sg13g2_nand3_1 (12)                        
+sg13g2_buf_16 (1)                          |sg13g2_buf_16 (1)                          
+sg13g2_dlygate4sd3_1 (31)                  |sg13g2_dlygate4sd3_1 (31)                  
+sg13g2_and4_1 (1)                          |sg13g2_and4_1 (1)                          
+sg13g2_or4_1 (4)                           |sg13g2_or4_1 (4)                           
+Number of devices: 644                     |Number of devices: 644                     
+Number of nets: 675                        |Number of nets: 675                        
+---------------------------------------------------------------------------------------
+NET mismatches: Class fragments follow (with fanout counts):
+Circuit 1: uart_core                       |Circuit 2: uart_core                       
+
+---------------------------------------------------------------------------------------
+Net: VSS                                   |Net: VSS                                   
+  sg13g2_dfrbpq_1/VSS = 81                 |  sg13g2_dfrbpq_1/VSS = 81                 
+  sg13g2_tiehi/VSS = 81                    |  sg13g2_tiehi/VSS = 81                    
+  sg13g2_xnor2_1/VSS = 23                  |  sg13g2_xnor2_1/VSS = 23                  
+  sg13g2_and2_1/VSS = 9                    |  sg13g2_and2_1/VSS = 9                    
+  sg13g2_inv_1/VSS = 37                    |  sg13g2_inv_1/VSS = 37                    
+  sg13g2_xor2_1/VSS = 7                    |  sg13g2_xor2_1/VSS = 7                    
+  sg13g2_nor3_1/VSS = 27                   |  sg13g2_nor3_1/VSS = 27                   
+  sg13g2_nand4_1/VSS = 4                   |  sg13g2_nand4_1/VSS = 4                   
+  sg13g2_nand2b_1/VSS = 18                 |  sg13g2_nand2b_1/VSS = 18                 
+  sg13g2_a221oi_1/VSS = 21                 |  sg13g2_a221oi_1/VSS = 21                 
+  sg13g2_nand2_1/VSS = 34                  |  sg13g2_nand2_1/VSS = 34                  
+  sg13g2_or2_1/VSS = 12                    |  sg13g2_or2_1/VSS = 12                    
+  sg13g2_nor4_1/VSS = 10                   |  sg13g2_nor4_1/VSS = 10                   
+  sg13g2_buf_1/VSS = 38                    |  sg13g2_buf_1/VSS = 38                    
+  sg13g2_nor2b_1/VSS = 16                  |  sg13g2_nor2b_1/VSS = 16                  
+  sg13g2_a21oi_1/VSS = 40                  |  sg13g2_a21oi_1/VSS = 40                  
+  sg13g2_o21ai_1/VSS = 54                  |  sg13g2_o21ai_1/VSS = 54                  
+  sg13g2_nor2_1/VSS = 32                   |  sg13g2_nor2_1/VSS = 32                   
+  sg13g2_a22oi_1/VSS = 8                   |  sg13g2_a22oi_1/VSS = 8                   
+  sg13g2_buf_8/VSS = 30                    |  sg13g2_buf_8/VSS = 30                    
+  sg13g2_nand3b_1/VSS = 1                  |  sg13g2_nand3b_1/VSS = 1                  
+  sg13g2_a21o_1/VSS = 5                    |  sg13g2_a21o_1/VSS = 5                    
+  sg13g2_or3_1/VSS = 2                     |  sg13g2_or3_1/VSS = 2                     
+  sg13g2_mux2_1/VSS = 5                    |  sg13g2_mux2_1/VSS = 5                    
+  sg13g2_nand3_1/VSS = 12                  |  sg13g2_nand3_1/VSS = 12                  
+  sg13g2_buf_16/VSS = 1                    |  sg13g2_buf_16/VSS = 1                    
+  sg13g2_dlygate4sd3_1/VSS = 31            |  sg13g2_dlygate4sd3_1/VSS = 31            
+  sg13g2_and4_1/VSS = 1                    |  sg13g2_and4_1/VSS = 1                    
+  sg13g2_or4_1/VSS = 4                     |  sg13g2_or4_1/VSS = 4                     
+                                           |  sg13g2_dlygate4sd3_1/VDD = 1             
+                                           |                                           
+Net: VDD                                   |Net: VDD                                   
+  sg13g2_dfrbpq_1/VDD = 81                 |  sg13g2_dfrbpq_1/VDD = 81                 
+  sg13g2_tiehi/VDD = 81                    |  sg13g2_tiehi/VDD = 81                    
+  sg13g2_xnor2_1/VDD = 23                  |  sg13g2_xnor2_1/VDD = 23                  
+  sg13g2_and2_1/VDD = 9                    |  sg13g2_and2_1/VDD = 9                    
+  sg13g2_inv_1/VDD = 37                    |  sg13g2_inv_1/VDD = 37                    
+  sg13g2_xor2_1/VDD = 7                    |  sg13g2_xor2_1/VDD = 7                    
+  sg13g2_nor3_1/VDD = 27                   |  sg13g2_nor3_1/VDD = 27                   
+  sg13g2_nand4_1/VDD = 4                   |  sg13g2_nand4_1/VDD = 4                   
+  sg13g2_nand2b_1/VDD = 18                 |  sg13g2_nand2b_1/VDD = 18                 
+  sg13g2_a221oi_1/VDD = 21                 |  sg13g2_a221oi_1/VDD = 21                 
+  sg13g2_nand2_1/VDD = 34                  |  sg13g2_nand2_1/VDD = 34                  
+  sg13g2_or2_1/VDD = 12                    |  sg13g2_or2_1/VDD = 12                    
+  sg13g2_nor4_1/VDD = 10                   |  sg13g2_nor4_1/VDD = 10                   
+  sg13g2_buf_1/VDD = 38                    |  sg13g2_buf_1/VDD = 38                    
+  sg13g2_nor2b_1/VDD = 16                  |  sg13g2_nor2b_1/VDD = 16                  
+  sg13g2_a21oi_1/VDD = 40                  |  sg13g2_a21oi_1/VDD = 40                  
+  sg13g2_o21ai_1/VDD = 54                  |  sg13g2_o21ai_1/VDD = 54                  
+  sg13g2_nor2_1/VDD = 32                   |  sg13g2_nor2_1/VDD = 32                   
+  sg13g2_a22oi_1/VDD = 8                   |  sg13g2_a22oi_1/VDD = 8                   
+  sg13g2_buf_8/VDD = 30                    |  sg13g2_buf_8/VDD = 30                    
+  sg13g2_nand3b_1/VDD = 1                  |  sg13g2_nand3b_1/VDD = 1                  
+  sg13g2_a21o_1/VDD = 5                    |  sg13g2_a21o_1/VDD = 5                    
+  sg13g2_or3_1/VDD = 2                     |  sg13g2_or3_1/VDD = 2                     
+  sg13g2_mux2_1/VDD = 5                    |  sg13g2_mux2_1/VDD = 5                    
+  sg13g2_nand3_1/VDD = 12                  |  sg13g2_nand3_1/VDD = 12                  
+  sg13g2_buf_16/VDD = 1                    |  sg13g2_buf_16/VDD = 1                    
+  sg13g2_dlygate4sd3_1/VDD = 31            |  sg13g2_dlygate4sd3_1/VDD = 30            
+  sg13g2_and4_1/VDD = 1                    |  sg13g2_and4_1/VDD = 1                    
+  sg13g2_or4_1/VDD = 4                     |  sg13g2_or4_1/VDD = 4                     
+---------------------------------------------------------------------------------------
+Netlists do not match.
+Port matching may fail to disambiguate symmetries.
+
+Subcircuit pins:
+Circuit 1: uart_core                       |Circuit 2: uart_core                       
+-------------------------------------------|-------------------------------------------
+VSS                                        |VSS                                        
+VDD                                        |VDD                                        
+prescale[9]                                |prescale[9]                                
+prescale[12]                               |prescale[12]                               
+prescale[15]                               |prescale[15]                               
+prescale[8]                                |prescale[8]                                
+prescale[14]                               |prescale[14]                               
+prescale[13]                               |prescale[13]                               
+prescale[6]                                |prescale[6]                                
+prescale[5]                                |prescale[5]                                
+tx_valid                                   |tx_valid                                   
+rxd                                        |rxd                                        
+tx_data[2]                                 |tx_data[2]                                 
+prescale[11]                               |prescale[11]                               
+prescale[10]                               |prescale[10]                               
+rx_ready                                   |rx_ready                                   
+tx_data[6]                                 |tx_data[6]                                 
+tx_data[5]                                 |tx_data[5]                                 
+tx_data[1]                                 |tx_data[1]                                 
+tx_data[0]                                 |tx_data[0]                                 
+tx_data[7]                                 |tx_data[7]                                 
+tx_data[4]                                 |tx_data[4]                                 
+tx_data[3]                                 |tx_data[3]                                 
+rst                                        |rst                                        
+clk                                        |clk                                        
+rx_frame_error                             |rx_frame_error                             
+rx_overrun_error                           |rx_overrun_error                           
+prescale[2]                                |prescale[2]                                
+prescale[1]                                |prescale[1]                                
+prescale[0]                                |prescale[0]                                
+rx_valid                                   |rx_valid                                   
+tx_ready                                   |tx_ready                                   
+prescale[3]                                |prescale[3]                                
+prescale[4]                                |prescale[4]                                
+prescale[7]                                |prescale[7]                                
+rx_busy                                    |rx_busy                                    
+txd                                        |txd                                        
+tx_busy                                    |tx_busy                                    
+rx_data[1]                                 |rx_data[1]                                 
+rx_data[3]                                 |rx_data[3]                                 
+rx_data[2]                                 |rx_data[2]                                 
+rx_data[4]                                 |rx_data[4]                                 
+rx_data[5]                                 |rx_data[5]                                 
+rx_data[6]                                 |rx_data[6]                                 
+rx_data[7]                                 |rx_data[7]                                 
+rx_data[0]                                 |rx_data[0]                                 
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes uart_core and uart_core are equivalent.
+
+Final result: Netlists do not match.
+Port matching may fail to disambiguate symmetries.

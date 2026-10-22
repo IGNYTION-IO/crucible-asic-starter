@@ -1,0 +1,162 @@
+%Warning-WIDTHEXPAND: 01_rtl/uart_tx.v:80:43: Operator SHIFTL expects 32 or 19 bits on the LHS, but LHS's VARREF 'prescale' generates 16 bits.
+                                            : ... note: In instance 'uart_core.controller.uart_tx_inst'
+   80 |                 prescale_reg <= (prescale << 3)-1;
+      |                                           ^~
+                      ... For warning description see https://verilator.org/warn/WIDTHEXPAND?v=5.047
+                      ... Use "/* verilator lint_off WIDTHEXPAND */" and lint_on around source to disable this message.
+%Warning-WIDTHEXPAND: 01_rtl/uart_tx.v:89:43: Operator SHIFTL expects 32 or 19 bits on the LHS, but LHS's VARREF 'prescale' generates 16 bits.
+                                            : ... note: In instance 'uart_core.controller.uart_tx_inst'
+   89 |                 prescale_reg <= (prescale << 3)-1;
+      |                                           ^~
+%Warning-WIDTHEXPAND: 01_rtl/uart_rx.v:96:47: Operator SHIFTL expects 32 or 19 bits on the LHS, but LHS's VARREF 'prescale' generates 16 bits.
+                                            : ... note: In instance 'uart_core.controller.uart_rx_inst'
+   96 |                     prescale_reg <= (prescale << 3)-1;
+      |                                               ^~
+%Warning-WIDTHEXPAND: 01_rtl/uart_rx.v:103:43: Operator SHIFTL expects 32 or 19 bits on the LHS, but LHS's VARREF 'prescale' generates 16 bits.
+                                             : ... note: In instance 'uart_core.controller.uart_rx_inst'
+  103 |                 prescale_reg <= (prescale << 3)-1;
+      |                                           ^~
+%Warning-WIDTHEXPAND: 01_rtl/uart_rx.v:118:43: Operator SHIFTL expects 32 or 19 bits on the LHS, but LHS's VARREF 'prescale' generates 16 bits.
+                                             : ... note: In instance 'uart_core.controller.uart_rx_inst'
+  118 |                 prescale_reg <= (prescale << 2)-2;
+      |                                           ^~
+%Warning-PROCASSINIT: 01_rtl/uart_rx.v:51:41: Procedural assignment to declaration with initial value: 'm_axis_tdata_reg'
+                                            : ... note: In instance 'uart_core.controller.uart_rx_inst'
+                                            : ... Location of variable initialization
+   51 | reg [DATA_WIDTH-1:0] m_axis_tdata_reg = 0;
+      |                                         ^
+                      01_rtl/uart_rx.v:73:9: ... Location of variable process write
+                                           : ... Perhaps should initialize instead using a reset in this process
+   73 |         m_axis_tdata_reg <= 0;
+      |         ^~~~~~~~~~~~~~~~
+                      ... For warning description see https://verilator.org/warn/PROCASSINIT?v=5.047
+                      ... Use "/* verilator lint_off PROCASSINIT */" and lint_on around source to disable this message.
+%Warning-PROCASSINIT: 01_rtl/uart_rx.v:52:25: Procedural assignment to declaration with initial value: 'm_axis_tvalid_reg'
+                                            : ... note: In instance 'uart_core.controller.uart_rx_inst'
+                                            : ... Location of variable initialization
+   52 | reg m_axis_tvalid_reg = 0;
+      |                         ^
+                      01_rtl/uart_rx.v:74:9: ... Location of variable process write
+                                           : ... Perhaps should initialize instead using a reset in this process
+   74 |         m_axis_tvalid_reg <= 0;
+      |         ^~~~~~~~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/uart_rx.v:54:15: Procedural assignment to declaration with initial value: 'rxd_reg'
+                                            : ... note: In instance 'uart_core.controller.uart_rx_inst'
+                                            : ... Location of variable initialization
+   54 | reg rxd_reg = 1;
+      |               ^
+                      01_rtl/uart_rx.v:75:9: ... Location of variable process write
+                                           : ... Perhaps should initialize instead using a reset in this process
+   75 |         rxd_reg <= 1;
+      |         ^~~~~~~
+%Warning-PROCASSINIT: 01_rtl/uart_rx.v:56:16: Procedural assignment to declaration with initial value: 'busy_reg'
+                                            : ... note: In instance 'uart_core.controller.uart_rx_inst'
+                                            : ... Location of variable initialization
+   56 | reg busy_reg = 0;
+      |                ^
+                      01_rtl/uart_rx.v:78:9: ... Location of variable process write
+                                           : ... Perhaps should initialize instead using a reset in this process
+   78 |         busy_reg <= 0;
+      |         ^~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/uart_rx.v:57:25: Procedural assignment to declaration with initial value: 'overrun_error_reg'
+                                            : ... note: In instance 'uart_core.controller.uart_rx_inst'
+                                            : ... Location of variable initialization
+   57 | reg overrun_error_reg = 0;
+      |                         ^
+                      01_rtl/uart_rx.v:79:9: ... Location of variable process write
+                                           : ... Perhaps should initialize instead using a reset in this process
+   79 |         overrun_error_reg <= 0;
+      |         ^~~~~~~~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/uart_rx.v:58:23: Procedural assignment to declaration with initial value: 'frame_error_reg'
+                                            : ... note: In instance 'uart_core.controller.uart_rx_inst'
+                                            : ... Location of variable initialization
+   58 | reg frame_error_reg = 0;
+      |                       ^
+                      01_rtl/uart_rx.v:80:9: ... Location of variable process write
+                                           : ... Perhaps should initialize instead using a reset in this process
+   80 |         frame_error_reg <= 0;
+      |         ^~~~~~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/uart_rx.v:60:33: Procedural assignment to declaration with initial value: 'data_reg'
+                                            : ... note: In instance 'uart_core.controller.uart_rx_inst'
+                                            : ... Location of variable initialization
+   60 | reg [DATA_WIDTH-1:0] data_reg = 0;
+      |                                 ^
+                      01_rtl/uart_rx.v:104:17: ... Location of variable process write
+                                             : ... Perhaps should initialize instead using a reset in this process
+  104 |                 data_reg <= {rxd_reg, data_reg[DATA_WIDTH-1:1]};
+      |                 ^~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/uart_rx.v:61:27: Procedural assignment to declaration with initial value: 'prescale_reg'
+                                            : ... note: In instance 'uart_core.controller.uart_rx_inst'
+                                            : ... Location of variable initialization
+   61 | reg [18:0] prescale_reg = 0;
+      |                           ^
+                      01_rtl/uart_rx.v:76:9: ... Location of variable process write
+                                           : ... Perhaps should initialize instead using a reset in this process
+   76 |         prescale_reg <= 0;
+      |         ^~~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/uart_rx.v:62:21: Procedural assignment to declaration with initial value: 'bit_cnt'
+                                            : ... note: In instance 'uart_core.controller.uart_rx_inst'
+                                            : ... Location of variable initialization
+   62 | reg [3:0] bit_cnt = 0;
+      |                     ^
+                      01_rtl/uart_rx.v:77:9: ... Location of variable process write
+                                           : ... Perhaps should initialize instead using a reset in this process
+   77 |         bit_cnt <= 0;
+      |         ^~~~~~~
+%Warning-PROCASSINIT: 01_rtl/uart_tx.v:48:25: Procedural assignment to declaration with initial value: 's_axis_tready_reg'
+                                            : ... note: In instance 'uart_core.controller.uart_tx_inst'
+                                            : ... Location of variable initialization
+   48 | reg s_axis_tready_reg = 0;
+      |                         ^
+                      01_rtl/uart_tx.v:65:9: ... Location of variable process write
+                                           : ... Perhaps should initialize instead using a reset in this process
+   65 |         s_axis_tready_reg <= 0;
+      |         ^~~~~~~~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/uart_tx.v:50:15: Procedural assignment to declaration with initial value: 'txd_reg'
+                                            : ... note: In instance 'uart_core.controller.uart_tx_inst'
+                                            : ... Location of variable initialization
+   50 | reg txd_reg = 1;
+      |               ^
+                      01_rtl/uart_tx.v:66:9: ... Location of variable process write
+                                           : ... Perhaps should initialize instead using a reset in this process
+   66 |         txd_reg <= 1;
+      |         ^~~~~~~
+%Warning-PROCASSINIT: 01_rtl/uart_tx.v:52:16: Procedural assignment to declaration with initial value: 'busy_reg'
+                                            : ... note: In instance 'uart_core.controller.uart_tx_inst'
+                                            : ... Location of variable initialization
+   52 | reg busy_reg = 0;
+      |                ^
+                      01_rtl/uart_tx.v:69:9: ... Location of variable process write
+                                           : ... Perhaps should initialize instead using a reset in this process
+   69 |         busy_reg <= 0;
+      |         ^~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/uart_tx.v:54:31: Procedural assignment to declaration with initial value: 'data_reg'
+                                            : ... note: In instance 'uart_core.controller.uart_tx_inst'
+                                            : ... Location of variable initialization
+   54 | reg [DATA_WIDTH:0] data_reg = 0;
+      |                               ^
+                      01_rtl/uart_tx.v:82:17: ... Location of variable process write
+                                            : ... Perhaps should initialize instead using a reset in this process
+   82 |                 data_reg <= {1'b1, s_axis_tdata};
+      |                 ^~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/uart_tx.v:55:27: Procedural assignment to declaration with initial value: 'prescale_reg'
+                                            : ... note: In instance 'uart_core.controller.uart_tx_inst'
+                                            : ... Location of variable initialization
+   55 | reg [18:0] prescale_reg = 0;
+      |                           ^
+                      01_rtl/uart_tx.v:67:9: ... Location of variable process write
+                                           : ... Perhaps should initialize instead using a reset in this process
+   67 |         prescale_reg <= 0;
+      |         ^~~~~~~~~~~~
+%Warning-PROCASSINIT: 01_rtl/uart_tx.v:56:21: Procedural assignment to declaration with initial value: 'bit_cnt'
+                                            : ... note: In instance 'uart_core.controller.uart_tx_inst'
+                                            : ... Location of variable initialization
+   56 | reg [3:0] bit_cnt = 0;
+      |                     ^
+                      01_rtl/uart_tx.v:68:9: ... Location of variable process write
+                                           : ... Perhaps should initialize instead using a reset in this process
+   68 |         bit_cnt <= 0;
+      |         ^~~~~~~
+- V e r i l a t i o n   R e p o r t: Verilator 5.047 devel rev v5.046-219-g56ed47ee7 (mod)
+- Verilator: Built from 0.101 MB sources in 5 modules, into 0.027 MB in 3 C++ files needing 0.000 MB
+- Verilator: Walltime 0.067 s (elab=0.001, cvt=0.006, bld=0.000); cpu 0.024 s on 1 threads; allocated 21.207 MB
