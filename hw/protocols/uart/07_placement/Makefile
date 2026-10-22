@@ -10,7 +10,10 @@
 SHELL := /bin/bash
 .SHELLFLAGS := -eu -o pipefail -c
 PROJECT_ROOT := $(abspath ..)
-.PHONY: all place
+.PHONY: all place clean
 all: place
 place:
 	cd "$(PROJECT_ROOT)" && bash run_flow.sh place
+
+clean:
+	rm -f -- placement.def placement.odb openroad_placement.log

@@ -10,7 +10,10 @@
 SHELL := /bin/bash
 .SHELLFLAGS := -eu -o pipefail -c
 PROJECT_ROOT := $(abspath ..)
-.PHONY: all synth
+.PHONY: all synth clean
 all: synth
 synth:
 	cd "$(PROJECT_ROOT)" && bash run_flow.sh synth
+
+clean:
+	rm -f -- synthesis.log synth.json synth_output.v constraints.sdc

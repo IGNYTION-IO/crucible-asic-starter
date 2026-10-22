@@ -10,7 +10,10 @@
 SHELL := /bin/bash
 .SHELLFLAGS := -eu -o pipefail -c
 PROJECT_ROOT := $(abspath ..)
-.PHONY: all floorplan
+.PHONY: all floorplan clean
 all: floorplan
 floorplan:
 	cd "$(PROJECT_ROOT)" && bash run_flow.sh floorplan
+
+clean:
+	rm -f -- floorplan.def floorplan.odb openroad_floorplan.log

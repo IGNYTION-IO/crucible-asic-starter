@@ -10,7 +10,10 @@
 SHELL := /bin/bash
 .SHELLFLAGS := -eu -o pipefail -c
 PROJECT_ROOT := $(abspath ..)
-.PHONY: all sta
+.PHONY: all sta clean
 all: sta
 sta:
 	cd "$(PROJECT_ROOT)" && bash run_flow.sh sta
+
+clean:
+	rm -f -- timing_report.txt timing_slow.txt

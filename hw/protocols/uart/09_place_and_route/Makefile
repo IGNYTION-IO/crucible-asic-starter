@@ -10,7 +10,12 @@
 SHELL := /bin/bash
 .SHELLFLAGS := -eu -o pipefail -c
 PROJECT_ROOT := $(abspath ..)
-.PHONY: all cts route
+.PHONY: all cts route clean
 all: cts route
 cts route:
 	cd "$(PROJECT_ROOT)" && bash run_flow.sh $@
+
+clean:
+	rm -f -- cts.def cts.odb openroad_cts.log \
+		route.def route.odb route.spef route_output.v route.guide \
+		route_drc.rpt route_maze.log openroad_route.log

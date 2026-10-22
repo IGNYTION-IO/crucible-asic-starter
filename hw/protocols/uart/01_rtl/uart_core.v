@@ -5,9 +5,9 @@
 // File        : hw/protocols/uart/01_rtl/uart_core.v
 // Created     : 2026-10-03
 // Description : Protocol reference integration and teaching build.
-// Upstream copyright and licence notices below remain applicable.
+// Upstream copyright and licence notices: see LICENSE.forencich.
 // ===============================================================================
-// Alex Forencich UART integration; original MIT notices remain in uart*.v.
+// Alex Forencich UART integration; original MIT notices: see LICENSE.forencich.
 module uart_core (
     input wire clk, rst,
     input wire [7:0] tx_data,

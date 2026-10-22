@@ -10,7 +10,10 @@
 SHELL := /bin/bash
 .SHELLFLAGS := -eu -o pipefail -c
 PROJECT_ROOT := $(abspath ..)
-.PHONY: all sim
+.PHONY: all sim clean
 all: sim
 sim:
 	cd "$(PROJECT_ROOT)" && bash run_flow.sh sim
+
+clean:
+	rm -f -- uart_core_sim.out uart_core.vcd simulation.log negative_control.log

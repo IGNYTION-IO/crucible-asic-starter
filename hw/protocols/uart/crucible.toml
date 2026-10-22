@@ -1,8 +1,8 @@
 [workspace]
 name = "uart"
 id = "uart-2d86cae6"
-environment = "janestreet-uart"
-environments = [ "janestreet-uart",]
+environment = "janestreet-i2c"
+environments = [ "janestreet-uart", "janestreet-i2c",]
 
 [workspace.metadata]
 managed = false

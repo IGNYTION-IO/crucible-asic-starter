@@ -10,7 +10,10 @@
 SHELL := /bin/bash
 .SHELLFLAGS := -eu -o pipefail -c
 PROJECT_ROOT := $(abspath ..)
-.PHONY: all sim
+.PHONY: all sim clean
 all: sim
 sim:
 	cd "$(PROJECT_ROOT)" && bash run_flow.sh sim
+
+clean:
+	$(MAKE) -C "$(PROJECT_ROOT)/02_sim" clean

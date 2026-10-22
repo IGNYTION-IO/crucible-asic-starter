@@ -10,7 +10,11 @@
 SHELL := /bin/bash
 .SHELLFLAGS := -eu -o pipefail -c
 PROJECT_ROOT := $(abspath ..)
-.PHONY: all
+.PHONY: all clean
 all:
 	@echo 'This reference flow has no implemented scan/DFT stage. Do not claim signoff.' >&2
 	@exit 2
+
+# This placeholder stage produces no files.
+clean:
+	@:

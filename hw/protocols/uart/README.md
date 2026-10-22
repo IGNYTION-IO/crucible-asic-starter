@@ -10,7 +10,7 @@ Description : UART reference integration, reproduction and evidence boundaries.
 -->
 # UART reference RTL-to-GDS build
 
-Upstream https://github.com/alexforencich/verilog-uart pinned at `1b867e53af738e4a8bc7c839ca2f1c07f40382dc`. Original MIT notices remain in `uart.v`, `uart_rx.v`, `uart_tx.v` and `01_rtl/LICENSE.alexforencich`. Ignytion headers describe this integration and do not replace upstream ownership.
+Upstream https://github.com/alexforencich/verilog-uart pinned at `1b867e53af738e4a8bc7c839ca2f1c07f40382dc`. Original MIT notices are retained in `01_rtl/LICENSE.forencich`. Ignytion headers describe this integration and do not replace upstream ownership.
 
 `uart_core` implements full-duplex 8N1 UART with independent transmit/receive ready-valid byte interfaces. TX and RX send the least significant bit first. `rst` is synchronous and active high. A two-flop input synchronizer samples external `rxd`. RX errors are pulse outputs, not software counters. The bench counts those pulses.
 

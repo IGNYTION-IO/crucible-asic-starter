@@ -10,7 +10,10 @@
 SHELL := /bin/bash
 .SHELLFLAGS := -eu -o pipefail -c
 PROJECT_ROOT := $(abspath ..)
-.PHONY: all lint
+.PHONY: all lint clean
 all: lint
 lint:
 	cd "$(PROJECT_ROOT)" && bash run_flow.sh lint
+
+clean:
+	rm -f -- lint_report.txt

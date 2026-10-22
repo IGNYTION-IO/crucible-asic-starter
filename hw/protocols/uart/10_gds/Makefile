@@ -10,7 +10,10 @@
 SHELL := /bin/bash
 .SHELLFLAGS := -eu -o pipefail -c
 PROJECT_ROOT := $(abspath ..)
-.PHONY: all gds
+.PHONY: all gds clean
 all: gds
 gds:
 	cd "$(PROJECT_ROOT)" && bash run_flow.sh gds
+
+clean:
+	rm -f -- uart_core.gds validation.json negative_control.log
